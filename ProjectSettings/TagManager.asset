@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Aggrivation_Trigger
+  - Floor
+  - Projectile
+  - Ammo_Pickup
+  - Weapon
+  - Shotgun_Ammo_Pickup
+  - Right_Weapon
+  - Left_Weapon
+  - Experience_Pickup
+  - Chest
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Weapon/Pickup
+  - Water
+  - UI
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 671440353
+    locked: 0
+  - name: Foreground
+    uniqueID: 480131523
+    locked: 0
+  - name: Live_Action
+    uniqueID: 1375675165
+    locked: 0
