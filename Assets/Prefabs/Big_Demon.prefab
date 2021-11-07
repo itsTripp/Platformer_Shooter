@@ -148,8 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyMovementSpeed: 4
-  _enemyHealth: 1
+  _currentEnemyHealth: 0
   _damageTakenAudio: {fileID: 8300000, guid: 8ff1640605c07a1428cf6b3766fd708e, type: 3}
+  enemyScriptableObject: {fileID: 11400000, guid: 05c22646308222142b06c3197b565d0d, type: 2}
   _experiencePickup: {fileID: -854225738908622419, guid: 6a2c133717aa99f4eb10b1a83a0f1e95, type: 3}
   _upwardForce: 300
   _outwardForce: 200
@@ -184,13 +185,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 16
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

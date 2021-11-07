@@ -8,13 +8,14 @@ TagManager:
   - Aggrivation_Trigger
   - Floor
   - Projectile
-  - Ammo_Pickup
   - Weapon
   - Shotgun_Ammo_Pickup
   - Right_Weapon
   - Left_Weapon
   - Experience_Pickup
   - Chest
+  - Pistol_Ammo_Pickup
+  - PerkCard
   layers:
   - Default
   - TransparentFX

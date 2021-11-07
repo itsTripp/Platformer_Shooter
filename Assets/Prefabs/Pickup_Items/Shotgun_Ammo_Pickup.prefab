@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickupID: 0
   _audioClip: {fileID: 8300000, guid: 0f3e2ae397c35be41acb5ba9fc725986, type: 3}
-  _weaponDrop: {fileID: 0}
+  lootPickup: {fileID: 11400000, guid: d90d2984424b07a49b788eb02d253c15, type: 2}
 --- !u!82 &8150530486024069389
 AudioSource:
   m_ObjectHideFlags: 0

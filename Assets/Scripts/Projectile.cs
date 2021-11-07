@@ -11,8 +11,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        _rigidbody.velocity = transform.right * _projectileSpeed;
-        transform.Rotate(0, 0, -90f);
+        _rigidbody.velocity = transform.up * _projectileSpeed;
     }
 
     // Update is called once per frame

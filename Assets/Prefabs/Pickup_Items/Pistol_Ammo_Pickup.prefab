@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickupID: 0
   _audioClip: {fileID: 8300000, guid: 0f3e2ae397c35be41acb5ba9fc725986, type: 3}
-  _weaponDrop: {fileID: 0}
+  lootPickup: {fileID: 11400000, guid: 0640e57065722de4685246e4684b0090, type: 2}
 --- !u!50 &-6778596442585795548
 Rigidbody2D:
   serializedVersion: 4

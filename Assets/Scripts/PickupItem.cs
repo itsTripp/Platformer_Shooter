@@ -9,7 +9,7 @@ public class PickupItem : MonoBehaviour
     [SerializeField]
     private AudioClip _audioClip;
     private Player _player;
-    private PlayerPickups _playerPickups;
+    public LootPickups lootPickup;
 
 
 
@@ -21,38 +21,28 @@ public class PickupItem : MonoBehaviour
         {
             Debug.LogError("Player is Null on PickupItem");
         }
-        _playerPickups = GameObject.Find("Player").GetComponent<PlayerPickups>();
-        if (_playerPickups == null)
-        {
-            Debug.LogError("PlayerPickups is Null on PickupItem");
-        }
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
+        //Screen Wrapping
+        if (transform.position.x > 10.3f)
         {
-            AudioSource.PlayClipAtPoint(_audioClip, transform.position);
-            switch (_pickupID)
-            {
-                case 0:
-                    _playerPickups.AddAmmo();
-                    break;
-                case 1:
-                    _playerPickups.AddExperience();
-                    break;
-                
-            }
-            Destroy(gameObject);
+            transform.position = new Vector3(-10.3f, transform.position.y, 0);
+        }
+        if (transform.position.x < -10.3f)
+        {
+            transform.position = new Vector3(10.3f, transform.position.y, 0);
+        }
+        if (transform.position.y < -1.5f)
+        {
+            transform.position = new Vector3(transform.position.x, 11f, 0);
+        }
+        if (transform.position.y > 11f)
+        {
+            transform.position = new Vector3(transform.position.x, -1.5f, 0);
         }
     }
 }

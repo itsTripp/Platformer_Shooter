@@ -5,28 +5,9 @@ using System;
 
 public class Player : MonoBehaviour
 {
-    [Header("Player Health")]
-    [SerializeField]
-    private int _playerMaxHealth = 5;
-    [SerializeField]
-    private int _playerCurrentHealth;
-
     [Header("Player Movement")]
     [SerializeField]
     private float _speed;
-
-    [Header("Weapon Info")]
-  
-    public GameObject _rightWeapon;
-    [SerializeField]
-    private GameObject _activeRightWeapon;
-    
-    public GameObject _leftWeapon;
-    [SerializeField]
-    private GameObject _activeLeftWeapon;
-    private bool _isRightWeaponActive;
-    private bool _isLeftWeaponActive;
-
     private Vector3 _jump;
     [SerializeField]
     private float _jumpForce = 2.0f;
@@ -34,9 +15,17 @@ public class Player : MonoBehaviour
     private bool _isGrounded;
     private bool _isPlayerRunning = false;
 
+    [Header("Weapon Info")]
+    private float canShootRightWeapon = 0;
+    private float canShootLeftWeapon = 0;
+    public GameObject _rightWeapon;
+    public GameObject _leftWeapon;
+
     [Header("Player Score")]
     [SerializeField]
     private int _score;
+    [SerializeField]
+    private int _experienceOnPickup = 5;
 
     [Header("Player Audio")]
     private AudioSource _audioSource;
@@ -52,76 +41,94 @@ public class Player : MonoBehaviour
     private UIManager _uiManager;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
-    private Weapon _weapon;
-    public WeaponEquip _weaponEquip;
-    private WeaponEquip _leftWeaponEquip;
-    private WeaponEquip _rightWeaponEquip;
+    public LootPickups lootPickups;
+    private EnemySpawnManager _enemySpawnManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Object[] allWeapons = Object.FindObjectsOfType<WeaponEquip>();
-        //_weaponEquip = (WeaponEquip)allWeapons[0];
-        _playerCurrentHealth = _playerMaxHealth;
+        GameControl.gameControl.playerCurrentHealth = GameControl.gameControl.playerMaxHealth;
         _rigidbody = GetComponent<Rigidbody2D>();
         _jump = new Vector3(0, 2.0f, 0);
         _uiManager = GameObject.Find("Game_HUD").GetComponent<UIManager>();
-        if(_uiManager == null)
+        if (_uiManager == null)
         {
             Debug.LogError("UI Manager is Null on the Player");
         }
         _audioSource = GetComponent<AudioSource>();
-        if(_audioSource == null)
+        if (_audioSource == null)
         {
             Debug.LogError("The Audio Source on the Player is Null");
         }
         _animator = GetComponent<Animator>();
-        if(_animator == null)
+        if (_animator == null)
         {
             Debug.LogError("Animator is Null on the Player.");
         }
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        if(_spriteRenderer == null)
+        if (_spriteRenderer == null)
         {
             Debug.LogError("Sprite Renderer is Null on the Player");
         }
-        /*GameObject[] Weapons = GameObject.FindGameObjectsWithTag("Weapon");
-        _weapons = new Weapon[Weapons.Length];
-        for (int i = 0; i < Weapons.Length; i++)
+        if (GameControl.gameControl.currentLeftWeapon != null)
         {
-            _weapons[i] = Weapons[i].GetComponent<Weapon>();
-            _weaponEquip = Weapons[i].GetComponent<WeaponEquip>();
-        }*/
-
-        WeaponEquip.instance = _weaponEquip;
-
-        /*try
-        {
-            _weaponEquip = GameObject.FindGameObjectWithTag("Weapon").GetComponent<WeaponEquip>();
+            _leftWeapon.GetComponent<SpriteRenderer>().sprite = 
+                GameControl.gameControl.currentLeftWeapon.currentWeaponSprite;
+            
         }
-        catch(NullReferenceException f)
+        if (GameControl.gameControl.currentRightWeapon != null)
         {
-            Debug.Log(f);
-        }*/
-        
+            _rightWeapon.GetComponent<SpriteRenderer>().sprite = 
+                GameControl.gameControl.currentRightWeapon.currentWeaponSprite;
+            
+        }
+        _enemySpawnManager = GameObject.Find("Enemy_Spawn_Manager").GetComponent<EnemySpawnManager>();
+        if (_enemySpawnManager == null)
+        {
+            Debug.LogError("Enemy Spawn Manager is Null on the Player");
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
         CalculateMovement();
-
-        if (WeaponEquip.rightGunSlotIsFull == true && Input.GetButtonDown("Fire2"))
+        _uiManager.UpdateAmmoCount();
+        _uiManager.UpdateWeapon();
+         if (Input.GetMouseButtonDown(1))
         {
-            _weapon.ShootRightWeapon();
-            Debug.Log("Shot Right");
-        }
-        if (WeaponEquip.leftGunSlotIsFull == true && Input.GetButtonDown("Fire1"))
-        {
-            _weapon.ShootLeftWeapon();
-            Debug.Log("Shot Left");
-        }
+            if (Time.time >= canShootRightWeapon)
+            {
+                if (GameControl.gameControl.rightWeaponCurrentAmmo > 0)
+                {
+                    GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
+                    canShootRightWeapon = Time.time + 1 / 
+                        GameControl.gameControl.currentRightWeapon.fireRate;
+                    GameControl.gameControl.rightWeaponCurrentAmmo--;
+                    _uiManager.UpdateAmmoCount();
+                    Debug.Log("ShootRight");
+                }
                 
+            }
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Time.time >= canShootLeftWeapon)
+            {
+                if (GameControl.gameControl.leftWeaponCurrentAmmo > 0)
+                {
+                    GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
+                    canShootLeftWeapon = Time.time + 1 / 
+                        GameControl.gameControl.currentLeftWeapon.fireRate;
+                    GameControl.gameControl.leftWeaponCurrentAmmo--;
+                    _uiManager.UpdateAmmoCount();
+                    Debug.Log("ShootLeft");
+                }
+                
+            }
+        }
+        
     }
 
     private void CalculateMovement()
@@ -182,26 +189,37 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void AddScore(int points)
+    {
+        _score += points;
+        _uiManager.UpdateScore(_score);
+    }
+
     private void OnCollisionStay2D()
     {
-        _isGrounded = true;
+        
+        if(!_isGrounded && _rigidbody.velocity.y == 0)
+        {
+            _isGrounded = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.tag == "Enemy")
         {
-            _playerCurrentHealth--;
+            GameControl.gameControl.playerCurrentHealth--;
             _animator.SetTrigger("_onPlayerHit");
-            _uiManager.UpdateHealth(_playerCurrentHealth);
+            _uiManager.UpdateHealth(GameControl.gameControl.playerCurrentHealth);
             _audioSource.PlayOneShot(_damageTakenAudio);
-            if(_playerCurrentHealth <= 0)
+            if(GameControl.gameControl.playerCurrentHealth <= 0)
             {
                 _audioSource.PlayOneShot(_deathAudio);
                 Destroy(gameObject,.5f);
+                _enemySpawnManager.OnPlayerDeath();
             }
         }
-        if(other.transform.tag == "Floor")
+        if(other.gameObject.tag == "Floor" && _isGrounded == false)
         {
             _isGrounded = true;
         }
@@ -209,22 +227,52 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Weapon")
+        if (other.tag == "Experience_Pickup")
         {
-            try
+            _uiManager.AddExperience(_experienceOnPickup);
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Pistol_Ammo_Pickup")
+        {
+            if(GameControl.gameControl.currentLeftWeapon != null)
             {
-                WeaponEquip.instance.PickupWeapon(other.gameObject.GetInstanceID());
+                if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    GameControl.gameControl.leftWeaponCurrentAmmo = 
+                        GameControl.gameControl.currentLeftWeapon.maximumAmmo;
+                }
             }
-            catch(NullReferenceException e)
+            if(GameControl.gameControl.currentRightWeapon != null)
             {
-                Debug.Log(e);
+                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    GameControl.gameControl.rightWeaponCurrentAmmo = 
+                        GameControl.gameControl.currentRightWeapon.maximumAmmo;
+                }
             }
+            
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Shotgun_Ammo_Pickup")
+        {
+            if (GameControl.gameControl.currentLeftWeapon != null)
+            {
+                if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                {
+                    GameControl.gameControl.leftWeaponCurrentAmmo = 
+                        GameControl.gameControl.currentLeftWeapon.maximumAmmo;
+                }
+            }
+            if (GameControl.gameControl.currentRightWeapon != null)
+            {
+                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                {
+                    GameControl.gameControl.rightWeaponCurrentAmmo = 
+                        GameControl.gameControl.currentRightWeapon.maximumAmmo;
+                }
+            }
+            Destroy(other.gameObject);
         }
     }
 
-    public void AddScore(int points)
-    {
-        _score += points;
-        _uiManager.UpdateScore(_score);
-    }
 }
