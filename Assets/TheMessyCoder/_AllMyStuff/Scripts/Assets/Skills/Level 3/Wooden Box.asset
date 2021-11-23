@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fce23485b037a4aa4cd17b9e3df68a, type: 3}
+  m_Name: Wooden Box
+  m_EditorClassIdentifier: 
+  Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+    volutpat risus eu elit sagittis
+  Icon: {fileID: 21300000, guid: 882ce339599a1cc4f9453413ea450c07, type: 3}
+  LevelNeeded: 3
+  XPNeeded: 30
+  AffectedAttributes: []
+  RequiredSkills:
+  - {fileID: 11400000, guid: f4cd84b91c5dec949ab029b3205cc774, type: 2}

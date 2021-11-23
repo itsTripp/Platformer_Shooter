@@ -8,8 +8,9 @@ public class ChoosePerk : MonoBehaviour
     public static ChoosePerk choosePerk;
 
     public GameObject perkCard;
-    public PerkCards _scriptablePerkCard;
+    public Perks _scriptablePerkCard;
     public int perkCost;
+    public int perkID;
 
     private PerkSystem _perkSystem;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class ChoosePerk : MonoBehaviour
             Debug.Log("PerkSystem is Null in Choose Perk");
         }
         perkCost = _scriptablePerkCard.perkCost;
+        perkID = _scriptablePerkCard.perkID;
     }
 }
 

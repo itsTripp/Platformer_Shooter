@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fce23485b037a4aa4cd17b9e3df68a, type: 3}
+  m_Name: Weapon Master
+  m_EditorClassIdentifier: 
+  Description: Increas Fighting by 20
+  Icon: {fileID: 21300000, guid: 3b4929b0df0fe074eaedefdc5d1657b4, type: 3}
+  LevelNeeded: 3
+  XPNeeded: 30
+  AffectedAttributes:
+  - attribute: {fileID: 11400000, guid: 4a22c90220c7e6f4b9af6c28754d2859, type: 2}
+    amount: 20

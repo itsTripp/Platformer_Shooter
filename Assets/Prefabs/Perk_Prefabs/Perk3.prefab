@@ -100,6 +100,7 @@ MonoBehaviour:
   perkCard: {fileID: 2944702104515201968}
   _scriptablePerkCard: {fileID: 11400000, guid: 3fb5c99db22cbf24980ffa125edeffca, type: 2}
   perkCost: 3
+  perkID: 3
 --- !u!61 &7931658972673781020
 BoxCollider2D:
   m_ObjectHideFlags: 0

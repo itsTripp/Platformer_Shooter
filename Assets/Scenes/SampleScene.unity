@@ -1136,9 +1136,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHealth: 5
   playerCurrentHealth: 0
-  playerLevel: 0
-  playerExperience: 0
+  currentRightWeapon: {fileID: 0}
+  currentLeftWeapon: {fileID: 0}
+  rightWeaponCurrentAmmo: 0
+  leftWeaponCurrentAmmo: 0
+  _playerXP: 0
   experienceToNextLevel: 0
+  _playerLvl: 0
+  txtPlayerLevel: {fileID: 0}
+  txtPlayerXP: {fileID: 0}
+  testText: {fileID: 0}
+  selectedPerks: []
+  m_PlayerPerks: []
 --- !u!4 &284892246
 Transform:
   m_ObjectHideFlags: 0
@@ -1822,7 +1831,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
 --- !u!114 &383339013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,7 +1874,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &383339015
 RectTransform:
@@ -1928,7 +1937,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 277fb3ca4f07fce4fae79e165f00e66c, type: 3}
   - {fileID: 21300000, guid: e320713615c3ca24c96192f839b15c2b, type: 3}
   _experienceSlider: {fileID: 1931181181}
-  _player: {fileID: 0}
 --- !u!1 &401038014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,9 +2000,9 @@ RectTransform:
   m_Father: {fileID: 383339015}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294.3, y: 141}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35.700012, y: -45}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409677859
@@ -3985,12 +3993,8 @@ MonoBehaviour:
   _speed: 5
   _jumpForce: 5
   _isGrounded: 0
-  currentRightWeapon: {fileID: 0}
-  currentLeftWeapon: {fileID: 0}
   _rightWeapon: {fileID: 1168782781}
   _leftWeapon: {fileID: 1206579920}
-  leftWeaponCurrentAmmo: 0
-  rightWeaponCurrentAmmo: 0
   _score: 0
   _experienceOnPickup: 5
   _jumpAudio: {fileID: 8300000, guid: 5d034ae56a97f8e4e9831df3ab0d7960, type: 3}
@@ -6102,7 +6106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12.100006, y: -124.3}
+  m_AnchoredPosition: {x: 12.099976, y: -124.3}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &969431381
@@ -10214,7 +10218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12.1, y: -74.6}
+  m_AnchoredPosition: {x: 12.099976, y: -74.600006}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1869568815

@@ -11,7 +11,7 @@ public class PerkSystem : MonoBehaviour
     public GameObject[] perkCardsToSpawn;
 
     public List<GameObject> possiblePerkCards = new List<GameObject>();
-
+    public List<int> selectedPerks = new List<int>();
     private static System.Random _randomNumber = new System.Random();
 
     private int currentIndex = 0;
@@ -19,11 +19,14 @@ public class PerkSystem : MonoBehaviour
     public List<GameObject> remainingPerkCards = new List<GameObject>();
     public Text _perkDescription;
 
+    public GameObject chosenPerkCard;
+
     // Start is called before the first frame update
     void Start()
     {
         possiblePerkCards = perkCardsToSpawn.OrderBy(a => _randomNumber.Next()).ToList();
         SpawnPerkCards();
+        //DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class PerkSystem : MonoBehaviour
             {
                 Debug.Log("Click on " + hit.collider.gameObject.name);
                 GameControl.gameControl.selectedPerks.Add(hit.collider.gameObject);
+                
                 //Subtract perkCost from PlayerLevel
                 ///Perk Cards are built as scriptable objects and contain the cost of the perk.
                 ///I'd prefer to only have that information in the PerkCards script,
@@ -47,7 +51,17 @@ public class PerkSystem : MonoBehaviour
                 hit.collider.gameObject.SetActive(false);
                 _perkDescription.gameObject.SetActive(false);
                 //Place remaining non selected cards back into the possiblePerkCards list
-                StartCoroutine(NextLevel());
+                //StartCoroutine(NextLevel());
+                chosenPerkCard = hit.collider.gameObject.GetComponent<ChoosePerk>().perkCard;
+
+                for (int i = 0; i < possiblePerkCards.Count; i++)
+                {
+                    if(possiblePerkCards[i] == chosenPerkCard)
+                    {
+                        possiblePerkCards.RemoveAt(i);
+                        Debug.Log("Removed: " + chosenPerkCard);
+                    }
+                }
             }
             _perkDescription.text = "Test Text " + hit.collider.gameObject.name;
             _perkDescription.gameObject.SetActive(true);

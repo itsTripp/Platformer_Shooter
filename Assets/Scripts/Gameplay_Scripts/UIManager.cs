@@ -112,9 +112,9 @@ public class UIManager : MonoBehaviour
 
     public bool AddExperience(int expereienceToAdd)
     {
-        GameControl.gameControl.playerExperience += expereienceToAdd;
-        _experienceSlider.value = GameControl.gameControl.playerExperience;
-        if (GameControl.gameControl.playerExperience >= GameControl.gameControl.experienceToNextLevel)
+        GameControl.gameControl.playerXP += expereienceToAdd;
+        _experienceSlider.value = GameControl.gameControl.playerXP;
+        if (GameControl.gameControl.playerXP >= GameControl.gameControl.experienceToNextLevel)
         {
             SetLevel(GameControl.gameControl.playerLevel + 1);
             return true;
@@ -126,7 +126,7 @@ public class UIManager : MonoBehaviour
     private void SetLevel(int value)
     {
         GameControl.gameControl.playerLevel = value;
-        GameControl.gameControl.playerExperience = GameControl.gameControl.playerExperience - 
+        GameControl.gameControl.playerXP = GameControl.gameControl.playerXP - 
             GameControl.gameControl.experienceToNextLevel;
         
         GameControl.gameControl.experienceToNextLevel = (int)(50f * 

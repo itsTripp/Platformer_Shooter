@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fce23485b037a4aa4cd17b9e3df68a, type: 3}
+  m_Name: Survivalist
+  m_EditorClassIdentifier: 
+  Description: This has no benefit or requirements just a place holder skill
+  Icon: {fileID: 21300000, guid: a3ba49c1efcdc764b9db23363b566fa1, type: 3}
+  LevelNeeded: 1
+  XPNeeded: 0
+  AffectedAttributes: []
+  RequiredSkills: []
