@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Loot Item", menuName = "Loot_Items")]
-public class LootPickups : ScriptableObject
+namespace EpicTortoiseStudios
 {
-    public Sprite lootSprite;
-    public AudioClip audioClip;
-    public LootType lootType;
-    public enum LootType
+    [CreateAssetMenu(fileName = "New Loot Item", menuName = "Loot_Items")]
+    public class LootPickups : ScriptableObject
     {
-        None,
-        Experience,
-        Pistol,
-        Shotgun
-    };
+        public Sprite lootSprite;
+        public AudioClip audioClip;
+        public LootType lootType;
+        public enum LootType
+        {
+            None,
+            Experience,
+            Pistol,
+            Shotgun
+        };
+    }
 }
