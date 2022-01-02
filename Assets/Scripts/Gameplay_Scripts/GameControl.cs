@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using TMPro;
+using System;
 
 namespace EpicTortoiseStudios
 {
     public class GameControl : MonoBehaviour
     {
         public static GameControl gameControl;
+
+        public event EventHandler OnDamaged;
+        public event EventHandler OnHealed;
 
         [Header("Player Health")]
         public int playerMaxHealth = 5;
@@ -74,6 +78,16 @@ namespace EpicTortoiseStudios
         {
             ShowData("level");
             possiblePerks = Resources.LoadAll<Perks>("Perks").ToList();
+
+            /*DontDestroyOnLoad(gameObject);
+            if(gameControl == null)
+            {
+                gameControl = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }*/
         }
 
         private void Awake()
@@ -83,6 +97,15 @@ namespace EpicTortoiseStudios
             {
                 gameControl = this;
             }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        private void Update()
+        {
+           
         }
 
         public void ShowData(string i)
@@ -103,6 +126,37 @@ namespace EpicTortoiseStudios
         {
             playerLevel += amount;
             Debug.Log("Level is Firing");
+        }
+
+        public GameControl(int healthAmount)
+        {
+            playerMaxHealth = healthAmount;
+            playerCurrentHealth = healthAmount;
+        }
+
+        public void Damage(int amount)
+        {
+            playerCurrentHealth -= amount;
+            if (playerCurrentHealth < 0)
+            {
+                playerCurrentHealth = 0;
+            }
+            if (OnDamaged != null) OnDamaged(this, EventArgs.Empty);
+        }
+
+        public void Heal(int amount)
+        {
+            playerCurrentHealth += amount;
+            if (playerCurrentHealth > playerMaxHealth)
+            {
+                playerCurrentHealth = playerMaxHealth;
+            }
+            if (OnHealed != null) OnHealed(this, EventArgs.Empty);
+        }
+
+        public float GetHealthNormalized()
+        {
+            return (float)playerCurrentHealth / playerMaxHealth;
         }
     }
 }

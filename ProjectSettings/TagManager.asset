@@ -16,6 +16,9 @@ TagManager:
   - Chest
   - Pistol_Ammo_Pickup
   - PerkCard
+  - Ammo_Pickup
+  - Yes_Button
+  - No_Button
   layers:
   - Default
   - TransparentFX

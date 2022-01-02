@@ -9,6 +9,7 @@ namespace EpicTortoiseStudios
     {
         public Sprite lootSprite;
         public AudioClip audioClip;
+        public string popupText;
         public LootType lootType;
         public enum LootType
         {
@@ -17,5 +18,6 @@ namespace EpicTortoiseStudios
             Pistol,
             Shotgun
         };
+        public int ammoPickupAmount;
     }
 }

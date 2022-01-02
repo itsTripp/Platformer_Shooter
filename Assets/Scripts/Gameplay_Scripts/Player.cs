@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 namespace EpicTortoiseStudios
 {
     public class Player : MonoBehaviour
     {
+        private static Player playerInstance;
+
         [Header("Player Movement")]
         [SerializeField]
         private float _speed;
@@ -38,13 +41,13 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private AudioClip _deathAudio;
 
-
         private Rigidbody2D _rigidbody;
         private UIManager _uiManager;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
         public LootPickups lootPickups;
         private EnemySpawnManager _enemySpawnManager;
+        public GameObject PopupText;
 
         // Start is called before the first frame update
         void Start()
@@ -89,7 +92,15 @@ namespace EpicTortoiseStudios
             {
                 Debug.LogError("Enemy Spawn Manager is Null on the Player");
             }
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(this);
+            if(playerInstance == null)
+            {
+                playerInstance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         // Update is called once per frame
@@ -210,9 +221,9 @@ namespace EpicTortoiseStudios
         {
             if (other.transform.tag == "Enemy")
             {
-                GameControl.gameControl.playerCurrentHealth--;
+                GameControl.gameControl.Damage(1);
                 _animator.SetTrigger("_onPlayerHit");
-                _uiManager.UpdateHealth(GameControl.gameControl.playerCurrentHealth);
+                _uiManager.SetHealth(GameControl.gameControl.GetHealthNormalized());
                 _audioSource.PlayOneShot(_damageTakenAudio);
                 if (GameControl.gameControl.playerCurrentHealth <= 0)
                 {
@@ -229,9 +240,11 @@ namespace EpicTortoiseStudios
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            
             if (other.tag == "Experience_Pickup")
             {
                 _uiManager.AddExperience(_experienceOnPickup);
+                //lootPickups = other.GetComponent<PickupItem>().lootPickup;
                 Destroy(other.gameObject);
             }
             if (other.tag == "Pistol_Ammo_Pickup")
@@ -240,19 +253,24 @@ namespace EpicTortoiseStudios
                 {
                     if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
                     {
-                        GameControl.gameControl.leftWeaponCurrentAmmo =
-                            GameControl.gameControl.currentLeftWeapon.maximumAmmo;
+                        GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
+                        _uiManager.UpdateAmmoCount();
+                        Destroy(other.gameObject);
                     }
                 }
                 if (GameControl.gameControl.currentRightWeapon != null)
                 {
                     if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
                     {
-                        GameControl.gameControl.rightWeaponCurrentAmmo =
-                            GameControl.gameControl.currentRightWeapon.maximumAmmo;
+                        GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
+                        _uiManager.UpdateAmmoCount();
+                        Destroy(other.gameObject);
                     }
                 }
-
+                //lootPickups = other.GetComponent<PickupItem>().lootPickup;
+                //var go = Instantiate(PopupText, transform.position, Quaternion.identity);
+                //go.GetComponent<TextMeshPro>().text = lootPickups.popupText;
+                _uiManager.UpdateAmmoCount();
                 Destroy(other.gameObject);
             }
             if (other.tag == "Shotgun_Ammo_Pickup")
@@ -261,18 +279,24 @@ namespace EpicTortoiseStudios
                 {
                     if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
                     {
-                        GameControl.gameControl.leftWeaponCurrentAmmo =
-                            GameControl.gameControl.currentLeftWeapon.maximumAmmo;
+                        GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
+                        _uiManager.UpdateAmmoCount();
+                        Destroy(other.gameObject);
                     }
                 }
                 if (GameControl.gameControl.currentRightWeapon != null)
                 {
                     if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
                     {
-                        GameControl.gameControl.rightWeaponCurrentAmmo =
-                            GameControl.gameControl.currentRightWeapon.maximumAmmo;
+                        GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
+                        _uiManager.UpdateAmmoCount();
+                        Destroy(other.gameObject);
                     }
                 }
+                //lootPickups = other.GetComponent<PickupItem>().lootPickup;
+                //var go = Instantiate(PopupText, transform.position, Quaternion.identity);
+                //go.GetComponent<TextMeshPro>().text = lootPickups.popupText;
+                _uiManager.UpdateAmmoCount();
                 Destroy(other.gameObject);
             }
         }

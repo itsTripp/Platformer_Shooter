@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: c57b0ae959d7bd04fb854dd2289c5ee0, type: 2}
+  PopupText: {fileID: 5326295258736498785, guid: 6974cbc27032c7a439e46b9faa8616c6, type: 3}
 --- !u!50 &923256098581972189
 Rigidbody2D:
   serializedVersion: 4

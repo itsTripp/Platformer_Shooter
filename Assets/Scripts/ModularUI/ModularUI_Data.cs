@@ -8,7 +8,7 @@ namespace EpicTortoiseStudios
     [CreateAssetMenu(menuName = "Modular UI Data")]
     public class ModularUI_Data : ScriptableObject
     {
-        [Header("Flexible Button")]
+        [Header("Modular Button")]
         public Sprite buttonSprite;
         public SpriteState buttonSpriteState;
 

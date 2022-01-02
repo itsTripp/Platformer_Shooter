@@ -13,6 +13,9 @@ namespace EpicTortoiseStudios
         public float fireRate = 1;
         public int damage = 1;
         public int maximumAmmo;
+        public int ammoPickupAmount;
+        public string weaponText;
+        public string ammoCountText;
         public enum WeaponType
         {
             None,

@@ -17,4 +17,7 @@ MonoBehaviour:
   weaponType: 2
   fireRate: 1
   damage: 1
-  maximumAmmo: 10
+  maximumAmmo: 99
+  ammoPickupAmount: 5
+  weaponText: Shotgun
+  ammoCountText: +5

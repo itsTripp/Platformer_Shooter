@@ -9,57 +9,27 @@ namespace EpicTortoiseStudios
     {
         [SerializeField]
         private GameObject mainMenu;
-        [SerializeField]
-        private GameObject optionsMenu;
-        [SerializeField]
-        private GameObject creditsMenu;
+        
 
         // Start is called before the first frame update
         void Start()
         {
             mainMenu.SetActive(true);
-            optionsMenu.SetActive(false);
-            creditsMenu.SetActive(false);
+            if(mainMenu.activeSelf == true)
+            {
+                UIManager.UIManagerInstance.gameObject.SetActive(false);
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && optionsMenu.activeSelf)
-            {
-                optionsMenu.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.Escape) && creditsMenu.activeSelf)
-            {
-                creditsMenu.SetActive(false);
-            }
+            
         }
 
         public void Play_Game()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-
-        public void Options_Menu()
-        {
-            optionsMenu.SetActive(true);
-        }
-
-        public void Credits_Menu()
-        {
-            creditsMenu.SetActive(true);
-        }
-
-        public void Back_Button()
-        {
-            if (optionsMenu.activeSelf)
-            {
-                optionsMenu.SetActive(false);
-            }
-            if (creditsMenu.activeSelf)
-            {
-                creditsMenu.SetActive(false);
-            }
         }
 
         public void QuitGame()

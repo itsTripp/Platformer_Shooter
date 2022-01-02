@@ -262,6 +262,7 @@ MonoBehaviour:
   _pickupID: 1
   _audioClip: {fileID: 8300000, guid: 0f3e2ae397c35be41acb5ba9fc725986, type: 3}
   lootPickup: {fileID: 11400000, guid: 9bcc99c46e9779a4b880a862dd6676ed, type: 2}
+  popupText: {fileID: 5326295258736498785, guid: 6974cbc27032c7a439e46b9faa8616c6, type: 3}
 --- !u!50 &-854225738908622419
 Rigidbody2D:
   serializedVersion: 4

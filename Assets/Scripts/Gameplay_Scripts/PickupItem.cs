@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace EpicTortoiseStudios
 {
@@ -12,6 +13,8 @@ namespace EpicTortoiseStudios
         private AudioClip _audioClip;
         private Player _player;
         public LootPickups lootPickup;
+        [SerializeField]
+        private GameObject popupText;
 
 
 
@@ -45,6 +48,16 @@ namespace EpicTortoiseStudios
             if (transform.position.y > 11f)
             {
                 transform.position = new Vector3(transform.position.x, -1.5f, 0);
+            }
+        }
+
+
+            private void OnTriggerExit2D(Collider2D other)
+        {
+            if(other.tag == "Player")
+            {
+                var go = Instantiate(popupText, transform.position, Quaternion.identity);
+                go.GetComponent<TextMeshPro>().text = lootPickup.popupText;
             }
         }
     }

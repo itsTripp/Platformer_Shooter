@@ -17,4 +17,7 @@ MonoBehaviour:
   weaponType: 1
   fireRate: 1
   damage: 1
-  maximumAmmo: 15
+  maximumAmmo: 99
+  ammoPickupAmount: 10
+  weaponText: Pistol
+  ammoCountText: +10
