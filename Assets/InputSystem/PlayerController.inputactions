@@ -1,0 +1,33 @@
+{
+    "name": "PlayerController",
+    "maps": [
+        {
+            "name": "Player_Movement",
+            "id": "3962d0c8-7cdf-42ab-b46a-77f0280f527a",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "cf985a54-e41e-4808-871c-a316950594fa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5b1f7bc1-3f5a-4d3f-9163-6afaad438739",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
+using UnityEngine.InputSystem;
 
 namespace EpicTortoiseStudios
 {
     public class Player : MonoBehaviour
     {
+
+        public PlayerController controller;
+
         private static Player playerInstance;
 
         [Header("Player Movement")]
@@ -29,8 +33,8 @@ namespace EpicTortoiseStudios
         [Header("Player Score")]
         [SerializeField]
         private int _score;
-        [SerializeField]
-        private int _experienceOnPickup = 5;
+        //[SerializeField]
+        public int _experienceOnPickup = 5;
 
         [Header("Player Audio")]
         private AudioSource _audioSource;
@@ -103,9 +107,19 @@ namespace EpicTortoiseStudios
             }
         }
 
+        private void Awake()
+        {
+            controller = new PlayerController();
+        }
+
         // Update is called once per frame
         void Update()
         {
+            if(controller.Player_Movement.Jump.triggered)
+            {
+                OnJump();
+            }
+
             CalculateMovement();
             _uiManager.UpdateAmmoCount();
             _uiManager.UpdateWeapon();
@@ -113,14 +127,29 @@ namespace EpicTortoiseStudios
             {
                 if (Time.time >= canShootRightWeapon)
                 {
-                    if (GameControl.gameControl.rightWeaponCurrentAmmo > 0)
+                    if(GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
                     {
-                        GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
-                        canShootRightWeapon = Time.time + 1 /
-                            GameControl.gameControl.currentRightWeapon.fireRate;
-                        GameControl.gameControl.rightWeaponCurrentAmmo--;
-                        _uiManager.UpdateAmmoCount();
-                        Debug.Log("ShootRight");
+                        if (GameControl.gameControl.pistolAmmo > 0)
+                        {
+                            GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
+                            canShootRightWeapon = Time.time + 1 /
+                                GameControl.gameControl.currentRightWeapon.fireRate;
+                            GameControl.gameControl.pistolAmmo--;
+                            _uiManager.UpdateAmmoCount();
+                            Debug.Log("ShootRight");
+                        }
+                    }
+                    if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                    {
+                        if (GameControl.gameControl.shotgunAmmo > 0)
+                        {
+                            GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
+                            canShootRightWeapon = Time.time + 1 /
+                                GameControl.gameControl.currentRightWeapon.fireRate;
+                            GameControl.gameControl.shotgunAmmo--;
+                            _uiManager.UpdateAmmoCount();
+                            Debug.Log("ShootRight");
+                        }
                     }
 
                 }
@@ -129,19 +158,39 @@ namespace EpicTortoiseStudios
             {
                 if (Time.time >= canShootLeftWeapon)
                 {
-                    if (GameControl.gameControl.leftWeaponCurrentAmmo > 0)
+                    if(GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
                     {
-                        GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
-                        canShootLeftWeapon = Time.time + 1 /
-                            GameControl.gameControl.currentLeftWeapon.fireRate;
-                        GameControl.gameControl.leftWeaponCurrentAmmo--;
-                        _uiManager.UpdateAmmoCount();
-                        Debug.Log("ShootLeft");
+                        if (GameControl.gameControl.pistolAmmo > 0)
+                        {
+                            GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
+                            canShootLeftWeapon = Time.time + 1 /
+                                GameControl.gameControl.currentLeftWeapon.fireRate;
+                            GameControl.gameControl.pistolAmmo--;
+                            _uiManager.UpdateAmmoCount();
+                            Debug.Log("ShootLeft");
+                        }
                     }
-
+                    if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                    {
+                        if (GameControl.gameControl.shotgunAmmo > 0)
+                        {
+                            GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
+                            canShootLeftWeapon = Time.time + 1 /
+                                GameControl.gameControl.currentLeftWeapon.fireRate;
+                            GameControl.gameControl.shotgunAmmo--;
+                            _uiManager.UpdateAmmoCount();
+                            Debug.Log("ShootLeft");
+                        }
+                    }
                 }
             }
+        }
 
+        void OnJump()
+        {
+            _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
+            _isGrounded = false;
+            _audioSource.PlayOneShot(_jumpAudio);
         }
 
         private void CalculateMovement()
@@ -235,69 +284,6 @@ namespace EpicTortoiseStudios
             if (other.gameObject.tag == "Floor" && _isGrounded == false)
             {
                 _isGrounded = true;
-            }
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            
-            if (other.tag == "Experience_Pickup")
-            {
-                _uiManager.AddExperience(_experienceOnPickup);
-                //lootPickups = other.GetComponent<PickupItem>().lootPickup;
-                Destroy(other.gameObject);
-            }
-            if (other.tag == "Pistol_Ammo_Pickup")
-            {
-                if (GameControl.gameControl.currentLeftWeapon != null)
-                {
-                    if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
-                    {
-                        GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
-                        _uiManager.UpdateAmmoCount();
-                        Destroy(other.gameObject);
-                    }
-                }
-                if (GameControl.gameControl.currentRightWeapon != null)
-                {
-                    if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
-                    {
-                        GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
-                        _uiManager.UpdateAmmoCount();
-                        Destroy(other.gameObject);
-                    }
-                }
-                //lootPickups = other.GetComponent<PickupItem>().lootPickup;
-                //var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                //go.GetComponent<TextMeshPro>().text = lootPickups.popupText;
-                _uiManager.UpdateAmmoCount();
-                Destroy(other.gameObject);
-            }
-            if (other.tag == "Shotgun_Ammo_Pickup")
-            {
-                if (GameControl.gameControl.currentLeftWeapon != null)
-                {
-                    if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
-                    {
-                        GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
-                        _uiManager.UpdateAmmoCount();
-                        Destroy(other.gameObject);
-                    }
-                }
-                if (GameControl.gameControl.currentRightWeapon != null)
-                {
-                    if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
-                    {
-                        GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + lootPickups.ammoPickupAmount;
-                        _uiManager.UpdateAmmoCount();
-                        Destroy(other.gameObject);
-                    }
-                }
-                //lootPickups = other.GetComponent<PickupItem>().lootPickup;
-                //var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                //go.GetComponent<TextMeshPro>().text = lootPickups.popupText;
-                _uiManager.UpdateAmmoCount();
-                Destroy(other.gameObject);
             }
         }
     }

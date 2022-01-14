@@ -20,6 +20,7 @@ namespace EpicTortoiseStudios
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            ///Commented out logic removes ammo being added when a weapon is picked up
             if (other.tag == "Right_Weapon")
             {
                 if (GameControl.gameControl.currentRightWeapon != null)
@@ -28,35 +29,28 @@ namespace EpicTortoiseStudios
                     {
                         GameControl.gameControl.currentRightWeapon = weapon;
                         other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //_uiManager.UpdateAmmoCount();
                         _uiManager.UpdateWeapon();
-                        _uiManager.UpdateAmmoCount();
-                        var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                        go.GetComponent<TextMeshPro>().text = weapon.ammoCountText;
                         Destroy(gameObject);
                     }
                     else
                     {
                         GameControl.gameControl.currentRightWeapon = weapon;
                         other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //_uiManager.UpdateAmmoCount();
                         _uiManager.UpdateWeapon();
-                        _uiManager.UpdateAmmoCount();
-                        var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                        go.GetComponent<TextMeshPro>().text = weapon.weaponText;
                         Destroy(gameObject);
                     }
-
                 }
                 else
                 {
                     GameControl.gameControl.currentRightWeapon = weapon;
                     other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                    GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                    //GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                    //_uiManager.UpdateAmmoCount();
                     _uiManager.UpdateWeapon();
-                    _uiManager.UpdateAmmoCount();
-                    var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                    go.GetComponent<TextMeshPro>().text = weapon.weaponText;
                     Destroy(gameObject);
                 }
 
@@ -69,39 +63,40 @@ namespace EpicTortoiseStudios
                     {
                         GameControl.gameControl.currentLeftWeapon = weapon;
                         other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //_uiManager.UpdateAmmoCount();
                         _uiManager.UpdateWeapon();
-                        _uiManager.UpdateAmmoCount();
-                        var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                        go.GetComponent<TextMeshPro>().text = weapon.ammoCountText;
                         Destroy(gameObject);
                     }
                     else
                     {
                         GameControl.gameControl.currentLeftWeapon = weapon;
                         other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        //_uiManager.UpdateAmmoCount();
                         _uiManager.UpdateWeapon();
-                        _uiManager.UpdateAmmoCount();
-                        var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                        go.GetComponent<TextMeshPro>().text = weapon.weaponText;
                         Destroy(gameObject);
                     }
-
                 }
                 else
                 {
                     GameControl.gameControl.currentLeftWeapon = weapon;
                     other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                    GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                    //GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                    //_uiManager.UpdateAmmoCount();
                     _uiManager.UpdateWeapon();
-                    _uiManager.UpdateAmmoCount();
-                    var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                    go.GetComponent<TextMeshPro>().text = weapon.weaponText;
                     Destroy(gameObject);
                 }
             }
         }
-        
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if(other.tag == "Player")
+            {
+                var go = Instantiate(PopupText, transform.position, Quaternion.identity);
+                go.GetComponent<TextMeshPro>().text = weapon.weaponText;
+            }
+        }
+
     }
 }

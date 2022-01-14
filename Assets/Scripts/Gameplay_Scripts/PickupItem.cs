@@ -15,6 +15,7 @@ namespace EpicTortoiseStudios
         public LootPickups lootPickup;
         [SerializeField]
         private GameObject popupText;
+        private UIManager _uiManager;
 
 
 
@@ -25,6 +26,11 @@ namespace EpicTortoiseStudios
             if (_player == null)
             {
                 Debug.LogError("Player is Null on PickupItem");
+            }
+            _uiManager = GameObject.Find("Game_HUD").GetComponent<UIManager>();
+            if(_uiManager == null)
+            {
+                Debug.LogError("UI Manager is Null on PickupItem");
             }
         }
 
@@ -51,8 +57,34 @@ namespace EpicTortoiseStudios
             }
         }
 
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if(other.tag == "Player")
+            {
+                if(lootPickup.lootType == LootPickups.LootType.Experience)
+                {
+                    _uiManager.AddExperience(_player._experienceOnPickup);
+                    Destroy(gameObject);
+                    Debug.Log("XP Pickup");
+                }
+                if(lootPickup.lootType == LootPickups.LootType.Pistol)
+                {
+                    GameControl.gameControl.pistolAmmo =+ lootPickup.ammoPickupAmount;
+                    _uiManager.UpdateAmmoCount();
+                    Destroy(gameObject);
+                    Debug.Log("Pistol Ammo");
+                }
+                if(lootPickup.lootType == LootPickups.LootType.Shotgun)
+                {
+                    GameControl.gameControl.shotgunAmmo =+ lootPickup.ammoPickupAmount;
+                    _uiManager.UpdateAmmoCount();
+                    Destroy(gameObject);
+                    Debug.Log("Shotgun Ammo");
+                }
+            }
+        }
 
-            private void OnTriggerExit2D(Collider2D other)
+        private void OnTriggerExit2D(Collider2D other)
         {
             if(other.tag == "Player")
             {

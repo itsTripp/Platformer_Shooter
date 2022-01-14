@@ -506,7 +506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: -87}
+  m_AnchoredPosition: {x: -173, y: -87}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143976573
@@ -1703,8 +1703,8 @@ MonoBehaviour:
   playerCurrentHealth: 0
   currentRightWeapon: {fileID: 0}
   currentLeftWeapon: {fileID: 0}
-  rightWeaponCurrentAmmo: 0
-  leftWeaponCurrentAmmo: 0
+  pistolAmmo: 0
+  shotgunAmmo: 0
   _playerXP: 0
   experienceToNextLevel: 0
   _playerLvl: 0
@@ -2592,7 +2592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166, y: -87}
+  m_AnchoredPosition: {x: -7, y: -87}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659504133
@@ -3949,7 +3949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -173, y: -87}
+  m_AnchoredPosition: {x: 166, y: -87}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125523414

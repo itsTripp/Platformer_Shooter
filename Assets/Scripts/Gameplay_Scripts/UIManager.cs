@@ -29,6 +29,10 @@ namespace EpicTortoiseStudios
         private Image _leftWeaponSprite;
         [SerializeField]
         private TextMeshProUGUI _leftWeaponAmmoText;
+        //[SerializeField]
+        //private TextMeshProUGUI _pistolAmmoText;
+        //[SerializeField]
+        //private TextMeshProUGUI _shotgunAmmoText;
         [Header("Health")]
         [SerializeField]
         private Image _playerHealthImage;
@@ -219,15 +223,34 @@ namespace EpicTortoiseStudios
         {
             if (GameControl.gameControl.currentLeftWeapon != null)
             {
-                _leftWeaponAmmoText.text = GameControl.gameControl.leftWeaponCurrentAmmo.ToString();
-                _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
-                    _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
+                if(GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    _leftWeaponAmmoText.text = GameControl.gameControl.pistolAmmo.ToString();
+                    _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
+                        _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
+                }
+                if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                {
+                    _leftWeaponAmmoText.text = GameControl.gameControl.shotgunAmmo.ToString();
+                    _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
+                        _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
+                }
+
             }
             if (GameControl.gameControl.currentRightWeapon != null)
             {
-                _rightWeaponAmmoText.text = GameControl.gameControl.rightWeaponCurrentAmmo.ToString();
-                _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
-                    _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
+                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    _rightWeaponAmmoText.text = GameControl.gameControl.pistolAmmo.ToString();
+                    _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
+                        _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
+                }
+                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                {
+                    _rightWeaponAmmoText.text = GameControl.gameControl.shotgunAmmo.ToString();
+                    _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
+                        _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
+                }
             }
         }
 

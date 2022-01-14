@@ -22,8 +22,10 @@ namespace EpicTortoiseStudios
         [Header("Player Weapon Info")]
         public Weapon currentRightWeapon;
         public Weapon currentLeftWeapon;
-        public int rightWeaponCurrentAmmo;
-        public int leftWeaponCurrentAmmo;
+        public int pistolAmmo = 0;
+        public int shotgunAmmo = 0;
+        //public int rightWeaponCurrentAmmo;
+        //public int leftWeaponCurrentAmmo;
 
         [Header("Player Experience")]
         [SerializeField]
