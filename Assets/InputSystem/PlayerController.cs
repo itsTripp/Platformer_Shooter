@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/PlayerController.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/InputSystem/PlayerController.inputactions'
 
 using System;
 using System.Collections;
@@ -25,6 +25,14 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""PlayerMove"",
+                    ""type"": ""Value"",
+                    ""id"": ""c5e98e6c-aa02-4993-b873-b2e04b6082ca"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -38,6 +46,61 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""35f1c987-99bf-4697-ab4a-d3f0d05a4049"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""921c2e47-269d-4a45-b335-2f8954b57006"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e14399a0-9d51-4ac6-ba3e-41c9579f4607"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a2a0e989-df34-42cb-aa07-b5299b277484"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd5d80ca-fa49-434d-a771-026e0c34a47e"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -47,6 +110,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         // Player_Movement
         m_Player_Movement = asset.FindActionMap("Player_Movement", throwIfNotFound: true);
         m_Player_Movement_Jump = m_Player_Movement.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Movement_PlayerMove = m_Player_Movement.FindAction("PlayerMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -97,11 +161,13 @@ public class @PlayerController : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Player_Movement;
     private IPlayer_MovementActions m_Player_MovementActionsCallbackInterface;
     private readonly InputAction m_Player_Movement_Jump;
+    private readonly InputAction m_Player_Movement_PlayerMove;
     public struct Player_MovementActions
     {
         private @PlayerController m_Wrapper;
         public Player_MovementActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Player_Movement_Jump;
+        public InputAction @PlayerMove => m_Wrapper.m_Player_Movement_PlayerMove;
         public InputActionMap Get() { return m_Wrapper.m_Player_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -114,6 +180,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnJump;
+                @PlayerMove.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPlayerMove;
+                @PlayerMove.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPlayerMove;
+                @PlayerMove.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPlayerMove;
             }
             m_Wrapper.m_Player_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -121,6 +190,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @PlayerMove.started += instance.OnPlayerMove;
+                @PlayerMove.performed += instance.OnPlayerMove;
+                @PlayerMove.canceled += instance.OnPlayerMove;
             }
         }
     }
@@ -128,5 +200,6 @@ public class @PlayerController : IInputActionCollection, IDisposable
     public interface IPlayer_MovementActions
     {
         void OnJump(InputAction.CallbackContext context);
+        void OnPlayerMove(InputAction.CallbackContext context);
     }
 }

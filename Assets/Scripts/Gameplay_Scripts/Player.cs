@@ -112,14 +112,12 @@ namespace EpicTortoiseStudios
             controller = new PlayerController();
         }
 
+        
+
         // Update is called once per frame
         void Update()
         {
-            if(controller.Player_Movement.Jump.triggered)
-            {
-                OnJump();
-            }
-
+            
             CalculateMovement();
             _uiManager.UpdateAmmoCount();
             _uiManager.UpdateWeapon();
@@ -186,22 +184,28 @@ namespace EpicTortoiseStudios
             }
         }
 
-        void OnJump()
+        private void OnEnable()
         {
-            _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
-            _isGrounded = false;
-            _audioSource.PlayOneShot(_jumpAudio);
+            controller.Player_Movement.Enable();
         }
 
-        private void CalculateMovement()
+        private void OnDisable()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+            controller.Player_Movement.Disable();
+        }
+
+        void OnJump()
+        {
+            if(_isGrounded == true)
             {
                 _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
                 _isGrounded = false;
                 _audioSource.PlayOneShot(_jumpAudio);
             }
+        }
 
+        void OnPlayerMove()
+        {
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             Vector3 direction = new Vector3(horizontalInput, 0, 0);
             transform.Translate(direction * _speed * Time.deltaTime);
@@ -249,6 +253,64 @@ namespace EpicTortoiseStudios
             {
                 transform.position = new Vector3(transform.position.x, -1.5f, 0);
             }
+        }
+
+        private void CalculateMovement()
+        {
+            /*if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+            {
+                _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
+                _isGrounded = false;
+                _audioSource.PlayOneShot(_jumpAudio);
+            }*/
+
+            /*float horizontalInput = Input.GetAxisRaw("Horizontal");
+            Vector3 direction = new Vector3(horizontalInput, 0, 0);
+            transform.Translate(direction * _speed * Time.deltaTime);
+
+            if (horizontalInput < 0)
+            {
+                _spriteRenderer.flipX = true;
+            }
+            if (horizontalInput > 0)
+            {
+                _spriteRenderer.flipX = false;
+            }
+
+            if (horizontalInput != 0)
+            {
+                _isPlayerRunning = true;
+            }
+            else
+            {
+                _isPlayerRunning = false;
+            }
+
+            if (_isPlayerRunning == true)
+            {
+                _animator.SetBool("_isRunning", true);
+            }
+            else
+            {
+                _animator.SetBool("_isRunning", false);
+            }
+            //Screen Wrapping
+            if (transform.position.x > 11f)
+            {
+                transform.position = new Vector3(-11f, transform.position.y, 0);
+            }
+            if (transform.position.x < -11f)
+            {
+                transform.position = new Vector3(11f, transform.position.y, 0);
+            }
+            if (transform.position.y < -1.5f)
+            {
+                transform.position = new Vector3(transform.position.x, 11f, 0);
+            }
+            if (transform.position.y > 11f)
+            {
+                transform.position = new Vector3(transform.position.x, -1.5f, 0);
+            }*/
         }
 
         public void AddScore(int points)
