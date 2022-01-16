@@ -23,6 +23,7 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private bool _isGrounded;
         private bool _isPlayerRunning = false;
+        private float inputX;
 
         [Header("Weapon Info")]
         private float canShootRightWeapon = 0;
@@ -117,11 +118,12 @@ namespace EpicTortoiseStudios
         // Update is called once per frame
         void Update()
         {
-            
-            CalculateMovement();
+            _rigidbody.velocity = new Vector2(inputX * _speed, _rigidbody.velocity.y);
+            ScreenWrapping();
+            //CalculateMovement();
             _uiManager.UpdateAmmoCount();
             _uiManager.UpdateWeapon();
-            if (Input.GetMouseButtonDown(1))
+            /*if (Input.GetMouseButtonDown(1))
             {
                 if (Time.time >= canShootRightWeapon)
                 {
@@ -181,7 +183,7 @@ namespace EpicTortoiseStudios
                         }
                     }
                 }
-            }
+            }*/
         }
 
         private void OnEnable()
@@ -194,9 +196,61 @@ namespace EpicTortoiseStudios
             controller.Player_Movement.Disable();
         }
 
-        void OnJump()
+        public void Move(InputAction.CallbackContext context)
         {
-            if(_isGrounded == true)
+            inputX = context.ReadValue<Vector2>().x;
+
+            if (inputX < 0)
+            {
+                _spriteRenderer.flipX = true;
+            }
+            if (inputX > 0)
+            {
+                _spriteRenderer.flipX = false;
+            }
+
+            if (inputX != 0)
+            {
+                _isPlayerRunning = true;
+            }
+            else
+            {
+                _isPlayerRunning = false;
+            }
+
+            if (_isPlayerRunning == true)
+            {
+                _animator.SetBool("_isRunning", true);
+            }
+            else
+            {
+                _animator.SetBool("_isRunning", false);
+            }
+        }
+
+        private void ScreenWrapping()
+        {
+            if (transform.position.x > 10.5f)
+            {
+                transform.position = new Vector3(-10.5f, transform.position.y, 0);
+            }
+            if (transform.position.x < -10.5f)
+            {
+                transform.position = new Vector3(10.5f, transform.position.y, 0);
+            }
+            if (transform.position.y < -1.5f)
+            {
+                transform.position = new Vector3(transform.position.x, 11f, 0);
+            }
+            if (transform.position.y > 11f)
+            {
+                transform.position = new Vector3(transform.position.x, -1.5f, 0);
+            }
+        }
+
+        public void Jump(InputAction.CallbackContext context)
+        {
+            if (_isGrounded == true)
             {
                 _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
                 _isGrounded = false;
@@ -204,8 +258,78 @@ namespace EpicTortoiseStudios
             }
         }
 
-        void OnPlayerMove()
+        public void Shoot_Left(InputAction.CallbackContext context)
         {
+            if (Time.time >= canShootLeftWeapon)
+            {
+                if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    if (GameControl.gameControl.pistolAmmo > 0)
+                    {
+                        GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
+                        canShootLeftWeapon = Time.time + 1 /
+                            GameControl.gameControl.currentLeftWeapon.fireRate;
+                        GameControl.gameControl.pistolAmmo--;
+                        _uiManager.UpdateAmmoCount();
+                        Debug.Log("ShootLeft");
+                    }
+                }
+                if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                {
+                    if (GameControl.gameControl.shotgunAmmo > 0)
+                    {
+                        GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
+                        canShootLeftWeapon = Time.time + 1 /
+                            GameControl.gameControl.currentLeftWeapon.fireRate;
+                        GameControl.gameControl.shotgunAmmo--;
+                        _uiManager.UpdateAmmoCount();
+                        Debug.Log("ShootLeft");
+                    }
+                }
+            }
+        }
+
+        public void Shoot_Right(InputAction.CallbackContext context)
+        {
+            if (Time.time >= canShootRightWeapon)
+            {
+                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
+                {
+                    if (GameControl.gameControl.pistolAmmo > 0)
+                    {
+                        GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
+                        canShootRightWeapon = Time.time + 1 /
+                            GameControl.gameControl.currentRightWeapon.fireRate;
+                        GameControl.gameControl.pistolAmmo--;
+                        _uiManager.UpdateAmmoCount();
+                        Debug.Log("ShootRight");
+                    }
+                }
+                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                {
+                    if (GameControl.gameControl.shotgunAmmo > 0)
+                    {
+                        GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
+                        canShootRightWeapon = Time.time + 1 /
+                            GameControl.gameControl.currentRightWeapon.fireRate;
+                        GameControl.gameControl.shotgunAmmo--;
+                        _uiManager.UpdateAmmoCount();
+                        Debug.Log("ShootRight");
+                    }
+                }
+
+            }
+        }
+
+        /*private void CalculateMovement()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+            {
+                _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
+                _isGrounded = false;
+                _audioSource.PlayOneShot(_jumpAudio);
+            }
+
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             Vector3 direction = new Vector3(horizontalInput, 0, 0);
             transform.Translate(direction * _speed * Time.deltaTime);
@@ -253,65 +377,7 @@ namespace EpicTortoiseStudios
             {
                 transform.position = new Vector3(transform.position.x, -1.5f, 0);
             }
-        }
-
-        private void CalculateMovement()
-        {
-            /*if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
-            {
-                _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
-                _isGrounded = false;
-                _audioSource.PlayOneShot(_jumpAudio);
-            }*/
-
-            /*float horizontalInput = Input.GetAxisRaw("Horizontal");
-            Vector3 direction = new Vector3(horizontalInput, 0, 0);
-            transform.Translate(direction * _speed * Time.deltaTime);
-
-            if (horizontalInput < 0)
-            {
-                _spriteRenderer.flipX = true;
-            }
-            if (horizontalInput > 0)
-            {
-                _spriteRenderer.flipX = false;
-            }
-
-            if (horizontalInput != 0)
-            {
-                _isPlayerRunning = true;
-            }
-            else
-            {
-                _isPlayerRunning = false;
-            }
-
-            if (_isPlayerRunning == true)
-            {
-                _animator.SetBool("_isRunning", true);
-            }
-            else
-            {
-                _animator.SetBool("_isRunning", false);
-            }
-            //Screen Wrapping
-            if (transform.position.x > 11f)
-            {
-                transform.position = new Vector3(-11f, transform.position.y, 0);
-            }
-            if (transform.position.x < -11f)
-            {
-                transform.position = new Vector3(11f, transform.position.y, 0);
-            }
-            if (transform.position.y < -1.5f)
-            {
-                transform.position = new Vector3(transform.position.x, 11f, 0);
-            }
-            if (transform.position.y > 11f)
-            {
-                transform.position = new Vector3(transform.position.x, -1.5f, 0);
-            }*/
-        }
+        }*/
 
         public void AddScore(int points)
         {

@@ -19,6 +19,14 @@ public class @PlayerController : IInputActionCollection, IDisposable
             ""id"": ""3962d0c8-7cdf-42ab-b46a-77f0280f527a"",
             ""actions"": [
                 {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""f440fc26-bbe8-4cc8-907d-938e7de1ef11"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""cf985a54-e41e-4808-871c-a316950594fa"",
@@ -27,10 +35,18 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""PlayerMove"",
-                    ""type"": ""Value"",
-                    ""id"": ""c5e98e6c-aa02-4993-b873-b2e04b6082ca"",
-                    ""expectedControlType"": """",
+                    ""name"": ""Fire_Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""0d40ef55-f85c-42fb-aeb7-de5acafd1902"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Fire_Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""497a18e0-8da3-4c18-879f-2e325627803f"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -59,46 +75,90 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""921c2e47-269d-4a45-b335-2f8954b57006"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""f5b2e49f-0b0e-4c9a-8473-7cf131da8ed3"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayerMove"",
+                    ""action"": ""Fire_Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c0a1670-4926-4350-aca2-aa6258459ed3"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire_Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da0bcebd-587c-4dc1-8af7-a41a118c71fa"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""fdb3baca-e33f-45a5-bc76-15c2bd47df41"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""e14399a0-9d51-4ac6-ba3e-41c9579f4607"",
+                    ""name"": ""left"",
+                    ""id"": ""3c5c0ebc-60bd-447e-a136-3f0207ef6546"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayerMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""a2a0e989-df34-42cb-aa07-b5299b277484"",
+                    ""name"": ""right"",
+                    ""id"": ""e6591acf-1b25-4ef2-8f22-f7bc2ad28acb"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayerMove"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cd5d80ca-fa49-434d-a771-026e0c34a47e"",
-                    ""path"": """",
+                    ""id"": ""a2457356-8f65-466b-8920-5703fe54e92a"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PlayerMove"",
+                    ""action"": ""Fire_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd25741e-d099-4278-bb27-cbe993f6ba45"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire_Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -109,8 +169,10 @@ public class @PlayerController : IInputActionCollection, IDisposable
 }");
         // Player_Movement
         m_Player_Movement = asset.FindActionMap("Player_Movement", throwIfNotFound: true);
+        m_Player_Movement_Move = m_Player_Movement.FindAction("Move", throwIfNotFound: true);
         m_Player_Movement_Jump = m_Player_Movement.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Movement_PlayerMove = m_Player_Movement.FindAction("PlayerMove", throwIfNotFound: true);
+        m_Player_Movement_Fire_Left = m_Player_Movement.FindAction("Fire_Left", throwIfNotFound: true);
+        m_Player_Movement_Fire_Right = m_Player_Movement.FindAction("Fire_Right", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,14 +222,18 @@ public class @PlayerController : IInputActionCollection, IDisposable
     // Player_Movement
     private readonly InputActionMap m_Player_Movement;
     private IPlayer_MovementActions m_Player_MovementActionsCallbackInterface;
+    private readonly InputAction m_Player_Movement_Move;
     private readonly InputAction m_Player_Movement_Jump;
-    private readonly InputAction m_Player_Movement_PlayerMove;
+    private readonly InputAction m_Player_Movement_Fire_Left;
+    private readonly InputAction m_Player_Movement_Fire_Right;
     public struct Player_MovementActions
     {
         private @PlayerController m_Wrapper;
         public Player_MovementActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Player_Movement_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Movement_Jump;
-        public InputAction @PlayerMove => m_Wrapper.m_Player_Movement_PlayerMove;
+        public InputAction @Fire_Left => m_Wrapper.m_Player_Movement_Fire_Left;
+        public InputAction @Fire_Right => m_Wrapper.m_Player_Movement_Fire_Right;
         public InputActionMap Get() { return m_Wrapper.m_Player_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -177,29 +243,43 @@ public class @PlayerController : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_Player_MovementActionsCallbackInterface != null)
             {
+                @Move.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnMove;
                 @Jump.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnJump;
-                @PlayerMove.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPlayerMove;
-                @PlayerMove.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPlayerMove;
-                @PlayerMove.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPlayerMove;
+                @Fire_Left.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Left;
+                @Fire_Left.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Left;
+                @Fire_Left.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Left;
+                @Fire_Right.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
+                @Fire_Right.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
+                @Fire_Right.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
             }
             m_Wrapper.m_Player_MovementActionsCallbackInterface = instance;
             if (instance != null)
             {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @PlayerMove.started += instance.OnPlayerMove;
-                @PlayerMove.performed += instance.OnPlayerMove;
-                @PlayerMove.canceled += instance.OnPlayerMove;
+                @Fire_Left.started += instance.OnFire_Left;
+                @Fire_Left.performed += instance.OnFire_Left;
+                @Fire_Left.canceled += instance.OnFire_Left;
+                @Fire_Right.started += instance.OnFire_Right;
+                @Fire_Right.performed += instance.OnFire_Right;
+                @Fire_Right.canceled += instance.OnFire_Right;
             }
         }
     }
     public Player_MovementActions @Player_Movement => new Player_MovementActions(this);
     public interface IPlayer_MovementActions
     {
+        void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnPlayerMove(InputAction.CallbackContext context);
+        void OnFire_Left(InputAction.CallbackContext context);
+        void OnFire_Right(InputAction.CallbackContext context);
     }
 }
