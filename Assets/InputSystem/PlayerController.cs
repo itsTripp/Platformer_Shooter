@@ -49,6 +49,14 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""af94892a-16ef-4bfe-991f-74bf06dc9e71"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -159,6 +167,28 @@ public class @PlayerController : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Fire_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5abb758d-036d-4ff1-9ccb-d1e75dfdda94"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34febd50-6b6b-4bcc-a186-1fd9bb8c9d74"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -679,6 +709,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         m_Player_Movement_Jump = m_Player_Movement.FindAction("Jump", throwIfNotFound: true);
         m_Player_Movement_Fire_Left = m_Player_Movement.FindAction("Fire_Left", throwIfNotFound: true);
         m_Player_Movement_Fire_Right = m_Player_Movement.FindAction("Fire_Right", throwIfNotFound: true);
+        m_Player_Movement_Pause = m_Player_Movement.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -744,6 +775,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Movement_Jump;
     private readonly InputAction m_Player_Movement_Fire_Left;
     private readonly InputAction m_Player_Movement_Fire_Right;
+    private readonly InputAction m_Player_Movement_Pause;
     public struct Player_MovementActions
     {
         private @PlayerController m_Wrapper;
@@ -752,6 +784,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Movement_Jump;
         public InputAction @Fire_Left => m_Wrapper.m_Player_Movement_Fire_Left;
         public InputAction @Fire_Right => m_Wrapper.m_Player_Movement_Fire_Right;
+        public InputAction @Pause => m_Wrapper.m_Player_Movement_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -773,6 +806,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Fire_Right.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
                 @Fire_Right.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
                 @Fire_Right.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
+                @Pause.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_Player_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -789,6 +825,9 @@ public class @PlayerController : IInputActionCollection, IDisposable
                 @Fire_Right.started += instance.OnFire_Right;
                 @Fire_Right.performed += instance.OnFire_Right;
                 @Fire_Right.canceled += instance.OnFire_Right;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -904,6 +943,7 @@ public class @PlayerController : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnFire_Left(InputAction.CallbackContext context);
         void OnFire_Right(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
