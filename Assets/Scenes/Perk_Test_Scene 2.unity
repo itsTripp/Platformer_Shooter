@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.1764706, g: 0.7372549, b: 0.015686275, a: 1}
     m_PressedColor: {r: 0, g: 0.10449934, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.1764706, g: 0.7372549, b: 0.015686275, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2514,16 +2514,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561208655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_PointAction: {fileID: -1903381081690017506, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_MoveAction: {fileID: -2089421217233450047, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_SubmitAction: {fileID: 7221385251514205710, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_CancelAction: {fileID: -1009720976583206938, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_LeftClickAction: {fileID: -7907534704090656984, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_MiddleClickAction: {fileID: -877390639849547801, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_RightClickAction: {fileID: -418748169249904262, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_ScrollWheelAction: {fileID: 6014685214361786574, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_TrackedDevicePositionAction: {fileID: -2965946391149333786, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 5456495243435844189, guid: de112a755cab89a4fa2129dd9f77fddf, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1561208657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2536,7 +2544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1981967357}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1561208658
@@ -2617,7 +2625,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.1764706, g: 0.7372549, b: 0.015686275, a: 1}
     m_PressedColor: {r: 0, g: 0.10449934, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3047,7 +3055,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.1764706, g: 0.7372549, b: 0.015686275, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3504,7 +3512,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.1764706, g: 0.7372549, b: 0.015686275, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3974,7 +3982,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.17663021, g: 0.735849, b: 0.017354928, a: 1}
     m_PressedColor: {r: 0, g: 0.10449934, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
