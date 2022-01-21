@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace EpicTortoiseStudios
 {
 
     public class PauseMenu : MonoBehaviour
     {
+        public PlayerController controller;
+        
         public static PauseMenu pauseInstance;
         public static bool GameIsPaused = false;
 
@@ -66,9 +69,6 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private GameObject quitMenuClosedButton;
 
-        [SerializeField]
-        private KeyCode pauseInput;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -90,12 +90,17 @@ namespace EpicTortoiseStudios
             }
         }
 
+        private void Awake()
+        {
+            controller = new PlayerController();
+        }
+
         // Update is called once per frame
         void Update()
         {
             Scene currentScene = SceneManager.GetActiveScene();
             string sceneName = currentScene.name;
-            if(Input.GetKeyDown(pauseInput) && sceneName != "Main_Menu")
+            /*if(Input.GetKeyDown(pauseInput) && sceneName != "Main_Menu")
             {
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0;
@@ -115,30 +120,38 @@ namespace EpicTortoiseStudios
                 {
                     UnPauseGame();
                 }
+            }*/
+        }
+
+        public void PauseGame(InputAction.CallbackContext context)
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            string sceneName = currentScene.name;
+            if(sceneName != "Main_Menu")
+            {
+                if (pauseMenu.activeSelf == false)
+                {
+                    pauseMenu.SetActive(true);
+                    Time.timeScale = 0;
+                    GameIsPaused = true;
+                    EventSystem.current.SetSelectedGameObject(null);
+                    EventSystem.current.SetSelectedGameObject(pauseMenuFirstButton);
+                    UIManager.UIManagerInstance._waveText.gameObject.SetActive(false);
+                }
+                else
+                {
+                    pauseMenu.SetActive(false);
+                    Time.timeScale = 1;
+                    GameIsPaused = false;
+                }
             }
-        }
-
-        private void PauseGame()
-        {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0;
-            GameIsPaused = true;
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(pauseMenuFirstButton);
-            UIManager.UIManagerInstance._waveText.gameObject.SetActive(false);
-        }
-
-        private void UnPauseGame()
-        {
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1;
-            GameIsPaused = false;
+            
         }
         public void Settings_Menu()
         {
-            settingsMenu.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(settingsFirstButton);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(settingsFirstButton);
         }
 
         public void DisplaySettings()
@@ -258,6 +271,61 @@ namespace EpicTortoiseStudios
                 EventSystem.current.SetSelectedGameObject(creditsClosedButton);
             }
             if(quitMenu.activeSelf)
+            {
+                quitMenu.SetActive(false);
+                pauseMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(quitMenuClosedButton);
+            }
+        }
+        public void Cancel(InputAction.CallbackContext context)
+        {
+            if (settingsMenu.activeSelf)
+            {
+                settingsMenu.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(settingsClosedButton);
+            }
+            if (displaySettings.activeSelf)
+            {
+                displaySettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(displaySettingsClosedButton);
+            }
+            if (audioSettings.activeSelf)
+            {
+                audioSettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(audioSettingsClosedButton);
+            }
+            if (inputSettings.activeSelf)
+            {
+                inputSettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(inputSettingsClosedButton);
+            }
+            if (achievementsMenu.activeSelf)
+            {
+                achievementsMenu.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(achievementsClosedButton);
+            }
+            if (leaderboardMenu.activeSelf)
+            {
+                leaderboardMenu.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(leaderboardClosedButton);
+            }
+            if (creditsMenu.activeSelf)
+            {
+                creditsMenu.SetActive(false);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(creditsClosedButton);
+            }
+            if (quitMenu.activeSelf)
             {
                 quitMenu.SetActive(false);
                 pauseMenu.SetActive(true);

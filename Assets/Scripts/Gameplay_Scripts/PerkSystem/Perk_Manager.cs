@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 namespace EpicTortoiseStudios
 {
@@ -12,6 +13,9 @@ namespace EpicTortoiseStudios
         public static Perk_Manager perkManager;
         //public List<Perks> possiblePerks = new List<Perks>();
         public List<PerkSelect> perkSelect = new List<PerkSelect>();
+
+        [SerializeField]
+        private GameObject perkSceneFirstButton;
 
         // Start is called before the first frame update
         void Start()

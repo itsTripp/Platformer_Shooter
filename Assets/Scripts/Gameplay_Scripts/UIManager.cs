@@ -89,7 +89,7 @@ namespace EpicTortoiseStudios
             _experienceBar.fillAmount = 0;
             DontDestroyOnLoad(gameObject);
 
-            //GameControl.gameControl = new GameControl(5);
+            GameControl.gameControl = new GameControl(5);
             SetHealth(GameControl.gameControl.GetHealthNormalized());
             damagedHealthBarImage.fillAmount = healthBarImage.fillAmount;
 
@@ -103,8 +103,9 @@ namespace EpicTortoiseStudios
             UpdateAmmoCount();
             FillExperience();
             ShrinkHealth();
+
             //_experienceSlider.maxValue = GameControl.gameControl.experienceToNextLevel;
-            
+
             //_experienceBar.fillAmount = (float)GameControl.gameControl.playerXP / (float)GameControl.gameControl.experienceToNextLevel * Time.deltaTime;
             //_experienceBar.fillAmount += _xpFillSpeed * Time.deltaTime;
             /*if(PauseMenu.pauseInstance.gameObject.activeSelf == true)
