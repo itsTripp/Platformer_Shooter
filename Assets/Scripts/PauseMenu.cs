@@ -26,6 +26,10 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private GameObject inputSettings;
         [SerializeField]
+        private GameObject keyboardSettings;
+        [SerializeField]
+        private GameObject controllerSettings;
+        [SerializeField]
         private GameObject achievementsMenu;
         [SerializeField]
         private GameObject leaderboardMenu;
@@ -53,6 +57,14 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private GameObject inputSettingsClosedButton;
         [SerializeField]
+        private GameObject keyboardSettingsFirstButton;
+        [SerializeField]
+        private GameObject keyboardSettingsClosedButton;
+        [SerializeField]
+        private GameObject controllerSettingsFirstButton;
+        [SerializeField]
+        private GameObject controllerSettingsClosedButton;
+        [SerializeField]
         private GameObject achievementsFirstButton;
         [SerializeField]
         private GameObject achievementsClosedButton;
@@ -76,6 +88,8 @@ namespace EpicTortoiseStudios
             displaySettings.SetActive(false);
             audioSettings.SetActive(false);
             inputSettings.SetActive(false);
+            keyboardSettings.SetActive(false);
+            controllerSettings.SetActive(false);
             achievementsMenu.SetActive(false);
             leaderboardMenu.SetActive(false);
             creditsMenu.SetActive(false);
@@ -178,6 +192,22 @@ namespace EpicTortoiseStudios
             EventSystem.current.SetSelectedGameObject(inputSettingsFirstButton);
         }
 
+        public void KeyboardSettings()
+        {
+            keyboardSettings.SetActive(true);
+            inputSettings.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(keyboardSettingsFirstButton);
+        }
+
+        public void ControllerSettings()
+        {
+            controllerSettings.SetActive(true);
+            inputSettings.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(controllerSettingsFirstButton);
+        }
+
         public void AchievementsMenu()
         {
             achievementsMenu.SetActive(true);
@@ -252,7 +282,21 @@ namespace EpicTortoiseStudios
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(inputSettingsClosedButton);
             }
-            if(achievementsMenu.activeSelf)
+            if (keyboardSettings.activeSelf)
+            {
+                keyboardSettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(keyboardSettingsClosedButton);
+            }
+            if (controllerSettings.activeSelf)
+            {
+                controllerSettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(controllerSettingsClosedButton);
+            }
+            if (achievementsMenu.activeSelf)
             {
                 achievementsMenu.SetActive(false);
                 EventSystem.current.SetSelectedGameObject(null);
@@ -306,6 +350,20 @@ namespace EpicTortoiseStudios
                 settingsMenu.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(inputSettingsClosedButton);
+            }
+            if (keyboardSettings.activeSelf)
+            {
+                keyboardSettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(keyboardSettingsClosedButton);
+            }
+            if (controllerSettings.activeSelf)
+            {
+                controllerSettings.SetActive(false);
+                settingsMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(controllerSettingsClosedButton);
             }
             if (achievementsMenu.activeSelf)
             {
