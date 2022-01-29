@@ -62,6 +62,24 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pickup_Right_Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""e0a2a894-72db-4a27-806c-b0b053ebdf41"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pickup_Left_Weapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""c32b762b-8bbd-4913-beaf-8fc89b866d2a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +190,50 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Fire_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3aa50432-1709-44f7-ac68-f3e28391fb49"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup_Right_Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d3fd67d-7e72-42cf-9332-e560b258b3fd"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup_Right_Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f03eb2fa-bc6b-47e0-b5cd-3a335ac067e5"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup_Left_Weapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b484c31-cc87-4cc4-8009-87e51d485f18"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pickup_Left_Weapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -733,6 +795,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         m_Player_Movement_Jump = m_Player_Movement.FindAction("Jump", throwIfNotFound: true);
         m_Player_Movement_Fire_Left = m_Player_Movement.FindAction("Fire_Left", throwIfNotFound: true);
         m_Player_Movement_Fire_Right = m_Player_Movement.FindAction("Fire_Right", throwIfNotFound: true);
+        m_Player_Movement_Pickup_Right_Weapon = m_Player_Movement.FindAction("Pickup_Right_Weapon", throwIfNotFound: true);
+        m_Player_Movement_Pickup_Left_Weapon = m_Player_Movement.FindAction("Pickup_Left_Weapon", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -809,6 +873,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement_Jump;
     private readonly InputAction m_Player_Movement_Fire_Left;
     private readonly InputAction m_Player_Movement_Fire_Right;
+    private readonly InputAction m_Player_Movement_Pickup_Right_Weapon;
+    private readonly InputAction m_Player_Movement_Pickup_Left_Weapon;
     public struct Player_MovementActions
     {
         private @PlayerController m_Wrapper;
@@ -817,6 +883,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Movement_Jump;
         public InputAction @Fire_Left => m_Wrapper.m_Player_Movement_Fire_Left;
         public InputAction @Fire_Right => m_Wrapper.m_Player_Movement_Fire_Right;
+        public InputAction @Pickup_Right_Weapon => m_Wrapper.m_Player_Movement_Pickup_Right_Weapon;
+        public InputAction @Pickup_Left_Weapon => m_Wrapper.m_Player_Movement_Pickup_Left_Weapon;
         public InputActionMap Get() { return m_Wrapper.m_Player_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -838,6 +906,12 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                 @Fire_Right.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
                 @Fire_Right.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
                 @Fire_Right.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnFire_Right;
+                @Pickup_Right_Weapon.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPickup_Right_Weapon;
+                @Pickup_Right_Weapon.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPickup_Right_Weapon;
+                @Pickup_Right_Weapon.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPickup_Right_Weapon;
+                @Pickup_Left_Weapon.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPickup_Left_Weapon;
+                @Pickup_Left_Weapon.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPickup_Left_Weapon;
+                @Pickup_Left_Weapon.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnPickup_Left_Weapon;
             }
             m_Wrapper.m_Player_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -854,6 +928,12 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                 @Fire_Right.started += instance.OnFire_Right;
                 @Fire_Right.performed += instance.OnFire_Right;
                 @Fire_Right.canceled += instance.OnFire_Right;
+                @Pickup_Right_Weapon.started += instance.OnPickup_Right_Weapon;
+                @Pickup_Right_Weapon.performed += instance.OnPickup_Right_Weapon;
+                @Pickup_Right_Weapon.canceled += instance.OnPickup_Right_Weapon;
+                @Pickup_Left_Weapon.started += instance.OnPickup_Left_Weapon;
+                @Pickup_Left_Weapon.performed += instance.OnPickup_Left_Weapon;
+                @Pickup_Left_Weapon.canceled += instance.OnPickup_Left_Weapon;
             }
         }
     }
@@ -977,6 +1057,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnFire_Left(InputAction.CallbackContext context);
         void OnFire_Right(InputAction.CallbackContext context);
+        void OnPickup_Right_Weapon(InputAction.CallbackContext context);
+        void OnPickup_Left_Weapon(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
