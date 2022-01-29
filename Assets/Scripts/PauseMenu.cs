@@ -285,14 +285,14 @@ namespace EpicTortoiseStudios
             if (keyboardSettings.activeSelf)
             {
                 keyboardSettings.SetActive(false);
-                settingsMenu.SetActive(true);
+                inputSettings.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(keyboardSettingsClosedButton);
             }
             if (controllerSettings.activeSelf)
             {
                 controllerSettings.SetActive(false);
-                settingsMenu.SetActive(true);
+                inputSettings.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(controllerSettingsClosedButton);
             }
@@ -354,14 +354,14 @@ namespace EpicTortoiseStudios
             if (keyboardSettings.activeSelf)
             {
                 keyboardSettings.SetActive(false);
-                settingsMenu.SetActive(true);
+                inputSettings.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(keyboardSettingsClosedButton);
             }
             if (controllerSettings.activeSelf)
             {
                 controllerSettings.SetActive(false);
-                settingsMenu.SetActive(true);
+                inputSettings.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(controllerSettingsClosedButton);
             }
