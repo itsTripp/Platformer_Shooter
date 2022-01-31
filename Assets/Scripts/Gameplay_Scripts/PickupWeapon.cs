@@ -27,31 +27,31 @@ namespace EpicTortoiseStudios
                 {
                     if (GameControl.gameControl.currentRightWeapon == weapon)
                     {
-                        GameControl.gameControl.currentRightWeapon = weapon;
-                        other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        //GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
-                        //_uiManager.UpdateAmmoCount();
-                        _uiManager.UpdateWeapon();
-                        Destroy(gameObject);
+                        //GameControl.gameControl.currentRightWeapon = weapon;
+                        //other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
+                        ////GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        ////_uiManager.UpdateAmmoCount();
+                        //_uiManager.UpdateWeapon();
+                        //Destroy(gameObject);
                     }
                     else
                     {
-                        GameControl.gameControl.currentRightWeapon = weapon;
-                        other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        //GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
-                        //_uiManager.UpdateAmmoCount();
-                        _uiManager.UpdateWeapon();
-                        Destroy(gameObject);
+                        //GameControl.gameControl.currentRightWeapon = weapon;
+                        //other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
+                        ////GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        ////_uiManager.UpdateAmmoCount();
+                        //_uiManager.UpdateWeapon();
+                        //Destroy(gameObject);
                     }
                 }
                 else
                 {
-                    GameControl.gameControl.currentRightWeapon = weapon;
-                    other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                    //GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
-                    //_uiManager.UpdateAmmoCount();
-                    _uiManager.UpdateWeapon();
-                    Destroy(gameObject);
+                    //GameControl.gameControl.currentRightWeapon = weapon;
+                    //other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
+                    ////GameControl.gameControl.rightWeaponCurrentAmmo = GameControl.gameControl.rightWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                    ////_uiManager.UpdateAmmoCount();
+                    //_uiManager.UpdateWeapon();
+                    //Destroy(gameObject);
                 }
 
             }
@@ -61,41 +61,41 @@ namespace EpicTortoiseStudios
                 {
                     if (GameControl.gameControl.currentLeftWeapon == weapon)
                     {
-                        GameControl.gameControl.currentLeftWeapon = weapon;
-                        other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        //GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
-                        //_uiManager.UpdateAmmoCount();
-                        _uiManager.UpdateWeapon();
-                        Destroy(gameObject);
+                        //GameControl.gameControl.currentLeftWeapon = weapon;
+                        //other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
+                        ////GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        ////_uiManager.UpdateAmmoCount();
+                        //_uiManager.UpdateWeapon();
+                        //Destroy(gameObject);
                     }
                     else
                     {
-                        GameControl.gameControl.currentLeftWeapon = weapon;
-                        other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                        //GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
-                        //_uiManager.UpdateAmmoCount();
-                        _uiManager.UpdateWeapon();
-                        Destroy(gameObject);
+                        //GameControl.gameControl.currentLeftWeapon = weapon;
+                        //other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
+                        ////GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                        ////_uiManager.UpdateAmmoCount();
+                        //_uiManager.UpdateWeapon();
+                        //Destroy(gameObject);
                     }
                 }
                 else
                 {
-                    GameControl.gameControl.currentLeftWeapon = weapon;
-                    other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
-                    //GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
-                    //_uiManager.UpdateAmmoCount();
-                    _uiManager.UpdateWeapon();
-                    Destroy(gameObject);
+                    //GameControl.gameControl.currentLeftWeapon = weapon;
+                    //other.transform.GetComponent<SpriteRenderer>().sprite = weapon.currentWeaponSprite;
+                    ////GameControl.gameControl.leftWeaponCurrentAmmo = GameControl.gameControl.leftWeaponCurrentAmmo + weapon.ammoPickupAmount;
+                    ////_uiManager.UpdateAmmoCount();
+                    //_uiManager.UpdateWeapon();
+                    //Destroy(gameObject);
                 }
             }
         }
         private void OnTriggerExit2D(Collider2D other)
         {
-            if(other.tag == "Player")
-            {
-                var go = Instantiate(PopupText, transform.position, Quaternion.identity);
-                go.GetComponent<TextMeshPro>().text = weapon.weaponText;
-            }
+            //if(other.tag == "Player")
+            //{
+            //    var go = Instantiate(PopupText, transform.position, Quaternion.identity);
+            //    go.GetComponent<TextMeshPro>().text = weapon.weaponText;
+            //}
         }
 
     }

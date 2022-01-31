@@ -91,50 +91,50 @@ namespace EpicTortoiseStudios
             {
                 if (GameControl.gameControl.currentRightWeapon)
                 {
-                    _currentEnemyHealth -= GameControl.gameControl.currentRightWeapon.damage;
-                    _audioSource.PlayOneShot(_damageTakenAudio);
-                    Destroy(other.gameObject);
-                    if (_currentEnemyHealth <= 0)
-                    {
-                        if (_player != null)
-                        {
-                            _player.AddScore(10);
+                    //_currentEnemyHealth -= GameControl.gameControl.currentRightWeapon.damage;
+                    //_audioSource.PlayOneShot(_damageTakenAudio);
+                    //Destroy(other.gameObject);
+                    //if (_currentEnemyHealth <= 0)
+                    //{
+                    //    if (_player != null)
+                    //    {
+                    //        _player.AddScore(10);
 
-                            int _experienceDrops = Random.Range(1, 4);
-                            for (int i = 0; i < _experienceDrops; i++)
-                            {
-                                Rigidbody2D _expRig = Instantiate(_experiencePickup, transform.position, Quaternion.identity) as Rigidbody2D;
-                                _expRig.AddForce(transform.up * _upwardForce);
-                                _expRig.AddForce(transform.right * Random.Range(-_outwardForce, _outwardForce));
-                            }
-                        }
-                        Destroy(gameObject, .1f);
-                        _enemySpawnManager.EnemyKilled();
-                    }
+                    //        int _experienceDrops = Random.Range(1, 4);
+                    //        for (int i = 0; i < _experienceDrops; i++)
+                    //        {
+                    //            Rigidbody2D _expRig = Instantiate(_experiencePickup, transform.position, Quaternion.identity) as Rigidbody2D;
+                    //            _expRig.AddForce(transform.up * _upwardForce);
+                    //            _expRig.AddForce(transform.right * Random.Range(-_outwardForce, _outwardForce));
+                    //        }
+                    //    }
+                    //    Destroy(gameObject, .1f);
+                    //    _enemySpawnManager.EnemyKilled();
+                    //}
 
                 }
                 if (GameControl.gameControl.currentLeftWeapon)
                 {
-                    _currentEnemyHealth -= GameControl.gameControl.currentLeftWeapon.damage;
-                    _audioSource.PlayOneShot(_damageTakenAudio);
-                    Destroy(other.gameObject);
-                    if (_currentEnemyHealth <= 0)
-                    {
-                        if (_player != null)
-                        {
-                            _player.AddScore(10);
+                    //_currentEnemyHealth -= GameControl.gameControl.currentLeftWeapon.damage;
+                    //_audioSource.PlayOneShot(_damageTakenAudio);
+                    //Destroy(other.gameObject);
+                    //if (_currentEnemyHealth <= 0)
+                    //{
+                    //    if (_player != null)
+                    //    {
+                    //        _player.AddScore(10);
 
-                            int _experienceDrops = Random.Range(1, 4);
-                            for (int i = 0; i < _experienceDrops; i++)
-                            {
-                                Rigidbody2D _expRig = Instantiate(_experiencePickup, transform.position, Quaternion.identity) as Rigidbody2D;
-                                _expRig.AddForce(transform.up * _upwardForce);
-                                _expRig.AddForce(transform.right * Random.Range(-_outwardForce, _outwardForce));
-                            }
-                        }
-                        Destroy(gameObject, .1f);
-                        _enemySpawnManager.EnemyKilled();
-                    }
+                    //        int _experienceDrops = Random.Range(1, 4);
+                    //        for (int i = 0; i < _experienceDrops; i++)
+                    //        {
+                    //            Rigidbody2D _expRig = Instantiate(_experiencePickup, transform.position, Quaternion.identity) as Rigidbody2D;
+                    //            _expRig.AddForce(transform.up * _upwardForce);
+                    //            _expRig.AddForce(transform.right * Random.Range(-_outwardForce, _outwardForce));
+                    //        }
+                    //    }
+                    //    Destroy(gameObject, .1f);
+                    //    _enemySpawnManager.EnemyKilled();
+                    //}
 
                 }
             }

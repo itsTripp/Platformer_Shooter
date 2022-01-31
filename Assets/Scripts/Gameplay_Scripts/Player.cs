@@ -24,11 +24,11 @@ namespace EpicTortoiseStudios
         private bool _isGrounded;
         private bool _isPlayerRunning = false;
 
-        [Header("Weapon Info")]
-        private float canShootRightWeapon = 0;
-        private float canShootLeftWeapon = 0;
-        public GameObject _rightWeapon;
-        public GameObject _leftWeapon;
+        [Header("Weapons")]
+        [SerializeField]
+        private Weapon rightWeapon;
+        [SerializeField]
+        private Weapon leftWeapon;
 
         [Header("Player Score")]
         [SerializeField]
@@ -46,6 +46,7 @@ namespace EpicTortoiseStudios
         private AudioClip _deathAudio;
 
         private Rigidbody2D _rigidbody;
+        private BoxCollider2D _boxcollider2d;
         private UIManager _uiManager;
         private Animator _animator;
         private SpriteRenderer _spriteRenderer;
@@ -53,48 +54,41 @@ namespace EpicTortoiseStudios
         private EnemySpawnManager _enemySpawnManager;
         public GameObject PopupText;
 
+        private Transform rightWeaponEquip;
+        private Transform leftWeaponEquip;
+        private Inventory inventory;
+        private Interactor interactor;
+
         // Start is called before the first frame update
         void Start()
         {
+            rightWeaponEquip = this.transform.Find("Gun_Container").Find("Right_Weapon");
+            leftWeaponEquip = this.transform.Find("Gun_Container").Find("Left_Weapon");
+            inventory = this.GetComponent<Inventory>();
+            interactor = this.transform.Find("Interactor").GetComponent<Interactor>();
+
             GameControl.gameControl.playerCurrentHealth = GameControl.gameControl.playerMaxHealth;
             _rigidbody = GetComponent<Rigidbody2D>();
             _jump = new Vector3(0, 2.0f, 0);
             _uiManager = GameObject.Find("Game_HUD").GetComponent<UIManager>();
             if (_uiManager == null)
             {
-                Debug.LogError("UI Manager is Null on the Player");
+                Debug.LogError("UI Manager is Null on the Character");
             }
-            _audioSource = GetComponent<AudioSource>();
+            _audioSource = this.transform.Find("Character").GetComponent<AudioSource>();
             if (_audioSource == null)
             {
-                Debug.LogError("The Audio Source on the Player is Null");
+                Debug.LogError("The Audio Source on the Character is Null");
             }
-            _animator = GetComponent<Animator>();
+            _animator = this.transform.Find("Character").GetComponent<Animator>();
             if (_animator == null)
             {
-                Debug.LogError("Animator is Null on the Player.");
+                Debug.LogError("Animator is Null on the Character.");
             }
-            _spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = this.transform.Find("Character").GetComponent<SpriteRenderer>();
             if (_spriteRenderer == null)
             {
-                Debug.LogError("Sprite Renderer is Null on the Player");
-            }
-            if (GameControl.gameControl.currentLeftWeapon != null)
-            {
-                _leftWeapon.GetComponent<SpriteRenderer>().sprite =
-                    GameControl.gameControl.currentLeftWeapon.currentWeaponSprite;
-
-            }
-            if (GameControl.gameControl.currentRightWeapon != null)
-            {
-                _rightWeapon.GetComponent<SpriteRenderer>().sprite =
-                    GameControl.gameControl.currentRightWeapon.currentWeaponSprite;
-
-            }
-            _enemySpawnManager = GameObject.Find("Enemy_Spawn_Manager").GetComponent<EnemySpawnManager>();
-            if (_enemySpawnManager == null)
-            {
-                Debug.LogError("Enemy Spawn Manager is Null on the Player");
+                Debug.LogError("Sprite Renderer is Null on the Character");
             }
             DontDestroyOnLoad(this);
             if(playerInstance == null)
@@ -123,65 +117,50 @@ namespace EpicTortoiseStudios
             CalculateMovement();
             _uiManager.UpdateAmmoCount();
             _uiManager.UpdateWeapon();
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButton(1))
             {
-                if (Time.time >= canShootRightWeapon)
+                if (rightWeapon)
                 {
-                    if(GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
-                    {
-                        if (GameControl.gameControl.pistolAmmo > 0)
-                        {
-                            GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
-                            canShootRightWeapon = Time.time + 1 /
-                                GameControl.gameControl.currentRightWeapon.fireRate;
-                            GameControl.gameControl.pistolAmmo--;
-                            _uiManager.UpdateAmmoCount();
-                            Debug.Log("ShootRight");
-                        }
-                    }
-                    if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
-                    {
-                        if (GameControl.gameControl.shotgunAmmo > 0)
-                        {
-                            GameControl.gameControl.currentRightWeapon.ShootRightWeapon();
-                            canShootRightWeapon = Time.time + 1 /
-                                GameControl.gameControl.currentRightWeapon.fireRate;
-                            GameControl.gameControl.shotgunAmmo--;
-                            _uiManager.UpdateAmmoCount();
-                            Debug.Log("ShootRight");
-                        }
-                    }
-
+                    rightWeapon.Fire();
                 }
             }
             if (Input.GetMouseButtonDown(0))
             {
-                if (Time.time >= canShootLeftWeapon)
+                if (leftWeapon)
                 {
-                    if(GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
-                    {
-                        if (GameControl.gameControl.pistolAmmo > 0)
-                        {
-                            GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
-                            canShootLeftWeapon = Time.time + 1 /
-                                GameControl.gameControl.currentLeftWeapon.fireRate;
-                            GameControl.gameControl.pistolAmmo--;
-                            _uiManager.UpdateAmmoCount();
-                            Debug.Log("ShootLeft");
-                        }
-                    }
-                    if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
-                    {
-                        if (GameControl.gameControl.shotgunAmmo > 0)
-                        {
-                            GameControl.gameControl.currentLeftWeapon.ShootLeftWeapon();
-                            canShootLeftWeapon = Time.time + 1 /
-                                GameControl.gameControl.currentLeftWeapon.fireRate;
-                            GameControl.gameControl.shotgunAmmo--;
-                            _uiManager.UpdateAmmoCount();
-                            Debug.Log("ShootLeft");
-                        }
-                    }
+                    leftWeapon.Fire();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if (leftWeapon)
+                {
+                    leftWeapon.UnequipFromPlayer();
+                    leftWeapon = null;
+                }
+                
+                if (interactor.equipableWeapon != null)
+                {
+                    leftWeapon = interactor.equipableWeapon;
+                    interactor.equipableWeapon = null;
+                    leftWeapon.EquipToPlayer(leftWeaponEquip, inventory, this);
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (rightWeapon)
+                {
+                    rightWeapon.UnequipFromPlayer();
+                    rightWeapon = null;
+                }
+                
+                if (interactor.equipableWeapon != null)
+                {
+                    rightWeapon = interactor.equipableWeapon;
+                    interactor.equipableWeapon = null;
+                    rightWeapon.EquipToPlayer(rightWeaponEquip, inventory, this);
                 }
             }
         }
@@ -232,23 +211,6 @@ namespace EpicTortoiseStudios
             {
                 _animator.SetBool("_isRunning", false);
             }
-            //Screen Wrapping
-            if (transform.position.x > 11f)
-            {
-                transform.position = new Vector3(-11f, transform.position.y, 0);
-            }
-            if (transform.position.x < -11f)
-            {
-                transform.position = new Vector3(11f, transform.position.y, 0);
-            }
-            if (transform.position.y < -1.5f)
-            {
-                transform.position = new Vector3(transform.position.x, 11f, 0);
-            }
-            if (transform.position.y > 11f)
-            {
-                transform.position = new Vector3(transform.position.x, -1.5f, 0);
-            }
         }
 
         public void AddScore(int points)
@@ -285,6 +247,12 @@ namespace EpicTortoiseStudios
             {
                 _isGrounded = true;
             }
+        }
+
+        public void ApplyKnock(Vector3 direction, float intensity)
+        {
+            Vector2 convertedDirection = new Vector2(direction.x, direction.y);
+            _rigidbody.AddForce(direction * intensity);
         }
     }
 }

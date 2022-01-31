@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootSprite: {fileID: 21300000, guid: 827e8cfb8cbf04c4498526c4096c515a, type: 3}
   audioClip: {fileID: 8300000, guid: 0f3e2ae397c35be41acb5ba9fc725986, type: 3}
-  popupText: +5
+  popupText: +99999
   lootType: 3
-  ammoPickupAmount: 5
+  ammoPickupAmount: 99999

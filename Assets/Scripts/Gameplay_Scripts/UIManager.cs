@@ -206,51 +206,51 @@ namespace EpicTortoiseStudios
 
         public void UpdateWeapon()
         {
-            if (GameControl.gameControl.currentLeftWeapon != null)
-            {
-                _leftWeaponSprite.sprite = GameControl.gameControl.currentLeftWeapon.currentWeaponSprite;
-                _leftWeaponSprite.color = new Color(_leftWeaponSprite.color.r,
-                    _leftWeaponSprite.color.g, _leftWeaponSprite.color.b, 1f);
-            }
-            if (GameControl.gameControl.currentRightWeapon != null)
-            {
-                _rightWeaponSprite.sprite = GameControl.gameControl.currentRightWeapon.currentWeaponSprite;
-                _rightWeaponSprite.color = new Color(_rightWeaponSprite.color.r,
-                    _rightWeaponSprite.color.g, _rightWeaponSprite.color.b, 1f);
-            }
+            //if (GameControl.gameControl.currentLeftWeapon != null)
+            //{
+            //    _leftWeaponSprite.sprite = GameControl.gameControl.currentLeftWeapon.currentWeaponSprite;
+            //    _leftWeaponSprite.color = new Color(_leftWeaponSprite.color.r,
+            //        _leftWeaponSprite.color.g, _leftWeaponSprite.color.b, 1f);
+            //}
+            //if (GameControl.gameControl.currentRightWeapon != null)
+            //{
+            //    _rightWeaponSprite.sprite = GameControl.gameControl.currentRightWeapon.currentWeaponSprite;
+            //    _rightWeaponSprite.color = new Color(_rightWeaponSprite.color.r,
+            //        _rightWeaponSprite.color.g, _rightWeaponSprite.color.b, 1f);
+            //}
         }
         public void UpdateAmmoCount()
         {
             if (GameControl.gameControl.currentLeftWeapon != null)
             {
-                if(GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
-                {
-                    _leftWeaponAmmoText.text = GameControl.gameControl.pistolAmmo.ToString();
-                    _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
-                        _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
-                }
-                if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
-                {
-                    _leftWeaponAmmoText.text = GameControl.gameControl.shotgunAmmo.ToString();
-                    _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
-                        _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
-                }
+                //if(GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Pistol)
+                //{
+                //    _leftWeaponAmmoText.text = GameControl.gameControl.pistolAmmo.ToString();
+                //    _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
+                //        _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
+                //}
+                //if (GameControl.gameControl.currentLeftWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                //{
+                //    _leftWeaponAmmoText.text = GameControl.gameControl.shotgunAmmo.ToString();
+                //    _leftWeaponAmmoText.color = new Color(_leftWeaponAmmoText.color.r,
+                //        _leftWeaponAmmoText.color.g, _leftWeaponAmmoText.color.b, 1f);
+                //}
 
             }
             if (GameControl.gameControl.currentRightWeapon != null)
             {
-                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
-                {
-                    _rightWeaponAmmoText.text = GameControl.gameControl.pistolAmmo.ToString();
-                    _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
-                        _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
-                }
-                if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
-                {
-                    _rightWeaponAmmoText.text = GameControl.gameControl.shotgunAmmo.ToString();
-                    _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
-                        _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
-                }
+                //if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Pistol)
+                //{
+                //    _rightWeaponAmmoText.text = GameControl.gameControl.pistolAmmo.ToString();
+                //    _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
+                //        _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
+                //}
+                //if (GameControl.gameControl.currentRightWeapon.weaponType == Weapon.WeaponType.Shotgun)
+                //{
+                //    _rightWeaponAmmoText.text = GameControl.gameControl.shotgunAmmo.ToString();
+                //    _rightWeaponAmmoText.color = new Color(_rightWeaponAmmoText.color.r,
+                //        _rightWeaponAmmoText.color.g, _rightWeaponAmmoText.color.b, 1f);
+                //}
             }
         }
 
