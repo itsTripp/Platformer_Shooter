@@ -23,6 +23,7 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private bool _isGrounded;
         private bool _isPlayerRunning = false;
+        private float inputX;
 
         [Header("Weapons")]
         [SerializeField]
@@ -106,95 +107,20 @@ namespace EpicTortoiseStudios
             controller = new PlayerController();
         }
 
-        // Update is called once per frame
-        void Update()
+        public void Move(InputAction.CallbackContext context)
         {
-            if(controller.Player_Movement.Jump.triggered)
-            {
-                OnJump();
-            }
+            inputX = context.ReadValue<Vector2>().x;
 
-            CalculateMovement();
-            _uiManager.UpdateAmmoCount();
-            _uiManager.UpdateWeapon();
-            if (Input.GetMouseButton(1))
-            {
-                if (rightWeapon)
-                {
-                    rightWeapon.Fire();
-                }
-            }
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (leftWeapon)
-                {
-                    leftWeapon.Fire();
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                if (leftWeapon)
-                {
-                    leftWeapon.UnequipFromPlayer();
-                    leftWeapon = null;
-                }
-                
-                if (interactor.equipableWeapon != null)
-                {
-                    leftWeapon = interactor.equipableWeapon;
-                    interactor.equipableWeapon = null;
-                    leftWeapon.EquipToPlayer(leftWeaponEquip, inventory, this);
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (rightWeapon)
-                {
-                    rightWeapon.UnequipFromPlayer();
-                    rightWeapon = null;
-                }
-                
-                if (interactor.equipableWeapon != null)
-                {
-                    rightWeapon = interactor.equipableWeapon;
-                    interactor.equipableWeapon = null;
-                    rightWeapon.EquipToPlayer(rightWeaponEquip, inventory, this);
-                }
-            }
-        }
-
-        void OnJump()
-        {
-            _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
-            _isGrounded = false;
-            _audioSource.PlayOneShot(_jumpAudio);
-        }
-
-        private void CalculateMovement()
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
-            {
-                _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
-                _isGrounded = false;
-                _audioSource.PlayOneShot(_jumpAudio);
-            }
-
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
-            Vector3 direction = new Vector3(horizontalInput, 0, 0);
-            transform.Translate(direction * _speed * Time.deltaTime);
-
-            if (horizontalInput < 0)
+            if (inputX < 0)
             {
                 _spriteRenderer.flipX = true;
             }
-            if (horizontalInput > 0)
+            if (inputX > 0)
             {
                 _spriteRenderer.flipX = false;
             }
 
-            if (horizontalInput != 0)
+            if (inputX != 0)
             {
                 _isPlayerRunning = true;
             }
@@ -211,6 +137,80 @@ namespace EpicTortoiseStudios
             {
                 _animator.SetBool("_isRunning", false);
             }
+        }
+
+        public void Jump(InputAction.CallbackContext context)
+        {
+            if (context.performed && _isGrounded == true)
+            {
+                _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
+                _isGrounded = false;
+                _audioSource.PlayOneShot(_jumpAudio);
+            }
+        }
+
+        public void Shoot_Left(InputAction.CallbackContext context)
+        {
+            if (leftWeapon) // Does the character have a weapon in its left hand?
+            {
+                leftWeapon.Fire(); //Send fire command to left equipped weapon
+            }
+        }
+
+        public void Shoot_Right(InputAction.CallbackContext context)
+        {
+            if (rightWeapon) // Does the character have a weapon in its right hand?
+            {
+                rightWeapon.Fire(); //Send fire command to right equipped weapon
+            }
+        }
+
+        public void Equip_Right(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                if (rightWeapon)
+                {
+                    rightWeapon.UnequipFromPlayer();
+                    rightWeapon = null;
+                }
+
+                if (interactor.equipableWeapon != null)
+                {
+                    rightWeapon = interactor.equipableWeapon;
+                    interactor.equipableWeapon = null;
+                    rightWeapon.EquipToPlayer(rightWeaponEquip, inventory, this);
+                }
+            }
+        }
+
+        public void Equip_Left(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                if (leftWeapon)
+                {
+                    leftWeapon.UnequipFromPlayer();
+                    leftWeapon = null;
+                }
+
+                if (interactor.equipableWeapon != null)
+                {
+                    leftWeapon = interactor.equipableWeapon;
+                    interactor.equipableWeapon = null;
+                    leftWeapon.EquipToPlayer(leftWeaponEquip, inventory, this);
+                }
+            }
+                
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            _rigidbody.velocity = new Vector2(inputX * _speed, _rigidbody.velocity.y);
+            print(_rigidbody.velocity.ToString());
+            _uiManager.UpdateAmmoCount();
+            _uiManager.UpdateWeapon();
         }
 
         public void AddScore(int points)
