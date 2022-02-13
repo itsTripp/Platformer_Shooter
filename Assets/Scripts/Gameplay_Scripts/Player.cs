@@ -22,6 +22,7 @@ namespace EpicTortoiseStudios
         private float _jumpForce = 2.0f;
         [SerializeField]
         private bool _isGrounded;
+        private bool _canDoubleJump = false;
         private bool _isPlayerRunning = false;
         private float inputX;
 
@@ -145,6 +146,16 @@ namespace EpicTortoiseStudios
             {
                 _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
                 _isGrounded = false;
+                _animator.SetBool("_isJumping", true);
+                _audioSource.PlayOneShot(_jumpAudio);
+                _canDoubleJump = true;
+            }
+            else if(context.performed && _canDoubleJump == true)
+            {
+                _canDoubleJump = false;
+                _rigidbody.AddForce(_jump * _jumpForce, ForceMode2D.Impulse);
+                _isGrounded = false;
+                _animator.SetBool("_isDoubleJumping", true);
                 _audioSource.PlayOneShot(_jumpAudio);
             }
         }
@@ -211,6 +222,11 @@ namespace EpicTortoiseStudios
             print(_rigidbody.velocity.ToString());
             _uiManager.UpdateAmmoCount();
             _uiManager.UpdateWeapon();
+            if(_isGrounded == true)
+            {
+                _animator.SetBool("_isJumping", false);
+                _animator.SetBool("_isDoubleJumping", false);
+            }
         }
 
         public void AddScore(int points)
@@ -238,8 +254,9 @@ namespace EpicTortoiseStudios
                 _audioSource.PlayOneShot(_damageTakenAudio);
                 if (GameControl.gameControl.playerCurrentHealth <= 0)
                 {
+                    _animator.SetBool("_onPlayerDeath", true);
                     _audioSource.PlayOneShot(_deathAudio);
-                    Destroy(gameObject, .5f);
+                    Destroy(gameObject, 1.5f);
                     _enemySpawnManager.OnPlayerDeath();
                 }
             }

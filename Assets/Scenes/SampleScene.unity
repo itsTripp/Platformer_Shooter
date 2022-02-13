@@ -6497,6 +6497,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1363746991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 950309982767883345, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+  m_PrefabInstance: {fileID: 1045206632473208548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1363746996
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363746991}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.95, y: 1.7}
+    newSize: {x: 0.16, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.95, y: 1.7}
+  m_EdgeRadius: 0
 --- !u!1 &1373094571
 GameObject:
   m_ObjectHideFlags: 0
@@ -8688,6 +8719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_Menu_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8620619139848178286, guid: 49bd79cd2bc38944ead329a5a18c801e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8620619139848178289, guid: 49bd79cd2bc38944ead329a5a18c801e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9439,10 +9474,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1479999849, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 720280356614380714, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1045206631322260314, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045206631351604277, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045206631769332905, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: _jumpAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 9647d7bec01112d4eafc1bcdd67b4a41, type: 3}
+    - target: {fileID: 1045206631769332905, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: _deathAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: d31a0c108affcd44180ea0893b1225ca, type: 3}
+    - target: {fileID: 1045206631769332905, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: _damageTakenAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: c1e84e6519c13684dbdb712ab90cf803, type: 3}
     - target: {fileID: 1045206631769332911, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
       propertyPath: m_Name
       value: Player
@@ -9491,6 +9550,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5877388963676219492, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877388963676219492, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877388963676219492, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565618005008703364, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4620910694838647248, guid: 16bf12915c24d4e479e00b3568182165, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
 --- !u!1001 &1210065202531905605
