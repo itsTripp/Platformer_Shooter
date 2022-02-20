@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1064638494737656407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 9168958576891218052}
   m_RootOrder: 1
@@ -175,7 +175,10 @@ MonoBehaviour:
   projectileSpawnDelay: 0.2
   projectileSpreadFactor: 5
   recoilIntensity: 10
-  throwIntensity: 50
+  throwSpin: 50
+  throwSpeed: 100
+  rigidbody: {fileID: 0}
+  collider: {fileID: 0}
 --- !u!50 &3315387760691618505
 Rigidbody2D:
   serializedVersion: 4
