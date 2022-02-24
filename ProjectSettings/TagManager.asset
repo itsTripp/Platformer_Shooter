@@ -19,6 +19,7 @@ TagManager:
   - Ammo_Pickup
   - Yes_Button
   - No_Button
+  - Damage
   layers:
   - Default
   - TransparentFX

@@ -31,6 +31,8 @@ namespace EpicTortoiseStudios
         private Weapon rightWeapon;
         [SerializeField]
         private Weapon leftWeapon;
+        [SerializeField]
+        private Transform throwable;
 
         [Header("Player Score")]
         [SerializeField]
@@ -215,11 +217,43 @@ namespace EpicTortoiseStudios
                 
         }
 
+        public void Throw_Left(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                if (throwable) // Does the character have a weapon in its left hand?
+                {
+                    Transform instThrowable = Instantiate(throwable, leftWeaponEquip.transform.position, leftWeaponEquip.transform.rotation);
+                    Throwable throwableComp;
+                    if (instThrowable.TryGetComponent(out throwableComp))
+                    {
+                        throwableComp.Throw(-1);
+                    }
+                }
+            }
+        }
+
+        public void Throw_Right(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                if (throwable) // Does the character have a weapon in its right hand?
+                {
+                    Transform instThrowable = Instantiate(throwable, rightWeaponEquip.transform.position, rightWeaponEquip.transform.rotation);
+                    Throwable throwableComp;
+                    if (instThrowable.TryGetComponent(out throwableComp))
+                    {
+                        throwableComp.Throw(1);
+                    }
+                }
+            }
+        }
+
         // Update is called once per frame
         void Update()
         {
             _rigidbody.velocity = new Vector2(inputX * _speed, _rigidbody.velocity.y);
-            print(_rigidbody.velocity.ToString());
+            //print(_rigidbody.velocity.ToString());
             _uiManager.UpdateAmmoCount();
             _uiManager.UpdateWeapon();
             if(_isGrounded == true)
