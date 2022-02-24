@@ -65,6 +65,9 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private GameObject leaderboardClosedButton;
 
+        [SerializeField]
+        private AudioSource audioSource;
+
 
         // Start is called before the first frame update
         void Start()
@@ -97,6 +100,14 @@ namespace EpicTortoiseStudios
 
         public void Play_Game()
         {
+            audioSource.Play();
+            StartCoroutine(PlayGameWithDelay());
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        IEnumerator PlayGameWithDelay()
+        {
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

@@ -29,8 +29,8 @@ TagManager:
   - Enemy
   - Player
   - Interaction
-  - Projectiles
-  - 
+  - Friendly Projectiles
+  - Enemy Projectiles
   - 
   - 
   - 
