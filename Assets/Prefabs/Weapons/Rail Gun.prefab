@@ -123,10 +123,16 @@ GameObject:
   m_Component:
   - component: {fileID: 9168958576891218052}
   - component: {fileID: 3858303200454212771}
+<<<<<<< HEAD:Assets/Prefabs/Weapons/Rail Gun.prefab
   - component: {fileID: 6649955921683493255}
   - component: {fileID: 3616378093198537871}
   - component: {fileID: 3727333032422473908}
   - component: {fileID: 1327067022782224648}
+=======
+  - component: {fileID: 1077410743005348483}
+  - component: {fileID: 3742839498735272663}
+  - component: {fileID: 4393036786803921144}
+>>>>>>> 084a2480e1f58e08827ee4778ce34060f5c11059:Assets/Prefabs/Weapons/AssaultRifle.prefab
   m_Layer: 3
   m_Name: Rail Gun
   m_TagString: Weapon
@@ -178,6 +184,7 @@ MonoBehaviour:
   projectileSpreadFactor: 2
   recoilIntensity: 75
   throwSpin: 50
+<<<<<<< HEAD:Assets/Prefabs/Weapons/Rail Gun.prefab
   throwSpeed: 1000
   rigidbody: {fileID: 6649955921683493255}
   collider: {fileID: 3616378093198537871}
@@ -203,6 +210,27 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!61 &3616378093198537871
+=======
+  throwSpeed: 100
+  rigidbody: {fileID: 4393036786803921144}
+  collider: {fileID: 1077410743005348483}
+  m_Equip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Unequip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ShotFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ProjectileFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_NoAmmo:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &1077410743005348483
+>>>>>>> 084a2480e1f58e08827ee4778ce34060f5c11059:Assets/Prefabs/Weapons/AssaultRifle.prefab
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,8 +256,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48119232, y: 0.1951008}
   m_EdgeRadius: 0
+<<<<<<< HEAD:Assets/Prefabs/Weapons/Rail Gun.prefab
 --- !u!61 &3727333032422473908
 BoxCollider2D:
+=======
+--- !u!61 &3742839498735272663
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9168958576891218055}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.25, y: 0.3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!50 &4393036786803921144
+Rigidbody2D:
+  serializedVersion: 4
+>>>>>>> 084a2480e1f58e08827ee4778ce34060f5c11059:Assets/Prefabs/Weapons/AssaultRifle.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}

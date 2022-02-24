@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class InventoryAmmo : InventoryItem
+namespace EpicTortoiseStudios
 {
-    [SerializeField]
-    public Inventory.AmmoType type;
+    [System.Serializable]
+    public class InventoryAmmo : InventoryItem
+    {
+        [SerializeField]
+        public CommonEnums.AmmoType type;
+    }
 }
+

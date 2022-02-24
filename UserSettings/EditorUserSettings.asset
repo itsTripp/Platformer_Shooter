@@ -6,14 +6,9 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c6f15041c271e293b320f1e2a183de7ae2136ebf32f
-      flags: 0
-    RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c6f15041c271e293b320f1e2a183de7a06576f7e93ffdfe
-      flags: 0
-    RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c72151802563f22213229
       flags: 0
+<<<<<<< HEAD
     RecentlyUsedScenePath-3:
       value: 22424703114646680e0b0227036c6f15041c271e293b320f1e2a183de7a06776f7e93ffdfe
       flags: 0
@@ -30,6 +25,33 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
     RecentlyUsedScenePath-8:
+=======
+    RecentlyUsedScenePath-1:
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e28694c7df7ee3d2cfb
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c6f15041c271e293b320f1e2a183de7a06776f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c6f15041c271e293b320f1e2a183de7a06676f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680c031c2e1530103918070d3e6c1b3f23392c107cb3ae6576b3a804ece5333138300ce87c31174e0df7080005f202040c2427ce0f1cef1c1622c61dcb1f860a12c20d05
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 22424703114646680e0b0227036c72111f1927072926337e38271427fb
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c73313458340b0e17012523041830eae13a31e1f464a7f234362820
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c73313458340b0e17012523041830eae13a31e1f478fce9332b25
+      flags: 0
+    RecentlyUsedScenePath-9:
+>>>>>>> 084a2480e1f58e08827ee4778ce34060f5c11059
       value: 22424703114646680e0b0227036c7215020511293f170a353b2c117df7ee3d2cfb
       flags: 0
     RecentlyUsedScenePath-9:

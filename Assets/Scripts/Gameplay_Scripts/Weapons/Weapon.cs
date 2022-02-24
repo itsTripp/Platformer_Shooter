@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace EpicTortoiseStudios
 {
@@ -32,7 +33,7 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private string weaponDescription; // Description that will be used for HUD elements
         [SerializeField]
-        private Inventory.AmmoType ammoType; // Ammo Type that is used, checks the inventory of the player and uses that ammo.
+        private CommonEnums.AmmoType ammoType; // Ammo Type that is used, checks the inventory of the player and uses that ammo.
         [SerializeField]
         private int providedAmmo = 5; // # of Ammo given when the weapon is picked up.
         [SerializeField]
@@ -71,6 +72,12 @@ namespace EpicTortoiseStudios
         [SerializeField]
         private BoxCollider2D collider;
 
+        [SerializeField] UnityEvent m_Equip;
+        [SerializeField] UnityEvent m_Unequip;
+        [SerializeField] UnityEvent m_ShotFire;
+        [SerializeField] UnityEvent m_ProjectileFire;
+        [SerializeField] UnityEvent m_NoAmmo;
+
         // Hidden Global Variables that are constantly changing
         private bool bCanShoot;
         private bool bCanSpawnNextProjectile;
@@ -104,7 +111,7 @@ namespace EpicTortoiseStudios
             bCanShoot = true;
 
             bEquipped = true;
-
+            m_Equip.Invoke();
             return bEquipped;
         }
 
@@ -125,7 +132,7 @@ namespace EpicTortoiseStudios
             bCanShoot = false;
 
             ThrowWeapon();
-
+            m_Unequip.Invoke();
             return bUnequipped;
         }
 
@@ -154,6 +161,7 @@ namespace EpicTortoiseStudios
                     else
                     {
                         // Not enough Ammo available for shot
+                        m_NoAmmo.Invoke();
                         return false;
                     }
                 }
@@ -161,6 +169,7 @@ namespace EpicTortoiseStudios
                 StartCoroutine(SpawnProjectiles());
 
                 bFired = true;
+                m_ShotFire.Invoke();
 
                 // Cannot shoot again until fire rate timer has ended.
                 StartCoroutine(WaitForFire());
@@ -192,7 +201,7 @@ namespace EpicTortoiseStudios
             projectile.GetComponent<Rigidbody2D>().AddForce((projectile.transform.right * equipFactor) * projectileSpeed);
 
             bProjectileSpawned = true;
-
+            m_ProjectileFire.Invoke();
             return bProjectileSpawned;
         }
 
@@ -219,7 +228,8 @@ namespace EpicTortoiseStudios
                     }
                     else
                     {
-                        // Not enough Ammo available for projectile spawning
+                        // Not enough Ammo available for projectile spawning\
+                        m_NoAmmo.Invoke();
                         break;
                     }
                 }
