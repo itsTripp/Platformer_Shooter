@@ -9726,6 +9726,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.data[0].max
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.data[1].max
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.data[0].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.data[0].current
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091972762632523550, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
+      propertyPath: Ammos.Array.data[1].current
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
 --- !u!1001 &1210065202531905605
