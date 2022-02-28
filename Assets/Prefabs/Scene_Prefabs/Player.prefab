@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7565618005008703364}
   - component: {fileID: 9072835358120027020}
   - component: {fileID: 2999571624869491531}
-  m_Layer: 0
+  - component: {fileID: 1363746996}
+  m_Layer: 7
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 950309982767883345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1045206631769332917}
   m_RootOrder: 1
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 1375675165
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 6285816832620951213, guid: a78ecb4a6c795504fb3f9ad96377a025, type: 3}
+  m_Sprite: {fileID: -7754971977581883321, guid: f8421ff49217e394f9912f149b08f3e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,6 +201,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1363746996
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950309982767883345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.016326666, y: -0.04397559}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.57, y: 1.02}
+    newSize: {x: 0.16, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48079348, y: 0.9294405}
+  m_EdgeRadius: 0
 --- !u!1 &1045206630462658716
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045206630462658717}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun_Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,10 +268,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045206631322260314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right_Weapon
   m_TagString: Right_Weapon
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -256,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045206631322260313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalPosition: {x: 0.206, y: 0.401, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1045206630462658717}
@@ -271,10 +298,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045206631351604277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left_Weapon
   m_TagString: Left_Weapon
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -286,7 +313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045206631351604276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0, z: 0}
+  m_LocalPosition: {x: -0.184, y: 0.395, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1045206630462658717}
@@ -344,15 +371,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  _jumpForce: 5
+  _jumpForce: 7
   _isGrounded: 1
   rightWeapon: {fileID: 0}
   leftWeapon: {fileID: 0}
+  throwable: {fileID: 0}
   _score: 0
   _experienceOnPickup: 5
-  _jumpAudio: {fileID: 8300000, guid: 5d034ae56a97f8e4e9831df3ab0d7960, type: 3}
-  _damageTakenAudio: {fileID: 8300000, guid: 6bec0ea7f3ca81e4f91e0399788ce65d, type: 3}
-  _deathAudio: {fileID: 8300000, guid: 6dcecfcbc40843b4c9dc200b0fc794a0, type: 3}
+  _jumpAudio: {fileID: 8300000, guid: 9647d7bec01112d4eafc1bcdd67b4a41, type: 3}
+  _damageTakenAudio: {fileID: 8300000, guid: c1e84e6519c13684dbdb712ab90cf803, type: 3}
+  _deathAudio: {fileID: 8300000, guid: d31a0c108affcd44180ea0893b1225ca, type: 3}
   lootPickups: {fileID: 0}
   PopupText: {fileID: 5326295258736498785, guid: 6974cbc27032c7a439e46b9faa8616c6, type: 3}
 --- !u!114 &9091972762632523550
@@ -370,20 +398,21 @@ MonoBehaviour:
   Ammos:
   - max: 50
     current: 21
-    type: 0
-  - max: 25
-    current: 17
-    type: 2
-  - max: 120
-    current: 64
+    type: 3
+  - max: 50
+    current: 30
     type: 1
+  - max: 120
+    current: 110
+    type: 2
+  - max: 20
+    current: 20
+    type: 4
   Equipment:
   - max: 3
     current: 1
-    type: 0
   - max: 3
     current: 2
-    type: 1
 --- !u!114 &1479999845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +602,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c32b762b-8bbd-4913-beaf-8fc89b866d2a
     m_ActionName: Player_Movement/Pickup_Left_Weapon[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1045206631769332905}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Player, Assembly-CSharp
+        m_MethodName: Throw_Left
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 55fa6446-1a0b-4c7e-8bc8-a52417fd3377
+    m_ActionName: Player_Movement/Throw_Left[/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1045206631769332905}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Player, Assembly-CSharp
+        m_MethodName: Throw_Right
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 073d2231-40b9-471f-ae41-ff6b66cfeebb
+    m_ActionName: Player_Movement/Throw_Right[/Keyboard/c]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player_Movement
@@ -606,13 +667,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045206631769332911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.17918777}
+  m_Offset: {x: -0.01625681, y: -0.04461509}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -623,7 +684,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3583755}
+  m_Size: {x: 0.4808998, y: 0.93095315}
   m_EdgeRadius: 0
 --- !u!114 &2154903397719948935
 MonoBehaviour:
@@ -682,7 +743,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1787889}
+  m_Offset: {x: -0.014383554, y: -0.042613655}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -693,7 +754,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.3575778}
+  m_Size: {x: 0.36594915, y: 0.80736834}
   m_EdgeRadius: 0
 --- !u!114 &6926361791180981129
 MonoBehaviour:

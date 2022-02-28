@@ -164,11 +164,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: The Reach Around
   weaponDescription: This pistol will shoot behind you
-  ammoType: 0
+  ammoType: 1
   providedAmmo: 10
   fireRate: 0.5
   damageMultiplyer: 1
-  projectilePrefab: {fileID: 6003690836348204417, guid: 7ac2ae36557d2ec4f834aadeb761b028, type: 3}
+  projectilePrefab: {fileID: 6003690836348204417, guid: 4d86ab346661d9645bc844d5b9bd54b4, type: 3}
   projectileSpeed: 600
   eachProjectileCostAmmo: 0
   projectileAmmoCost: 1
@@ -181,6 +181,21 @@ MonoBehaviour:
   throwSpeed: 1000
   rigidbody: {fileID: 6649955921683493255}
   collider: {fileID: 3616378093198537871}
+  m_Equip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Unequip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ShotFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ProjectileFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_NoAmmo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &6649955921683493255
 Rigidbody2D:
   serializedVersion: 4

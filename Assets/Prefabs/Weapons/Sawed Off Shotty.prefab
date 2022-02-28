@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Sawed Off Shotty
   weaponDescription: A sawed off shotgun that packs a heck ofa punch.
-  ammoType: 2
+  ammoType: 3
   providedAmmo: 10
   fireRate: 0.5
   damageMultiplyer: 1
@@ -177,10 +177,25 @@ MonoBehaviour:
   projectileSpawnDelay: 0.15
   projectileSpreadFactor: 10
   recoilIntensity: 300
-  throwSpin: 25
+  throwSpin: 20
   throwSpeed: 1000
   rigidbody: {fileID: 6649955921683493255}
   collider: {fileID: 3616378093198537871}
+  m_Equip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Unequip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ShotFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ProjectileFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_NoAmmo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &6649955921683493255
 Rigidbody2D:
   serializedVersion: 4

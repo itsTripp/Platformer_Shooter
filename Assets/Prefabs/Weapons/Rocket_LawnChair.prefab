@@ -164,9 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Rocket Launcher
   weaponDescription: A pistol, staple of the American household.
-  ammoType: 3
+  ammoType: 4
   providedAmmo: 10
-  fireRate: 0.5
+  fireRate: 1
   damageMultiplyer: 1
   projectilePrefab: {fileID: 6003690836348204417, guid: 36cfd7ab97c89044f9530cf554135054, type: 3}
   projectileSpeed: 600
@@ -177,10 +177,25 @@ MonoBehaviour:
   projectileSpawnDelay: 0
   projectileSpreadFactor: 2
   recoilIntensity: 3000
-  throwSpin: 50
+  throwSpin: 20
   throwSpeed: 1000
   rigidbody: {fileID: 6649955921683493255}
   collider: {fileID: 3616378093198537871}
+  m_Equip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Unequip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ShotFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ProjectileFire:
+    m_PersistentCalls:
+      m_Calls: []
+  m_NoAmmo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &6649955921683493255
 Rigidbody2D:
   serializedVersion: 4

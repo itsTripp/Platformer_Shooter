@@ -81,10 +81,10 @@ namespace EpicTortoiseStudios
             controllerSettings.SetActive(false);
             achievementsMenu.SetActive(false);
             leaderboardMenu.SetActive(false);
-            if (mainMenu.activeSelf == true)
+            /*if (mainMenu.activeSelf == true)
             {
                 UIManager.UIManagerInstance.gameObject.SetActive(false);
-            }
+            }*/
         }
 
         private void Awake()
