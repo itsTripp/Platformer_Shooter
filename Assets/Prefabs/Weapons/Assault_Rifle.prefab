@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064638494737656407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.178, y: 0.027, z: 0}
+  m_LocalPosition: {x: 0.195, y: 0.043, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 9168958576891218052}
@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1375675165
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: ca64b1ac92a0f964abaf437df1525f15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7639369764520392311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.699, y: 0.044, z: 0}
+  m_LocalPosition: {x: 0.595, y: 0.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9168958576891218052}
@@ -177,8 +177,8 @@ MonoBehaviour:
   projectileSpawnDelay: 0
   projectileSpreadFactor: 2
   recoilIntensity: 200
-  throwSpin: 20
-  throwSpeed: 1000
+  throwSpin: 10
+  throwSpeed: 500
   rigidbody: {fileID: 6649955921683493255}
   collider: {fileID: 3616378093198537871}
   m_Equip:
@@ -196,6 +196,36 @@ MonoBehaviour:
   m_NoAmmo:
     m_PersistentCalls:
       m_Calls: []
+  m_InteractableStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 83f102fd5c3ed7a4b83a4df235e6b3c5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_InteractableEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &6649955921683493255
 Rigidbody2D:
   serializedVersion: 4

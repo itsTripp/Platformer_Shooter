@@ -224,6 +224,8 @@ GameObject:
   - component: {fileID: 1195193467}
   - component: {fileID: 1195193468}
   - component: {fileID: 1195193474}
+  - component: {fileID: 1009722820}
+  - component: {fileID: 4934533240011820363}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -737,6 +739,53 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1009722820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045206631769332911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b34c0dd375e47e4f953db4516a1bc33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rightEquipLocation: {fileID: 1045206631322260314}
+  _leftEquipLocation: {fileID: 1045206631351604277}
+  _rightWeapon: {fileID: 0}
+  _leftWeapon: {fileID: 0}
+  _throwable: {fileID: 0}
+  _throwableList: []
+  m_Equip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Unequip:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Throw:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Attack:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4934533240011820363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045206631769332911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5852db6d2232242904ec575d13ea9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ammos:
+  - max: 100
+    current: 100
+    type: 1
+  Equipment: []
 --- !u!1 &2915032317284093207
 GameObject:
   m_ObjectHideFlags: 0

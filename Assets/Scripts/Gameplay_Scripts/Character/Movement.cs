@@ -48,6 +48,7 @@ public class Movement : MonoBehaviour
     private float _perkJumpForce = 0;
     private int _perkJumpCount = 0;
 
+    [Header("Events")]
     [SerializeField] UnityEvent m_Jump;
     [SerializeField] UnityEvent m_DoubleJump;
     [SerializeField] UnityEvent m_Land;
@@ -181,8 +182,6 @@ public class Movement : MonoBehaviour
         float frameAirDeacceleration = (_airDeAcceleration + _perkAirDeAcceleratrion) * Time.deltaTime;
 
         if (!canMoveSide((int)Mathf.Sign(_inputX))) _inputX = 0;
-
-        Debug.Log("Current Speed: " + _currentSpeed);
 
         if (_inputX != 0)
         {

@@ -165,12 +165,20 @@ namespace EpicTortoiseStudios
             }
         }
 
-        private void ApplyKnockback(float knockBack, Vector3 position)
+        public void ApplyKnockback(float knockBack, Vector3 position)
         {
             if (!applyKnockback) return;
 
             Vector3 direction = transform.position - position;
             _rigidbody2D.AddForceAtPosition(direction * knockBack, direction);
+        }
+
+        public void ApplyRecoil(float intensity, Vector3 direction)
+        {
+            if (!applyKnockback) return;
+
+            Vector2 convertedDirection = new Vector2(direction.x, direction.y);
+            _rigidbody2D.AddForce(direction * intensity);
         }
 
         private void DisplayDamageUI(float damageTaken)
