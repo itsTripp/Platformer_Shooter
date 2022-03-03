@@ -14,7 +14,10 @@ GameObject:
   - component: {fileID: 8817071418009368670}
   - component: {fileID: 8042513275325459017}
   - component: {fileID: 454404766000261091}
+<<<<<<< HEAD:Assets/Prefabs/Projectiles/SimpleProjectile.prefab
+=======
   - component: {fileID: 2673883593914677723}
+>>>>>>> 084a2480e1f58e08827ee4778ce34060f5c11059:Assets/Prefabs/Weapons/Projectiles/SimpleProjectile.prefab
   m_Layer: 9
   m_Name: SimpleProjectile
   m_TagString: Damage
