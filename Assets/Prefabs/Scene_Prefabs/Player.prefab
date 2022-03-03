@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1045206631769332917}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &950309982767883345
 GameObject:
@@ -59,9 +59,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1045206631322260314}
+  - {fileID: 1045206631351604277}
   m_Father: {fileID: 1045206631769332917}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7565618005008703364
 SpriteRenderer:
@@ -146,38 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce66e2b0b04480a42aabf95ec8f0eed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1045206630462658716
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1045206630462658717}
-  m_Layer: 7
-  m_Name: Gun_Container
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1045206630462658717
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045206630462658716}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.532, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1045206631322260314}
-  - {fileID: 1045206631351604277}
-  m_Father: {fileID: 1045206631769332917}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045206631322260313
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,11 +171,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045206631322260313}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.35, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.29999995, y: -0.18200004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1045206630462658717}
+  m_Father: {fileID: 5877388963676219492}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045206631351604276
@@ -231,11 +201,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045206631351604276}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.29, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3000002, y: -0.24199998, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1045206630462658717}
+  m_Father: {fileID: 5877388963676219492}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045206631769332911
@@ -272,7 +242,6 @@ Transform:
   m_LocalPosition: {x: 0.11, y: 9.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1045206630462658717}
   - {fileID: 5877388963676219492}
   - {fileID: 4088689287541620920}
   - {fileID: 1436368667}
@@ -591,14 +560,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxSpeed: 5
-  _acceleration: 1
-  _deAcceleration: 10
-  _airMaxSpeed: 7.5
-  _airAcceleration: 0
-  _airDeAcceleration: 5
+  _acceleration: 20
+  _deAcceleration: 30
+  _airMaxSpeed: 5
+  _airAcceleration: 15
+  _airDeAcceleration: 15
   _maxFallSpeed: 10
   _jumpForce: 15
+  _jumpAirForcePerc: 0.75
   _jumpCount: 2
+  _coyoteTime: 0.2
   m_Jump:
     m_PersistentCalls:
       m_Calls:
@@ -612,18 +583,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1363746994}
-        m_TargetAssemblyTypeName: AnimatorParamSetter, Assembly-CSharp
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: _jump
           m_BoolArgument: 0
         m_CallState: 2
   m_DoubleJump:
@@ -808,7 +767,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1045206631769332917}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6791479176321906812
 BoxCollider2D:

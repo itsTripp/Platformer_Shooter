@@ -17,7 +17,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _maxFallSpeed;
     [Header("Jumping")]
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _jumpAirForcePerc = .5f;
     [SerializeField] private int _jumpCount; //Times the character can jump before touching the ground.
+    [SerializeField] private float _coyoteTime = .4f;
 
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
@@ -29,10 +31,12 @@ public class Movement : MonoBehaviour
 
     private float _currentSpeed = 0f;
     private int _currentJumpCount = 0;
+    private float _coyoteTimer = 0f;
 
     //Input
     private float _inputX = 0;
-    private bool _jump = false;
+    private bool _jumpHeld = false;
+    private bool _jumpStarted = false;
 
     //Perk Modifiers
     private float _perkMaxSpeed = 0;
@@ -94,19 +98,25 @@ public class Movement : MonoBehaviour
 
         //Move the player on the x Axis
         Move();
+
+        _animator.SetFloat("_yVelocity", _rigidbody2D.velocity.y);
+        _animator.SetFloat("_xVelocity", _rigidbody2D.velocity.x);
     }
 
     private void CheckGrounded()
     {
         int layer_mask = LayerMask.GetMask("World");
-        RaycastHit2D hit = Physics2D.Raycast(_characterBase.position, -Vector2.up, .1f, layer_mask);
-        
-        if (hit.transform != null)
+        float halfWidth = _collider.bounds.size.x / 2;
+        RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(_characterBase.position.x - halfWidth, _characterBase.position.y), -Vector2.up, .1f, layer_mask);
+        RaycastHit2D hitMid = Physics2D.Raycast(_characterBase.position, -Vector2.up, .1f, layer_mask);
+        RaycastHit2D hitRight = Physics2D.Raycast(new Vector2(_characterBase.position.x + halfWidth, _characterBase.position.y), -Vector2.up, .1f, layer_mask);
+
+        if (hitLeft.transform != null || hitMid.transform != null || hitRight.transform != null)
         {
-            Debug.Log(hit.transform.name.ToString());
             if (_isGrounded == false) m_Land.Invoke();
             _isGrounded = true;
             _currentJumpCount = 0;
+            _coyoteTimer = 0;
 
             if (_animator)
             {
@@ -114,6 +124,8 @@ public class Movement : MonoBehaviour
             }
         } else
         {
+            _coyoteTimer += Time.deltaTime;
+
             if (_animator)
             {
                 _animator.SetBool("_isGrounded", false);
@@ -125,35 +137,62 @@ public class Movement : MonoBehaviour
     public void Jump()
     {
         //Can we jump?
-        if (_jump && _currentJumpCount < (_jumpCount + _perkJumpCount))
+        if ((_jumpHeld && !_jumpStarted) && _currentJumpCount < (_jumpCount + _perkJumpCount))
         {
-            _jump = false;
-            Debug.Log("Jump Force: " + _jumpForce.ToString());
-            _rigidbody2D.AddForce(Vector2.up * (_jumpForce + _perkJumpForce), ForceMode2D.Impulse);
-            _currentJumpCount++;
+            if (_currentJumpCount == 0)
+            {
+                //Need to determine if the player is grounded or just left the ground. CoyoteTime.
+                if (_coyoteTimer <= _coyoteTime)
+                {
+                    _jumpStarted = true;
+                    if (_rigidbody2D.velocity.y < 0) _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
+                    _rigidbody2D.AddForce(Vector2.up * (_jumpForce + _perkJumpForce), ForceMode2D.Impulse);
+                    _currentJumpCount++;
 
-            m_Jump.Invoke();
+                    m_Jump.Invoke();
+                }
+
+            } else
+            {
+                //In Air Jump
+                if (_rigidbody2D.velocity.y < 0) _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
+                _rigidbody2D.AddForce(Vector2.up * ((_jumpForce + _perkJumpForce) * _jumpAirForcePerc), ForceMode2D.Impulse);
+                Debug.Log("JumpForce = " + ((_jumpForce + _perkJumpForce) * _jumpAirForcePerc).ToString());
+                _currentJumpCount++;
+
+                m_Jump.Invoke();
+            }
         }
-        else
+
+        if (!_jumpHeld && _jumpStarted && _rigidbody2D.velocity.y > 0)
         {
-            _jump = false;
+            Debug.Log("Halving Jump Height");
+            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y / 2);
+            _jumpStarted = false;
         }
     }
 
     public void Move()
     {
+        float frameAcceleration = (_acceleration + _perkAcceleration) * Time.deltaTime;
+        float frameAirAcceleration = (_airAcceleration + _perkAirAcceleratrion) * Time.deltaTime;
+        float frameDeaccelration = (_deAcceleration + _perkDeAcceleration) * Time.deltaTime;
+        float frameAirDeacceleration = (_airDeAcceleration + _perkAirDeAcceleratrion) * Time.deltaTime;
+
+        if (!canMoveSide((int)Mathf.Sign(_inputX))) _inputX = 0;
+
+        Debug.Log("Current Speed: " + _currentSpeed);
+
         if (_inputX != 0)
         {
-            if (_isGrounded) _currentSpeed = _inputX * Mathf.Clamp(Mathf.Abs(_currentSpeed) + (_acceleration + _perkAcceleration), 0, (_maxSpeed + _perkMaxSpeed));
-            if (!_isGrounded) _currentSpeed = _inputX * Mathf.Clamp(Mathf.Abs(_currentSpeed) + (_airAcceleration + _perkAirAcceleratrion), 0, (_airMaxSpeed + _perkAirMaxSpeed));
+            if (_isGrounded) _currentSpeed = _inputX * Mathf.Clamp(Mathf.Abs(_currentSpeed) + frameAcceleration, 0, (_maxSpeed + _perkMaxSpeed));
+            if (!_isGrounded) _currentSpeed = _inputX * Mathf.Clamp(Mathf.Abs(_currentSpeed) + frameAirAcceleration, 0, (_airMaxSpeed + _perkAirMaxSpeed));
         } else
         {
-            if (_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - (_deAcceleration + _perkDeAcceleration), 0, _currentSpeed);
-            if (!_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - (_airDeAcceleration + _perkAirDeAcceleratrion), 0, _currentSpeed);
+            if (_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - frameDeaccelration, 0, Mathf.Abs(_currentSpeed));
+            if (!_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - frameAirDeacceleration, 0, Mathf.Abs(_currentSpeed));
         }
-
-        //Check if there is a wall blocking left or right
-        
 
         _rigidbody2D.velocity = new Vector2(_currentSpeed, Mathf.Clamp(_rigidbody2D.velocity.y, -_maxFallSpeed, (_jumpForce + _perkJumpForce)));
 
@@ -188,6 +227,24 @@ public class Movement : MonoBehaviour
 
     public void JumpInput(InputAction.CallbackContext context)
     {
-        if (context.performed) _jump = true;
+        if (context.performed) _jumpHeld = true;
+        if (context.canceled) _jumpHeld = false;
+    }
+
+    private bool canMoveSide(int dir)
+    {
+        int layer_mask = LayerMask.GetMask("World");
+        float halfWidth = (_collider.bounds.size.x / 2) * dir;
+        float halfHeight = (_collider.bounds.size.y / 2);
+        RaycastHit2D hitHigh = Physics2D.Raycast(new Vector2(_characterBase.position.x + halfWidth, _characterBase.position.y + (halfHeight * 2)), Vector2.right * dir, .1f, layer_mask);
+        RaycastHit2D hitMid = Physics2D.Raycast(new Vector2(_characterBase.position.x + halfWidth, _characterBase.position.y + halfHeight), Vector2.right * dir, .1f, layer_mask);
+        //RaycastHit2D hitLow = Physics2D.Raycast(new Vector2(_characterBase.position.x + halfWidth, _characterBase.position.y), Vector2.right * dir, .1f, layer_mask);
+
+        if (hitHigh.transform != null || hitMid.transform != null)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
