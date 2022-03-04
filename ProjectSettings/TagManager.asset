@@ -20,6 +20,7 @@ TagManager:
   - Yes_Button
   - No_Button
   - Damage
+  - World
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - Friendly Projectiles
   - Enemy Projectiles
   - PostProcessing
-  - 
+  - World
   - 
   - 
   - 

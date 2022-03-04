@@ -65,18 +65,21 @@ namespace EpicTortoiseStudios
 
         // Hidden Global Variables that don't change much
         private Inventory inventory;
-        private Player player;
+        private Health _health;
         private Transform firePoint;
         [SerializeField]
         private Rigidbody2D rigidbody;
         [SerializeField]
         private BoxCollider2D collider;
 
+        [Header("Events")]
         [SerializeField] UnityEvent m_Equip;
         [SerializeField] UnityEvent m_Unequip;
         [SerializeField] UnityEvent m_ShotFire;
         [SerializeField] UnityEvent m_ProjectileFire;
         [SerializeField] UnityEvent m_NoAmmo;
+        [SerializeField] UnityEvent m_InteractableStart;
+        [SerializeField] UnityEvent m_InteractableEnd;
 
         // Hidden Global Variables that are constantly changing
         private bool bCanShoot;
@@ -88,7 +91,7 @@ namespace EpicTortoiseStudios
             firePoint = this.transform.Find("FirePoint");
         }
 
-        public bool EquipToPlayer(Transform equipPosition, Inventory inv, Player character)
+        public bool EquipToPlayer(Transform equipPosition, Inventory inv, Health health)
         {
             bool bEquipped = false;
 
@@ -105,7 +108,7 @@ namespace EpicTortoiseStudios
 
             equipFactor = equipPosition.localScale.x;
             inventory = inv;
-            player = character;
+            _health = health;
             inventory.AddAmmo(ammoType, providedAmmo);
             providedAmmo = 0; // After the initial pickup the weapon should not supply any more ammo.
             bCanShoot = true;
@@ -128,7 +131,7 @@ namespace EpicTortoiseStudios
             sw.enabled = true;
 
             inventory = null;
-            player = null;
+            _health = null;
             bCanShoot = false;
 
             ThrowWeapon();
@@ -236,7 +239,7 @@ namespace EpicTortoiseStudios
 
                 if (InstantiateProjectile())
                 {
-                    player.ApplyKnock(-equipFactor * Vector3.right, recoilIntensity);
+                    _health.ApplyRecoil(recoilIntensity, -equipFactor * Vector3.right);
                     projectilesSinceLastDelay++;
 
                     if (projectilesSinceLastDelay >= projectilesPerDelay)
@@ -253,7 +256,9 @@ namespace EpicTortoiseStudios
             if (collision.tag == "Player")
             {
                 Interactor interactor = collision.GetComponent<Interactor>();
-                interactor.equipableWeapon = this;
+                interactor.SelectWeapon(this);
+
+                m_InteractableStart.Invoke();
             }
         }
 
@@ -264,9 +269,14 @@ namespace EpicTortoiseStudios
                 Interactor interactor = collision.GetComponent<Interactor>();
                 if (interactor.equipableWeapon == this)
                 {
-                    interactor.equipableWeapon = null;
+                    interactor.UnSelectWeapon();
                 }
             }
+        }
+
+        public void UnSelectable()
+        {
+            m_InteractableEnd.Invoke();
         }
     }
 }
