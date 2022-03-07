@@ -85,6 +85,8 @@ namespace EpicTortoiseStudios
             {
                 UIManager.UIManagerInstance.gameObject.SetActive(false);
             }*/
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(mainMenuFirstButton);
         }
 
         private void Awake()
