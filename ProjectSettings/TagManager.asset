@@ -31,11 +31,11 @@ TagManager:
   - Enemy
   - Player
   - Interaction
-  - Friendly Projectiles
-  - Enemy Projectiles
-  - PostProcessing
-  - World
+  - Projectile
   - 
+  - PostProcessing
+  - World/AllCollision
+  - World/NoOtherCollision
   - 
   - 
   - 

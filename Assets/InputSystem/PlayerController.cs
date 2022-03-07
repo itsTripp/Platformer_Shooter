@@ -98,6 +98,24 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InteractPrev"",
+                    ""type"": ""Button"",
+                    ""id"": ""b1d96f8f-a023-4323-a09b-b6249c1aab94"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InteractNext"",
+                    ""type"": ""Button"",
+                    ""id"": ""192c3435-8768-4d6f-9cf9-b43e09d47772"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -296,6 +314,28 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Throw_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3f22f21-3442-4b90-a4e5-3f4896ab1008"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractPrev"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""68cc8100-dd11-4513-b281-0172f519b58d"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractNext"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -861,6 +901,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         m_Player_Movement_Pickup_Left_Weapon = m_Player_Movement.FindAction("Pickup_Left_Weapon", throwIfNotFound: true);
         m_Player_Movement_Throw_Left = m_Player_Movement.FindAction("Throw_Left", throwIfNotFound: true);
         m_Player_Movement_Throw_Right = m_Player_Movement.FindAction("Throw_Right", throwIfNotFound: true);
+        m_Player_Movement_InteractPrev = m_Player_Movement.FindAction("InteractPrev", throwIfNotFound: true);
+        m_Player_Movement_InteractNext = m_Player_Movement.FindAction("InteractNext", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -941,6 +983,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement_Pickup_Left_Weapon;
     private readonly InputAction m_Player_Movement_Throw_Left;
     private readonly InputAction m_Player_Movement_Throw_Right;
+    private readonly InputAction m_Player_Movement_InteractPrev;
+    private readonly InputAction m_Player_Movement_InteractNext;
     public struct Player_MovementActions
     {
         private @PlayerController m_Wrapper;
@@ -953,6 +997,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         public InputAction @Pickup_Left_Weapon => m_Wrapper.m_Player_Movement_Pickup_Left_Weapon;
         public InputAction @Throw_Left => m_Wrapper.m_Player_Movement_Throw_Left;
         public InputAction @Throw_Right => m_Wrapper.m_Player_Movement_Throw_Right;
+        public InputAction @InteractPrev => m_Wrapper.m_Player_Movement_InteractPrev;
+        public InputAction @InteractNext => m_Wrapper.m_Player_Movement_InteractNext;
         public InputActionMap Get() { return m_Wrapper.m_Player_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -986,6 +1032,12 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                 @Throw_Right.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnThrow_Right;
                 @Throw_Right.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnThrow_Right;
                 @Throw_Right.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnThrow_Right;
+                @InteractPrev.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnInteractPrev;
+                @InteractPrev.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnInteractPrev;
+                @InteractPrev.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnInteractPrev;
+                @InteractNext.started -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnInteractNext;
+                @InteractNext.performed -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnInteractNext;
+                @InteractNext.canceled -= m_Wrapper.m_Player_MovementActionsCallbackInterface.OnInteractNext;
             }
             m_Wrapper.m_Player_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -1014,6 +1066,12 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                 @Throw_Right.started += instance.OnThrow_Right;
                 @Throw_Right.performed += instance.OnThrow_Right;
                 @Throw_Right.canceled += instance.OnThrow_Right;
+                @InteractPrev.started += instance.OnInteractPrev;
+                @InteractPrev.performed += instance.OnInteractPrev;
+                @InteractPrev.canceled += instance.OnInteractPrev;
+                @InteractNext.started += instance.OnInteractNext;
+                @InteractNext.performed += instance.OnInteractNext;
+                @InteractNext.canceled += instance.OnInteractNext;
             }
         }
     }
@@ -1141,6 +1199,8 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         void OnPickup_Left_Weapon(InputAction.CallbackContext context);
         void OnThrow_Left(InputAction.CallbackContext context);
         void OnThrow_Right(InputAction.CallbackContext context);
+        void OnInteractPrev(InputAction.CallbackContext context);
+        void OnInteractNext(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
