@@ -97,6 +97,7 @@ namespace EpicTortoiseStudios
                 if (_rightWeapon)
                 {
                     _rightWeapon.UnequipFromCharacter();
+                    _interactor.RemoveSelectedInteractable();
                     _rightWeapon = null;
 
                     m_Unequip.Invoke();
@@ -105,6 +106,7 @@ namespace EpicTortoiseStudios
                 if (_interactor != null && _interactor._selectedWeapon != null)
                 {
                     _rightWeapon = _interactor._selectedWeapon;
+                    _interactor._selectedWeapon = null;
                     _interactor.RemoveSelectedInteractable();
                     _rightWeapon.EquipToCharacter(_rightEquipLocation, this.gameObject, _inventory, _health);
 
@@ -167,6 +169,7 @@ namespace EpicTortoiseStudios
                 if (_interactor != null && _interactor._selectedWeapon != null)
                 {
                     _leftWeapon = _interactor._selectedWeapon;
+                    _interactor._selectedWeapon = null;
                     _interactor.RemoveSelectedInteractable();
                     _leftWeapon.EquipToCharacter(_leftEquipLocation, this.gameObject, _inventory, _health);
 

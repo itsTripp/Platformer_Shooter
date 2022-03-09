@@ -32,7 +32,7 @@ TagManager:
   - Player
   - Interaction
   - Projectile
-  - 
+  - Damage
   - PostProcessing
   - World/AllCollision
   - World/NoOtherCollision

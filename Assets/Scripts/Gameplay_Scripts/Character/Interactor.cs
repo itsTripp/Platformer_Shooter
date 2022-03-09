@@ -28,14 +28,18 @@ namespace EpicTortoiseStudios
 
         public void RemoveSelectedInteractable()
         {
-            selectedInteractable.UnselectInteractable();
-            interactables.Remove(selectedInteractable);
-            SelectNextInteractable();
+            if (selectedInteractable != null)
+            {
+                selectedInteractable.UnselectInteractable();
+                interactables.Remove(selectedInteractable);
+                SelectNextInteractable();
+            }
         }
 
         public void UseSelectedInteractable()
         {
             selectedInteractable.UseSelected();
+            RemoveSelectedInteractable();
         }
 
         public void SelectInteractable(int index)
@@ -60,6 +64,10 @@ namespace EpicTortoiseStudios
 
                 //If Interactable is on a gameobject with Weapon then set the Weapon as the interactable.
                 if (selectedInteractable.TryGetComponent(out _selectedWeapon)) return;
+            } else
+            {
+                selectedInteractable = null;
+                _selectedWeapon = null;
             }
         }
 

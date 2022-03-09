@@ -90,7 +90,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+  - {fileID: 2100000, guid: f955e3e5b1891bb468452527b3ffc11f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 1195193474}
   - component: {fileID: 1009722820}
   - component: {fileID: 4934533240011820363}
+  - component: {fileID: 243465432}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -476,6 +477,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 073d2231-40b9-471f-ae41-ff6b66cfeebb
     m_ActionName: Player_Movement/Throw_Right[/Keyboard/c]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6926361791180981129}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Interactor, Assembly-CSharp
+        m_MethodName: SelectPrevInteractable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b1d96f8f-a023-4323-a09b-b6249c1aab94
+    m_ActionName: Player_Movement/InteractPrev[/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6926361791180981129}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Interactor, Assembly-CSharp
+        m_MethodName: SelectNextInteractable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 192c3435-8768-4d6f-9cf9-b43e09d47772
+    m_ActionName: Player_Movement/InteractNext[/Keyboard/c]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player_Movement
@@ -635,7 +668,7 @@ MonoBehaviour:
   _maxFallSpeed: 10
   _jumpForce: 15
   _jumpAirForcePerc: 0.75
-  _jumpCount: 1
+  _jumpCount: 2
   _coyoteTime: 0.2
   m_Jump:
     m_PersistentCalls:
@@ -839,6 +872,58 @@ MonoBehaviour:
     current: 100
     type: 1
   Equipment: []
+--- !u!114 &243465432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045206631769332911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3064d78d39a4caf4c94d087a2c6435c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 1
+  _oneShot: 0
+  _loopDelay: 1
+  _activateOnStart: 1
+  m_TimerActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TimerDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TimerStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7565618005008703364}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: f955e3e5b1891bb468452527b3ffc11f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_TimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7565618005008703364}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2915032317284093207
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,4 +994,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7630e2033ecb94b8c49ceecdfed9d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipableWeapon: {fileID: 0}
+  _selectedWeapon: {fileID: 0}

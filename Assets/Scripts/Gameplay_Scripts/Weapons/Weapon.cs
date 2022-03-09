@@ -102,8 +102,6 @@ namespace EpicTortoiseStudios
 
         private void FixedUpdate()
         {
-            Debug.Log(_rigidbody2D.velocity.magnitude);
-
             if (_rigidbody2D.velocity.magnitude > 1)
             {
                 this.gameObject.layer = 9;

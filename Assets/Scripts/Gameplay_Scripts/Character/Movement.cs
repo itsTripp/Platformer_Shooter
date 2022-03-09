@@ -159,7 +159,6 @@ public class Movement : MonoBehaviour
                 if (_rigidbody2D.velocity.y < 0) _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
                 _rigidbody2D.AddForce(Vector2.up * ((_jumpForce + _perkJumpForce) * _jumpAirForcePerc), ForceMode2D.Impulse);
-                Debug.Log("JumpForce = " + ((_jumpForce + _perkJumpForce) * _jumpAirForcePerc).ToString());
                 _currentJumpCount++;
 
                 m_Jump.Invoke();
@@ -168,7 +167,6 @@ public class Movement : MonoBehaviour
 
         if (!_jumpHeld && _jumpStarted && _rigidbody2D.velocity.y > 0)
         {
-            Debug.Log("Halving Jump Height");
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y / 2);
             _jumpStarted = false;
         }
