@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -7754971977581883321, guid: f8421ff49217e394f9912f149b08f3e9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -200,8 +200,9 @@ GameObject:
   - component: {fileID: 6723859727913209209}
   - component: {fileID: 6723859727134212681}
   - component: {fileID: 6723859727913208454}
+  - component: {fileID: 3295937612763947128}
   m_Layer: 6
-  m_Name: Enemy_Hologram
+  m_Name: Enemy_Hologram_Red
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,6 +535,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3295937612763947128}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6723859727134212681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,6 +594,46 @@ MonoBehaviour:
     current: 100
     type: 1
   Equipment: []
+--- !u!114 &3295937612763947128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723859727913208455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3064d78d39a4caf4c94d087a2c6435c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _time: 3
+  _oneShot: 1
+  _loopDelay: 0
+  _activateOnStart: 0
+  m_TimerActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TimerDeactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TimerStart:
+    m_PersistentCalls:
+      m_Calls: []
+  m_TimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6723859727913209209}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Health, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6723859728676496905
 GameObject:
   m_ObjectHideFlags: 0

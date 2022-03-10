@@ -36,7 +36,6 @@ public class Timer : MonoBehaviour
             
             if (_currentTime == 0f)
             {
-                Debug.Log("Timer Start");
                 m_TimerStart.Invoke();
             }
 
@@ -44,7 +43,6 @@ public class Timer : MonoBehaviour
             
             if (_currentTime > _time)
             {
-                Debug.Log("Timer End");
                 m_TimerEnd.Invoke();
                 _currentTime = 0f;
 
@@ -63,14 +61,13 @@ public class Timer : MonoBehaviour
         {
             if (_currentTime == 0f)
             {
-                Debug.Log("Delay Start");
+
             }
 
             _currentTime += Time.deltaTime;
 
             if (_currentTime > _loopDelay)
             {
-                Debug.Log("Delay End");
                 _active = true;
                 _loopDelayActive = false;
                 _currentTime = 0f;

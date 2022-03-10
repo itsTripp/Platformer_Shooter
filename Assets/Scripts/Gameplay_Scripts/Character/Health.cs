@@ -260,6 +260,11 @@ namespace EpicTortoiseStudios
                 }
             }
         }
+
+        public void DestroyObject()
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
 
