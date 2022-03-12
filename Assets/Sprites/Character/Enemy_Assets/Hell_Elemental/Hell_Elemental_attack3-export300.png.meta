@@ -1,0 +1,888 @@
+fileFormatVersion: 2
+guid: 935186ab2fc89774681bf4aa07d5b694
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1459887105898360938
+    second: Hell_Elemental_attack3-export300_0
+  - first:
+      213: 3269012343158650434
+    second: Hell_Elemental_attack3-export300_1
+  - first:
+      213: -6388097778895163743
+    second: Hell_Elemental_attack3-export300_2
+  - first:
+      213: -5102927018968029250
+    second: Hell_Elemental_attack3-export300_3
+  - first:
+      213: 2821830817110174135
+    second: Hell_Elemental_attack3-export300_4
+  - first:
+      213: -5327915182115226904
+    second: Hell_Elemental_attack3-export300_5
+  - first:
+      213: -3366299385376746973
+    second: Hell_Elemental_attack3-export300_6
+  - first:
+      213: 2576906197384770472
+    second: Hell_Elemental_attack3-export300_7
+  - first:
+      213: -5416191803398469843
+    second: Hell_Elemental_attack3-export300_8
+  - first:
+      213: -2609145583918067014
+    second: Hell_Elemental_attack3-export300_9
+  - first:
+      213: 1173004173797744762
+    second: Hell_Elemental_attack3-export300_10
+  - first:
+      213: 5470583948114643578
+    second: Hell_Elemental_attack3-export300_11
+  - first:
+      213: -8839981006869529362
+    second: Hell_Elemental_attack3-export300_12
+  - first:
+      213: 2871099953575477967
+    second: Hell_Elemental_attack3-export300_13
+  - first:
+      213: -2262692001165473766
+    second: Hell_Elemental_attack3-export300_14
+  - first:
+      213: 3970654603949414675
+    second: Hell_Elemental_attack3-export300_15
+  - first:
+      213: 5868609508370488720
+    second: Hell_Elemental_attack3-export300_16
+  - first:
+      213: -933363677411714011
+    second: Hell_Elemental_attack3-export300_17
+  - first:
+      213: 5933028805465560167
+    second: Hell_Elemental_attack3-export300_18
+  - first:
+      213: -3056931535376364059
+    second: Hell_Elemental_attack3-export300_19
+  - first:
+      213: -4883814768335695160
+    second: Hell_Elemental_attack3-export300_20
+  - first:
+      213: -1885835460570522623
+    second: Hell_Elemental_attack3-export300_21
+  - first:
+      213: 5300336256576964681
+    second: Hell_Elemental_attack3-export300_22
+  - first:
+      213: 5288113050983318224
+    second: Hell_Elemental_attack3-export300_23
+  - first:
+      213: 2242897890642147933
+    second: Hell_Elemental_attack3-export300_24
+  - first:
+      213: 5330343605351438703
+    second: Hell_Elemental_attack3-export300_25
+  - first:
+      213: 890559666057740948
+    second: Hell_Elemental_attack3-export300_26
+  - first:
+      213: -2062755253964868830
+    second: Hell_Elemental_attack3-export300_27
+  - first:
+      213: 870730256283848020
+    second: Hell_Elemental_attack3-export300_28
+  - first:
+      213: 4736428102166570470
+    second: Hell_Elemental_attack3-export300_29
+  - first:
+      213: -1904790970721899878
+    second: Hell_Elemental_attack3-export300_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60be37869f824410800000000000000
+      internalID: 1459887105898360938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 168
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246b658f76ddd5d20800000000000000
+      internalID: 3269012343158650434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aeed7a6aeae857a0800000000000000
+      internalID: -6388097778895163743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_3
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7eaa7a9e2ce29b0800000000000000
+      internalID: -5102927018968029250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 171
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b92a1e6d28292720800000000000000
+      internalID: 2821830817110174135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_5
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea7c90de517f06b0800000000000000
+      internalID: -5327915182115226904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_6
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322d00f5b808841d0800000000000000
+      internalID: -3366299385376746973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_7
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 174
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a33f92988203c320800000000000000
+      internalID: 2576906197384770472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_8
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d274d034042d5d4b0800000000000000
+      internalID: -5416191803398469843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_9
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2d84f4ae37acbd0800000000000000
+      internalID: -2609145583918067014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_10
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 174
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70e34bc419574010800000000000000
+      internalID: 1173004173797744762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_11
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ac35dcd1b6beb40800000000000000
+      internalID: 5470583948114643578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_12
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec77584c14125580800000000000000
+      internalID: -8839981006869529362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_13
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 174
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2c18f223238d720800000000000000
+      internalID: 2871099953575477967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_14
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a180a6afc9d4990e0800000000000000
+      internalID: -2262692001165473766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_15
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3199c2a23599a1730800000000000000
+      internalID: 3970654603949414675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_16
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 171
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d17ef214d717150800000000000000
+      internalID: 5868609508370488720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_17
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52c5f993ea60c03f0800000000000000
+      internalID: -933363677411714011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_18
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 123
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7645fe7934a565250800000000000000
+      internalID: 5933028805465560167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_19
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 24
+        width: 123
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5edc33307f89395d0800000000000000
+      internalID: -3056931535376364059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_20
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 24
+        width: 123
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c25b800854393cb0800000000000000
+      internalID: -4883814768335695160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_21
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 87
+        width: 63
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cdbd3e3aa24d5e0800000000000000
+      internalID: -1885835460570522623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_22
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 21
+        width: 108
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948c4633eb39e8940800000000000000
+      internalID: 5300336256576964681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_23
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 18
+        width: 147
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2c7ff5dc6236940800000000000000
+      internalID: 5288113050983318224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_24
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 12
+        width: 126
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ab2378fbf502f10800000000000000
+      internalID: 2242897890642147933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_25
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 18
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f695fb7844f29f940800000000000000
+      internalID: 5330343605351438703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_26
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49289a24c47eb5c00800000000000000
+      internalID: 890559666057740948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_27
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 18
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2237ad4860f9f53e0800000000000000
+      internalID: -2062755253964868830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_28
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45dcbf40e84751c00800000000000000
+      internalID: 870730256283848020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_29
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 6
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5e0d5a34c2bb140800000000000000
+      internalID: 4736428102166570470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_attack3-export300_30
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 3
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9aefb244b2d095e0800000000000000
+      internalID: -1904790970721899878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 45025e2257504c448ba843b7c1b317c7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,669 @@
+fileFormatVersion: 2
+guid: 09ff7bcd16b21b146abe1f888395c536
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8993119399630261317
+    second: Back_TileSet_0
+  - first:
+      213: -611388702781994053
+    second: Back_TileSet_1
+  - first:
+      213: 4164220832081686892
+    second: Back_TileSet_2
+  - first:
+      213: -4420731287939038964
+    second: Back_TileSet_3
+  - first:
+      213: 562470073124874909
+    second: Back_TileSet_4
+  - first:
+      213: 4619224403918447047
+    second: Back_TileSet_5
+  - first:
+      213: 2859195439872481302
+    second: Back_TileSet_6
+  - first:
+      213: 3333880269433656064
+    second: Back_TileSet_7
+  - first:
+      213: 4511018222288914886
+    second: Back_TileSet_8
+  - first:
+      213: 7749682289358387745
+    second: Back_TileSet_9
+  - first:
+      213: 2180023969134400496
+    second: Back_TileSet_10
+  - first:
+      213: 3826937657043953879
+    second: Back_TileSet_11
+  - first:
+      213: -4234798900074193538
+    second: Back_TileSet_12
+  - first:
+      213: -4760882273609017997
+    second: Back_TileSet_13
+  - first:
+      213: 1174888917890149583
+    second: Back_TileSet_14
+  - first:
+      213: 1891054168007258518
+    second: Back_TileSet_15
+  - first:
+      213: -7324725923581506694
+    second: Back_TileSet_16
+  - first:
+      213: 8807796988984434841
+    second: Back_TileSet_17
+  - first:
+      213: 7754802779563235455
+    second: Back_TileSet_18
+  - first:
+      213: 2946901021313792769
+    second: Back_TileSet_19
+  - first:
+      213: -3925644836323175512
+    second: Back_TileSet_20
+  - first:
+      213: 1407372138184368847
+    second: Back_TileSet_21
+  - first:
+      213: -3585332039754720028
+    second: Back_TileSet_22
+  - first:
+      213: 6236721387548725434
+    second: Back_TileSet_23
+  - first:
+      213: -39641616573989530
+    second: Back_TileSet_24
+  - first:
+      213: 344127914501085038
+    second: Back_TileSet_25
+  - first:
+      213: 881520928733211147
+    second: Back_TileSet_26
+  - first:
+      213: -781988861271579747
+    second: Back_TileSet_27
+  - first:
+      213: -2114213391406340408
+    second: Back_TileSet_28
+  - first:
+      213: 8005668627706099381
+    second: Back_TileSet_29
+  - first:
+      213: -8415842651463605358
+    second: Back_TileSet_30
+  - first:
+      213: -8757576745683673442
+    second: Back_TileSet_31
+  - first:
+      213: 7289948123427641632
+    second: Back_TileSet_32
+  - first:
+      213: 32123124050443291
+    second: Back_TileSet_33
+  - first:
+      213: 6926868686254066656
+    second: Back_TileSet_34
+  - first:
+      213: 705261616374047369
+    second: Back_TileSet_35
+  - first:
+      213: 7630718750325667103
+    second: Back_TileSet_36
+  - first:
+      213: 4170337588465444520
+    second: Back_TileSet_37
+  - first:
+      213: 7276856835080477650
+    second: Back_TileSet_38
+  - first:
+      213: 1495622956829217900
+    second: Back_TileSet_39
+  - first:
+      213: -8224227097564650497
+    second: Back_TileSet_40
+  - first:
+      213: 4376226880387073795
+    second: Back_TileSet_41
+  - first:
+      213: 4122971430410074034
+    second: Back_TileSet_42
+  - first:
+      213: -9166851320734043164
+    second: Back_TileSet_43
+  - first:
+      213: 1218657849242378279
+    second: Back_TileSet_44
+  - first:
+      213: -1931578495085880193
+    second: Back_TileSet_45
+  - first:
+      213: -3403539247404530185
+    second: Back_TileSet_46
+  - first:
+      213: -3227975526188632591
+    second: Back_TileSet_47
+  - first:
+      213: -3292779037122429806
+    second: Back_TileSet_48
+  - first:
+      213: -1791257624054641382
+    second: Back_TileSet_49
+  - first:
+      213: 7063024193506244481
+    second: Back_TileSet_50
+  - first:
+      213: -4077732656874732847
+    second: Back_TileSet_51
+  - first:
+      213: 1706727976176953363
+    second: Back_TileSet_52
+  - first:
+      213: -152229933239444971
+    second: Back_TileSet_53
+  - first:
+      213: 8180238436346748560
+    second: Back_TileSet_54
+  - first:
+      213: -6620690587193382688
+    second: Back_TileSet_55
+  - first:
+      213: 2230989302834952854
+    second: Back_TileSet_56
+  - first:
+      213: -3543607195851467454
+    second: Back_TileSet_57
+  - first:
+      213: 2732719097563917278
+    second: Back_TileSet_58
+  - first:
+      213: 9097849706464969440
+    second: Back_TileSet_59
+  - first:
+      213: -5309954143841121496
+    second: Back_TileSet_60
+  - first:
+      213: 5809615228106399240
+    second: Back_TileSet_61
+  - first:
+      213: 1564785982545721931
+    second: Back_TileSet_62
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Back_TileSet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cc2a5427afdcc70800000000000000
+      internalID: 8993119399630261317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb0efec639e387f0800000000000000
+      internalID: -611388702781994053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61b286a8c84ac930800000000000000
+      internalID: 4164220832081686892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0140fec05866a2c0800000000000000
+      internalID: -4420731287939038964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a65692d8b4ec700800000000000000
+      internalID: 562470073124874909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1ef552f18ca1040800000000000000
+      internalID: 4619224403918447047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61814099a17eda720800000000000000
+      internalID: 2859195439872481302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003d64ff072544e20800000000000000
+      internalID: 3333880269433656064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c948da3c2b5a9e30800000000000000
+      internalID: 4511018222288914886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ab75b8bf66c8b60800000000000000
+      internalID: 7749682289358387745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3d71aef30014e10800000000000000
+      internalID: 2180023969134400496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8aba9e5830c1530800000000000000
+      internalID: 3826937657043953879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ddcd956d8fa35c0800000000000000
+      internalID: -4234798900074193538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3759410ebc2fdedb0800000000000000
+      internalID: -4760882273609017997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcca269fe3b0e4010800000000000000
+      internalID: 1174888917890149583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_TileSet_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691381f1fbf5e3a10800000000000000
+      internalID: 1891054168007258518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,768 @@
+fileFormatVersion: 2
+guid: 3fb262c05f5235e4c91226a2adf496f8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6879748385496155257
+    second: Hell_Elemental_idle-export300_0
+  - first:
+      213: 8118619598101406904
+    second: Hell_Elemental_idle-export300_1
+  - first:
+      213: 1049703299887971192
+    second: Hell_Elemental_idle-export300_2
+  - first:
+      213: 9001729918736941499
+    second: Hell_Elemental_idle-export300_3
+  - first:
+      213: 1533203151742826542
+    second: Hell_Elemental_idle-export300_4
+  - first:
+      213: 8986701763589097398
+    second: Hell_Elemental_idle-export300_5
+  - first:
+      213: 4736250922491274772
+    second: Hell_Elemental_idle-export300_6
+  - first:
+      213: -8528645428686160181
+    second: Hell_Elemental_idle-export300_7
+  - first:
+      213: -156752386707201355
+    second: Hell_Elemental_idle-export300_8
+  - first:
+      213: -2647903741996083362
+    second: Hell_Elemental_idle-export300_9
+  - first:
+      213: -3549386470628957827
+    second: Hell_Elemental_idle-export300_10
+  - first:
+      213: -2714616846106992401
+    second: Hell_Elemental_idle-export300_11
+  - first:
+      213: -2312044121368621835
+    second: Hell_Elemental_idle-export300_12
+  - first:
+      213: -3457387415848264559
+    second: Hell_Elemental_idle-export300_13
+  - first:
+      213: -6399159275139549095
+    second: Hell_Elemental_idle-export300_14
+  - first:
+      213: -7308659038835823176
+    second: Hell_Elemental_idle-export300_15
+  - first:
+      213: -5272581748990973856
+    second: Hell_Elemental_idle-export300_16
+  - first:
+      213: -8250460850951270898
+    second: Hell_Elemental_idle-export300_17
+  - first:
+      213: -7467527180252812088
+    second: Hell_Elemental_idle-export300_18
+  - first:
+      213: -8874828723919143907
+    second: Hell_Elemental_idle-export300_19
+  - first:
+      213: -4655636732434986408
+    second: Hell_Elemental_idle-export300_20
+  - first:
+      213: -4496306738655174615
+    second: Hell_Elemental_idle-export300_21
+  - first:
+      213: 6738657212693613423
+    second: Hell_Elemental_idle-export300_22
+  - first:
+      213: -6647090795003570079
+    second: Hell_Elemental_idle-export300_23
+  - first:
+      213: 6306093688684271280
+    second: Hell_Elemental_idle-export300_24
+  - first:
+      213: -2014460227241393233
+    second: Hell_Elemental_idle-export300_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b3f6a3b493680a0800000000000000
+      internalID: -6879748385496155257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 168
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4eb5b92812ba070800000000000000
+      internalID: 8118619598101406904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87bb065f69b419e00800000000000000
+      internalID: 1049703299887971192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1425afaa19cec70800000000000000
+      internalID: 9001729918736941499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 171
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28f32ca428074510800000000000000
+      internalID: 1533203151742826542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_5
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7ca11f3ad27bc70800000000000000
+      internalID: 8986701763589097398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_6
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416653ace1b8ab140800000000000000
+      internalID: 4736250922491274772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_7
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 174
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcef6e75b2a24a980800000000000000
+      internalID: -8528645428686160181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_8
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b26f98e88a13ddf0800000000000000
+      internalID: -156752386707201355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_9
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5755ea6391c04bd0800000000000000
+      internalID: -2647903741996083362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_10
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 171
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7165977fcb0ebec0800000000000000
+      internalID: -3549386470628957827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_11
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 162
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe060827c5eb35ad0800000000000000
+      internalID: -2714616846106992401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 18
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc0bc01f18f9efd0800000000000000
+      internalID: -2312044121368621835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 123
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c557b9674e400d0800000000000000
+      internalID: -3457387415848264559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_14
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95839202b8e9137a0800000000000000
+      internalID: -6399159275139549095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_15
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 18
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd2ebdb35d629a90800000000000000
+      internalID: -7308659038835823176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_16
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 24
+        width: 123
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0686f2aa5d604d6b0800000000000000
+      internalID: -5272581748990973856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_17
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e48c1a199708d80800000000000000
+      internalID: -8250460850951270898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_18
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cce47e18930e5890800000000000000
+      internalID: -7467527180252812088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_19
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 21
+        width: 123
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cbd54eb4646d480800000000000000
+      internalID: -8874828723919143907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 24
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ac3f7fe0bd36fb0800000000000000
+      internalID: -4655636732434986408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9206349f7d8e991c0800000000000000
+      internalID: -4496306738655174615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_22
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 12
+        width: 123
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b0ab13805848d50800000000000000
+      internalID: 6738657212693613423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_23
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 24
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1681b06c32ac0c3a0800000000000000
+      internalID: -6647090795003570079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_24
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 6
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6db5a7cceb38750800000000000000
+      internalID: 6306093688684271280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_idle-export300_25
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3cf1da8133b04e0800000000000000
+      internalID: -2014460227241393233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 92cdb4c7b0279cb429c5281d56fd56d2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

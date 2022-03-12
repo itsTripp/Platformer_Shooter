@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: 666862a4fc6a3a440896c32867ea4d75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1778733221817245213
+    second: Flying_Flamethrower_Attack1-export300_0
+  - first:
+      213: -90723426759852691
+    second: Flying_Flamethrower_Attack1-export300_1
+  - first:
+      213: -4608548942961675363
+    second: Flying_Flamethrower_Attack1-export300_2
+  - first:
+      213: 60245178018024834
+    second: Flying_Flamethrower_Attack1-export300_3
+  - first:
+      213: 7666815092341008769
+    second: Flying_Flamethrower_Attack1-export300_4
+  - first:
+      213: -2983862875082007095
+    second: Flying_Flamethrower_Attack1-export300_5
+  - first:
+      213: -2656073611627167843
+    second: Flying_Flamethrower_Attack1-export300_6
+  - first:
+      213: 2973165039866271358
+    second: Flying_Flamethrower_Attack1-export300_7
+  - first:
+      213: -4539274054720375331
+    second: Flying_Flamethrower_Attack1-export300_8
+  - first:
+      213: -9074690750623075517
+    second: Flying_Flamethrower_Attack1-export300_9
+  - first:
+      213: -5179090985060021569
+    second: Flying_Flamethrower_Attack1-export300_10
+  - first:
+      213: -3572706299875129232
+    second: Flying_Flamethrower_Attack1-export300_11
+  - first:
+      213: 7279361009031573635
+    second: Flying_Flamethrower_Attack1-export300_12
+  - first:
+      213: -1923620474866627027
+    second: Flying_Flamethrower_Attack1-export300_13
+  - first:
+      213: -54489812547323301
+    second: Flying_Flamethrower_Attack1-export300_14
+  - first:
+      213: 2985749521466966344
+    second: Flying_Flamethrower_Attack1-export300_15
+  - first:
+      213: -5418708490830239590
+    second: Flying_Flamethrower_Attack1-export300_16
+  - first:
+      213: 2466235296559333647
+    second: Flying_Flamethrower_Attack1-export300_17
+  - first:
+      213: -5281431300882444249
+    second: Flying_Flamethrower_Attack1-export300_18
+  - first:
+      213: 1260251907375152685
+    second: Flying_Flamethrower_Attack1-export300_19
+  - first:
+      213: -3305802764996773892
+    second: Flying_Flamethrower_Attack1-export300_20
+  - first:
+      213: -5508039623548376507
+    second: Flying_Flamethrower_Attack1-export300_21
+  - first:
+      213: -313454236105557892
+    second: Flying_Flamethrower_Attack1-export300_22
+  - first:
+      213: 5693142416278867596
+    second: Flying_Flamethrower_Attack1-export300_23
+  - first:
+      213: 6374828177292015851
+    second: Flying_Flamethrower_Attack1-export300_24
+  - first:
+      213: -2314709235866984744
+    second: Flying_Flamethrower_Attack1-export300_25
+  - first:
+      213: 8367684537641366659
+    second: Flying_Flamethrower_Attack1-export300_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 42
+        width: 95
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1a5631f8ba057e0800000000000000
+      internalID: -1778733221817245213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 38
+        width: 125
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d3c27268fadbef0800000000000000
+      internalID: -90723426759852691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_2
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 17
+        width: 197
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9374cc47252b00c0800000000000000
+      internalID: -4608548942961675363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_3
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 20
+        width: 190
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28dc1339ba806d000800000000000000
+      internalID: 60245178018024834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_4
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 42
+        width: 89
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189e699b4bff56a60800000000000000
+      internalID: 7666815092341008769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_5
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 38
+        width: 82
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdd24836803796d0800000000000000
+      internalID: -2983862875082007095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_6
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 38
+        width: 86
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f7ca96f1bb32bd0800000000000000
+      internalID: -2656073611627167843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_7
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 78
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76d6dbe9ddc24920800000000000000
+      internalID: 2973165039866271358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_8
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 42
+        width: 86
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5be3e1c424101c0800000000000000
+      internalID: -4539274054720375331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_9
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 38
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343b69297d8301280800000000000000
+      internalID: -9074690750623075517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_10
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 56
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbac118603c2028b0800000000000000
+      internalID: -5179090985060021569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_11
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 56
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078842d9c823b6ec0800000000000000
+      internalID: -3572706299875129232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_12
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 62
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380f72f154c750560800000000000000
+      internalID: 7279361009031573635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_13
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 47
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e08e0be5ded45e0800000000000000
+      internalID: -1923620474866627027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_14
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 51
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a3d3fddc96e3ff0800000000000000
+      internalID: -54489812547323301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_15
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 20
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841c45fde538f6920800000000000000
+      internalID: 2985749521466966344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_16
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 35
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98abae4651ecc4b0800000000000000
+      internalID: -5418708490830239590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_17
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 35
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0103ff7fe3d93220800000000000000
+      internalID: 2466235296559333647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_18
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 35
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720d54dc63694b6b0800000000000000
+      internalID: -5281431300882444249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_19
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 35
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2eba92ce605d7110800000000000000
+      internalID: 1260251907375152685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_20
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 24
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7fcde66ed6f12d0800000000000000
+      internalID: -3305802764996773892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_21
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 15
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a6f9d25238f83b0800000000000000
+      internalID: -5508039623548376507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_22
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 17
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c783693780366abf0800000000000000
+      internalID: -313454236105557892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_23
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 20
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ec2023dda120f40800000000000000
+      internalID: 5693142416278867596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_24
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 8
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be834a3b370f77850800000000000000
+      internalID: 6374828177292015851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_25
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 11
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de15ddb63080efd0800000000000000
+      internalID: -2314709235866984744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying_Flamethrower_Attack1-export300_26
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38474aac0ccff1470800000000000000
+      internalID: 8367684537641366659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4b9030526a4bed345a9bd4d863457409
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

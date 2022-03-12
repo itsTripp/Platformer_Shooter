@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: 43c01d49dd7b0794ea1dd770049a6715
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 322555821690960996
+    second: Hell_Elemental_death-export300_0
+  - first:
+      213: -3560861541015761293
+    second: Hell_Elemental_death-export300_1
+  - first:
+      213: 3681173872837725396
+    second: Hell_Elemental_death-export300_2
+  - first:
+      213: -1380957272703402330
+    second: Hell_Elemental_death-export300_3
+  - first:
+      213: 6854584267054420114
+    second: Hell_Elemental_death-export300_4
+  - first:
+      213: 3973027417828923355
+    second: Hell_Elemental_death-export300_5
+  - first:
+      213: -7995033431068038223
+    second: Hell_Elemental_death-export300_6
+  - first:
+      213: 8051537513400029219
+    second: Hell_Elemental_death-export300_7
+  - first:
+      213: -539854897649342580
+    second: Hell_Elemental_death-export300_8
+  - first:
+      213: 2318233387045535542
+    second: Hell_Elemental_death-export300_9
+  - first:
+      213: 2045324236188355391
+    second: Hell_Elemental_death-export300_10
+  - first:
+      213: -2401522579259318047
+    second: Hell_Elemental_death-export300_11
+  - first:
+      213: 6615981623273610519
+    second: Hell_Elemental_death-export300_12
+  - first:
+      213: 3528437707417535132
+    second: Hell_Elemental_death-export300_13
+  - first:
+      213: 6924682479120421425
+    second: Hell_Elemental_death-export300_14
+  - first:
+      213: 4082580801563895958
+    second: Hell_Elemental_death-export300_15
+  - first:
+      213: 3036595103516825449
+    second: Hell_Elemental_death-export300_16
+  - first:
+      213: -5952117364780575754
+    second: Hell_Elemental_death-export300_17
+  - first:
+      213: -5485777955543991794
+    second: Hell_Elemental_death-export300_18
+  - first:
+      213: -8790471991706944852
+    second: Hell_Elemental_death-export300_19
+  - first:
+      213: -407599798293708662
+    second: Hell_Elemental_death-export300_20
+  - first:
+      213: 9087094712869622631
+    second: Hell_Elemental_death-export300_21
+  - first:
+      213: -6292250226451862412
+    second: Hell_Elemental_death-export300_22
+  - first:
+      213: -4781901527153516827
+    second: Hell_Elemental_death-export300_23
+  - first:
+      213: -3249425030475340853
+    second: Hell_Elemental_death-export300_24
+  - first:
+      213: 8544632251182414038
+    second: Hell_Elemental_death-export300_25
+  - first:
+      213: 2047534229790816574
+    second: Hell_Elemental_death-export300_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cbf149fc2f97400800000000000000
+      internalID: 322555821690960996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 168
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ec7617b47459ec0800000000000000
+      internalID: -3560861541015761293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc01f63228261330800000000000000
+      internalID: 3681173872837725396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_3
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 33
+        width: 123
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae75865daad5dce0800000000000000
+      internalID: -1380957272703402330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_4
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 171
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29092c0e210602f50800000000000000
+      internalID: 6854584267054420114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_5
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd79492f267032730800000000000000
+      internalID: 3973027417828923355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_6
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 168
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb21d5347feb0190800000000000000
+      internalID: -7995033431068038223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_7
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 159
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320d0f5a5beccbf60800000000000000
+      internalID: 8051537513400029219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_8
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 165
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c872b53b4dc0288f0800000000000000
+      internalID: -539854897649342580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 123
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63fbc45abf40c2020800000000000000
+      internalID: 2318233387045535542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_10
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 81
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b01846e83726c10800000000000000
+      internalID: 2045324236188355391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_11
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 105
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e02b2f10f31caed0800000000000000
+      internalID: -2401522579259318047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_12
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 114
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71d5cbfbb30b0db50800000000000000
+      internalID: 6615981623273610519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_13
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 30
+        width: 66
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9247b2866787f030800000000000000
+      internalID: 3528437707417535132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_14
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 21
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1321856b60a691060800000000000000
+      internalID: 6924682479120421425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_15
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 18
+        width: 66
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698ab0ccb9d38a830800000000000000
+      internalID: 4082580801563895958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_16
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 9
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9679fc77827242a20800000000000000
+      internalID: 3036595103516825449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 6
+        width: 66
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3d1dadac4d56da0800000000000000
+      internalID: -5952117364780575754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_18
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 0
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ab12ba30a9ed3b0800000000000000
+      internalID: -5485777955543991794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_19
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 0
+        width: 66
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa79462c48f10680800000000000000
+      internalID: -8790471991706944852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_20
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 0
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80ce2c942ae75af0800000000000000
+      internalID: -407599798293708662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_21
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 0
+        width: 66
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7639ce0fe78db1e70800000000000000
+      internalID: 9087094712869622631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_22
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 0
+        width: 66
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c277eb1cf6da8a0800000000000000
+      internalID: -6292250226451862412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_23
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 6
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eedd1b85e543adb0800000000000000
+      internalID: -4781901527153516827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_24
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 3
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc32146a629b7e2d0800000000000000
+      internalID: -3249425030475340853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_25
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 0
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8f214d2c1a49670800000000000000
+      internalID: 8544632251182414038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell_Elemental_death-export300_26
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 0
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e397220a88d4a6c10800000000000000
+      internalID: 2047534229790816574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2fc444129e79b514d8561d0698db5017
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
