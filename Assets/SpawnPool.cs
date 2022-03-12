@@ -17,8 +17,6 @@ namespace EpicTortoiseStudios
             [SerializeField] [Min(0)] public int _ticketCost = 1;
             [Tooltip("What percent chance does the enemy have to spawn? All Enemy Chance Percent should equal up to 100%.")]
             [SerializeField] [Range(0, 100)] public float _chancePercent = 100f;
-            [Tooltip("Number of this enemy that must spawn regardless of ticket or timer before spawn pool will be deactivated.")]
-            [SerializeField] [Min(0)] public int _minimumSpawnAmount = 0;
         }
 
         [TextArea(0,10)]
@@ -61,6 +59,8 @@ namespace EpicTortoiseStudios
 
         private float _actTimeToSpawn = 0f;
         private float _curTimeToSpawn = 0f;
+
+        private float _totalSpawnPercent = 0f;
 
         private bool _active = false;
         private bool _useTimer = false;
@@ -126,6 +126,8 @@ namespace EpicTortoiseStudios
             _active = true;
             _actTimeToSpawn = Random.Range(_minSpawnTime, _maxSpawnTime);
             _curTimeToSpawn = 0f;
+
+            GetTotalAvailablePercent();
         }
 
         public void DeActivate()
@@ -133,11 +135,28 @@ namespace EpicTortoiseStudios
             _active = false;
         }
 
+        private void GetTotalAvailablePercent()
+        {
+            _totalSpawnPercent = 0f;
+            foreach (EnemySpawn enemy in _enemyList)
+            {
+                if (_curTickets >= enemy._ticketCost)
+                {
+                    if (_activeTickets + enemy._ticketCost <= _actTicketMax)
+                    {
+                        _totalSpawnPercent += enemy._chancePercent;
+                    }
+                }
+            }
+        }
+
         public EnemySpawn GetSpawnObject(out int spawnedTicketCost)
         {
             EnemySpawn enemy = null;
             int loopTimeMax = 10;
             int loopIndex = 0;
+
+            GetTotalAvailablePercent();
 
             while (enemy == null || loopIndex < loopTimeMax)
             {
@@ -161,6 +180,38 @@ namespace EpicTortoiseStudios
 
             spawnedTicketCost = enemy._ticketCost;
             return enemy;
+        }
+
+        public EnemySpawn GetRandomEnemyOnPercent(out int spawnedTicketCost)
+        {
+            if (_curTickets <= 0)
+            {
+                spawnedTicketCost = 0;
+                return null;
+            }
+
+            //Generate a random position in the list.
+            float pick = Random.value * _totalSpawnPercent;
+            int chosenIndex = 0;
+            float cumalativeChance = _enemyList[0]._chancePercent;
+
+            //Step through the list until we've accumulated more weight than this.
+            //The length check is for safety in case rounding errors accumulate.
+            while (pick > cumalativeChance && chosenIndex < _enemyList.Count - 1)
+            {
+                chosenIndex++;
+                if (_curTickets >= _enemyList[chosenIndex]._ticketCost)
+                {
+                    if (_activeTickets + _enemyList[chosenIndex]._ticketCost <= _actTicketMax)
+                    {
+                        cumalativeChance += _enemyList[chosenIndex]._chancePercent;
+                    }
+                }
+            }
+
+            // Spawn the chosen item.
+            spawnedTicketCost = _enemyList[chosenIndex]._ticketCost;
+            return _enemyList[chosenIndex];
         }
 
         public SpawnPoint GetSpawnPoint()
@@ -201,7 +252,7 @@ namespace EpicTortoiseStudios
             if (_activeEnemies.Count < _maxSpawnedEnemies)
             {
                 int spawnedTicketCost = 0;
-                EnemySpawn spawnObject = GetSpawnObject(out spawnedTicketCost);
+                EnemySpawn spawnObject = GetRandomEnemyOnPercent(out spawnedTicketCost);
                 if (spawnObject != null)
                 {
                     SpawnEnemy(spawnObject, GetSpawnPoint());
