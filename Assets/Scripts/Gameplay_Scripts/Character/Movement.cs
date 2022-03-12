@@ -106,7 +106,7 @@ public class Movement : MonoBehaviour
 
     private void CheckGrounded()
     {
-        int layer_mask = LayerMask.GetMask("World");
+        int layer_mask = LayerMask.GetMask("World/AllCollision");
         float halfWidth = _collider.bounds.size.x / 2;
         RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(_characterBase.position.x - halfWidth, _characterBase.position.y), -Vector2.up, .1f, layer_mask);
         RaycastHit2D hitMid = Physics2D.Raycast(_characterBase.position, -Vector2.up, .1f, layer_mask);
@@ -159,7 +159,6 @@ public class Movement : MonoBehaviour
                 if (_rigidbody2D.velocity.y < 0) _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, 0);
                 _rigidbody2D.AddForce(Vector2.up * ((_jumpForce + _perkJumpForce) * _jumpAirForcePerc), ForceMode2D.Impulse);
-                Debug.Log("JumpForce = " + ((_jumpForce + _perkJumpForce) * _jumpAirForcePerc).ToString());
                 _currentJumpCount++;
 
                 m_Jump.Invoke();
@@ -168,7 +167,6 @@ public class Movement : MonoBehaviour
 
         if (!_jumpHeld && _jumpStarted && _rigidbody2D.velocity.y > 0)
         {
-            Debug.Log("Halving Jump Height");
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _rigidbody2D.velocity.y / 2);
             _jumpStarted = false;
         }

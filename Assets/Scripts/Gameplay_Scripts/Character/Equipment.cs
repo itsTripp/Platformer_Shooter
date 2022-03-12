@@ -51,10 +51,10 @@ namespace EpicTortoiseStudios
                 missingComponents += "Inventory,";
             }
             _interactor = this.transform.GetComponentInChildren<Interactor>(true);
-            if (_interactor == null)
-            {
-                missingComponents += "Interactor,";
-            }
+            //if (_interactor == null)
+            //{
+            //    missingComponents += "Interactor,";
+            //}
             if (!TryGetComponent(out _health))
             {
                 missingComponents += "Health,";
@@ -68,12 +68,12 @@ namespace EpicTortoiseStudios
 
             if (_rightWeapon && _rightEquipLocation && _inventory && _health)
             {
-                _rightWeapon.EquipToPlayer(_rightEquipLocation, _inventory, _health);
+                _rightWeapon.EquipToCharacter(_rightEquipLocation, this.gameObject, _inventory, _health);
             }
 
             if (_leftWeapon && _leftEquipLocation && _inventory && _health)
             {
-                _leftWeapon.EquipToPlayer(_leftEquipLocation, _inventory, _health);
+                _leftWeapon.EquipToCharacter(_leftEquipLocation, this.gameObject, _inventory, _health);
             }
         }
 
@@ -96,19 +96,60 @@ namespace EpicTortoiseStudios
             {
                 if (_rightWeapon)
                 {
-                    _rightWeapon.UnequipFromPlayer();
+                    _rightWeapon.UnequipFromCharacter();
+                    _interactor.RemoveSelectedInteractable();
                     _rightWeapon = null;
 
                     m_Unequip.Invoke();
                 }
 
-                if (_interactor.equipableWeapon != null)
+                if (_interactor != null && _interactor._selectedWeapon != null)
                 {
-                    _rightWeapon = _interactor.equipableWeapon;
-                    _interactor.UnSelectWeapon();
-                    _rightWeapon.EquipToPlayer(_rightEquipLocation, _inventory, _health);
+                    _rightWeapon = _interactor._selectedWeapon;
+                    _interactor._selectedWeapon = null;
+                    _interactor.RemoveSelectedInteractable();
+                    _rightWeapon.EquipToCharacter(_rightEquipLocation, this.gameObject, _inventory, _health);
 
                     m_Equip.Invoke();
+                }
+            }
+        }
+
+        public void UnequipAll(int percent)
+        {
+            int randomVal = Random.Range(0, 100);
+            Debug.Log("Random Value: " + randomVal);
+            if (randomVal <= percent)
+            {
+                if (_rightWeapon)
+                {
+                    _rightWeapon.UnequipFromCharacter();
+                    _rightWeapon = null;
+
+                    m_Unequip.Invoke();
+                }
+
+                if (_leftWeapon)
+                {
+                    _leftWeapon.UnequipFromCharacter();
+                    _leftWeapon = null;
+
+                    m_Unequip.Invoke();
+                }
+            } else
+            {
+                if (_rightWeapon)
+                {
+                    Debug.Log("Destroy Right Weapon");
+                    Destroy(_rightWeapon.gameObject);
+                    _rightWeapon = null;
+                }
+
+                if (_leftWeapon)
+                {
+                    Debug.Log("Destroy Left Weapon");
+                    Destroy(_leftWeapon.gameObject);
+                    _leftWeapon = null;
                 }
             }
         }
@@ -119,17 +160,18 @@ namespace EpicTortoiseStudios
             {
                 if (_leftWeapon)
                 {
-                    _leftWeapon.UnequipFromPlayer();
+                    _leftWeapon.UnequipFromCharacter();
                     _leftWeapon = null;
 
                     m_Unequip.Invoke();
                 }
 
-                if (_interactor.equipableWeapon != null)
+                if (_interactor != null && _interactor._selectedWeapon != null)
                 {
-                    _leftWeapon = _interactor.equipableWeapon;
-                    _interactor.UnSelectWeapon();
-                    _leftWeapon.EquipToPlayer(_leftEquipLocation, _inventory, _health);
+                    _leftWeapon = _interactor._selectedWeapon;
+                    _interactor._selectedWeapon = null;
+                    _interactor.RemoveSelectedInteractable();
+                    _leftWeapon.EquipToCharacter(_leftEquipLocation, this.gameObject, _inventory, _health);
 
                     m_Equip.Invoke();
                 }
