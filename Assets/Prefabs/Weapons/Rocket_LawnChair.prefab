@@ -196,6 +196,36 @@ MonoBehaviour:
   m_NoAmmo:
     m_PersistentCalls:
       m_Calls: []
+  m_InteractableStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 83f102fd5c3ed7a4b83a4df235e6b3c5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_InteractableEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &6649955921683493255
 Rigidbody2D:
   serializedVersion: 4
