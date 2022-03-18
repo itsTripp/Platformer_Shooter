@@ -28,49 +28,40 @@ namespace EpicTortoiseStudios
 
         // Global Serialized
 
-        [SerializeField]
-        private string weaponName; // Name that will be used for HUD elements
-        [SerializeField]
-        private string weaponDescription; // Description that will be used for HUD elements
-        [SerializeField]
-        private CommonEnums.AmmoType ammoType; // Ammo Type that is used, checks the inventory of the player and uses that ammo.
-        [SerializeField]
-        private int providedAmmo = 5; // # of Ammo given when the weapon is picked up.
-        [SerializeField]
-        private float fireRate = .5f; // Rate at which the fire command can trigger
-        [SerializeField]
-        private float damageMultiplyer = 1; // Damage is set on the projectile, this multiplyer alters the damage. (I.E Projectile Damage = 10 - Weapon Multiplyer = 1.2 : Projectile New Damage = 12)
-        [SerializeField]
-        private GameObject projectilePrefab; // Projectile object to instantiate
-        [SerializeField]
-        private float projectileSpeed = 750; // Speed to be multiplied against the spawn velocity to determine speed of projectile.
-        [SerializeField]
-        private bool eachProjectileCostAmmo = false; // Does each spawned projectile cost ammo, or just the shot?
-        [SerializeField]
-        private int projectileAmmoCost = 1; // Number of Ammo required per projectile/per shot
-        [SerializeField]
-        private int projectilesPerShot = 1; // Number of projectiles spawned per fire command
-        [SerializeField]
-        private int projectilesPerDelay = 1; // Number of projectiles spawned at the same time each delay.
-        [SerializeField]
-        private float projectileSpawnDelay = 0; // Time between each of the per shot projectiles - 0 fires all projectiles at once.
-        [SerializeField]
-        private float projectileSpreadFactor = 0; // Amount of variance for projectile spread.
-        [SerializeField]
-        private float recoilIntensity = 10f;
-        [SerializeField]
-        private float throwSpin = 50f;
-        [SerializeField]
-        private float throwSpeed = 100f;
+        [Header("Weapon Details")]
+        [SerializeField] private string weaponName; // Name that will be used for HUD elements
+        [SerializeField] private string weaponDescription; // Description that will be used for HUD elements
+        [SerializeField] private int providedAmmo = 5; // # of Ammo given when the weapon is picked up.
+        [SerializeField] private float recoilIntensity = 10f;
+
+        [Header("Projectile Damage Setup")]
+        [SerializeField] private CommonEnums.AmmoType ammoType; // Ammo Type that is used, checks the inventory of the player and uses that ammo.
+        [SerializeField] private CommonEnums.DamageType projectileDamageType; // Damage type that is applied to the projectile.
+        [SerializeField] private float projectileDamage = 5f;
+        [SerializeField] private float projectileKnock = 5f;
+
+        [Header("Projectile Firing Setup")]
+        [SerializeField] private GameObject projectilePrefab; // Projectile object to instantiate
+        [SerializeField] private float fireRate = .5f; // Rate at which the fire command can trigger
+        [SerializeField] private float projectileSpeed = 750; // Speed to be multiplied against the spawn velocity to determine speed of projectile.
+        [SerializeField] private bool eachProjectileCostAmmo = false; // Does each spawned projectile cost ammo, or just the shot?
+        [SerializeField] private int projectileAmmoCost = 1; // Number of Ammo required per projectile/per shot
+        [SerializeField] private int projectilesPerShot = 1; // Number of projectiles spawned per fire command
+        [SerializeField] private int projectilesPerDelay = 1; // Number of projectiles spawned at the same time each delay.
+        [SerializeField] private float projectileSpawnDelay = 0; // Time between each of the per shot projectiles - 0 fires all projectiles at once.
+        [SerializeField] private float projectileSpreadFactor = 0; // Amount of variance for projectile spread.
+
+        [Header("Weapon Throwing")]
+        [SerializeField] private float throwSpin = 50f;
+        [SerializeField] private float throwSpeed = 100f;
 
         // Hidden Global Variables that don't change much
         private Inventory inventory;
         private Health _health;
         private Transform firePoint;
-        [SerializeField]
-        private Rigidbody2D rigidbody;
-        [SerializeField]
-        private BoxCollider2D collider;
+        private Rigidbody2D _rigidbody2D;
+        private BoxCollider2D _collider2D;
+        private GameObject _owner;
 
         [Header("Events")]
         [SerializeField] UnityEvent m_Equip;
@@ -78,8 +69,6 @@ namespace EpicTortoiseStudios
         [SerializeField] UnityEvent m_ShotFire;
         [SerializeField] UnityEvent m_ProjectileFire;
         [SerializeField] UnityEvent m_NoAmmo;
-        [SerializeField] UnityEvent m_InteractableStart;
-        [SerializeField] UnityEvent m_InteractableEnd;
 
         // Hidden Global Variables that are constantly changing
         private bool bCanShoot;
@@ -88,15 +77,47 @@ namespace EpicTortoiseStudios
 
         private void Start()
         {
+            string missingComponents = "";
+            if (!TryGetComponent(out _rigidbody2D))
+            {
+                missingComponents += "Rigidbody2D";
+            }
+            if (!TryGetComponent(out _collider2D))
+            {
+                missingComponents += "Collider2D";
+            }
+
+            if (missingComponents.Length > 0)
+            {
+                missingComponents = missingComponents.Trim(','); //Trim the last comma off.
+                Debug.LogError(this.gameObject.name + " is missing the following required components/references for its 'Equipment' component (" + missingComponents + ")");
+            }
+
             firePoint = this.transform.Find("FirePoint");
+            if (firePoint == null)
+            {
+                Debug.LogError(this.gameObject.name + " is missing a required child object named 'FirePoint' that acts as the location of the projectile spawn.");
+            }
         }
 
-        public bool EquipToPlayer(Transform equipPosition, Inventory inv, Health health)
+        private void FixedUpdate()
+        {
+            if (_rigidbody2D.velocity.magnitude > 1)
+            {
+                this.gameObject.layer = 9;
+            } else
+            {
+                this.gameObject.layer = 3;
+            }
+        }
+
+        public bool EquipToCharacter(Transform equipPosition, GameObject owner, Inventory inv, Health health)
         {
             bool bEquipped = false;
 
-            rigidbody.simulated = false;
-            collider.enabled = false;
+            _rigidbody2D.simulated = false;
+            _collider2D.enabled = false;
+            _owner = owner;
             this.transform.SetParent(equipPosition);
             this.transform.localPosition = Vector3.zero;
             this.transform.localScale = Vector3.one;
@@ -118,13 +139,14 @@ namespace EpicTortoiseStudios
             return bEquipped;
         }
 
-        public bool UnequipFromPlayer()
+        public bool UnequipFromCharacter()
         {
             bool bUnequipped = false;
 
             this.transform.parent = null;
-            collider.enabled = true;
-            rigidbody.simulated = true;
+            _collider2D.enabled = true;
+            _rigidbody2D.simulated = true;
+            _owner = null;
 
             //enable screen wrapping since the weapon is no longer parented.
             ScreenWrapping sw = this.transform.GetComponent<ScreenWrapping>();
@@ -142,8 +164,8 @@ namespace EpicTortoiseStudios
         private void ThrowWeapon()
         {
             Vector2 throwDirection = new Vector2(equipFactor, .25f);
-            rigidbody.AddForce(throwDirection * throwSpeed);
-            rigidbody.AddTorque(equipFactor * throwSpin);
+            _rigidbody2D.AddForce(throwDirection * throwSpeed);
+            _rigidbody2D.AddTorque(equipFactor * throwSpin);
         }
 
         public bool Fire()
@@ -202,10 +224,23 @@ namespace EpicTortoiseStudios
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             projectile.transform.rotation = Quaternion.RotateTowards(projectile.transform.rotation, new Quaternion(0f, 0f, Random.rotation.z, Random.rotation.w), projectileSpreadFactor);
             projectile.GetComponent<Rigidbody2D>().AddForce((projectile.transform.right * equipFactor) * projectileSpeed);
+            projectile.name = "projectile";
+            projectile.tag = _owner.tag;
+
+            if (projectileDamage != 0 || projectileKnock != 0)
+            {
+                // Only added the Projectile Damage component if the wepaon applies damage or knock.
+                // Allows a projectile to use its own already applied damage component.
+                Damage projectileDmg = projectile.AddComponent<Damage>();
+                projectileDmg.type = projectileDamageType;
+                projectileDmg.damage = projectileDamage;
+                projectileDmg.knock = projectileKnock;
+                projectileDmg.owner = _owner;
+            }
 
             bProjectileSpawned = true;
             m_ProjectileFire.Invoke();
-            return bProjectileSpawned;
+             return bProjectileSpawned;
         }
 
         IEnumerator WaitForFire()
@@ -249,34 +284,6 @@ namespace EpicTortoiseStudios
                     }
                 }
             }
-        }
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.tag == "Player")
-            {
-                Interactor interactor = collision.GetComponent<Interactor>();
-                interactor.SelectWeapon(this);
-
-                m_InteractableStart.Invoke();
-            }
-        }
-
-        private void OnTriggerExit2D(Collider2D collision)
-        {
-            if (collision.tag == "Player")
-            {
-                Interactor interactor = collision.GetComponent<Interactor>();
-                if (interactor.equipableWeapon == this)
-                {
-                    interactor.UnSelectWeapon();
-                }
-            }
-        }
-
-        public void UnSelectable()
-        {
-            m_InteractableEnd.Invoke();
         }
     }
 }

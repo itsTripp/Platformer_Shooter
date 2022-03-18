@@ -22,6 +22,7 @@ namespace EpicTortoiseStudios
         [SerializeField] UnityEvent m_HealthEmpty;
 
         private float currentHealth;
+        private bool _isDead;
 
         private void Awake()
         {
@@ -30,6 +31,9 @@ namespace EpicTortoiseStudios
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (currentHealth <= 0) return;
+            if (collision.gameObject.tag == this.gameObject.tag) return;
+
             DamageRadius outDamageRad;
             Damage outDamage;
             if (collision.transform.TryGetComponent(out outDamageRad))
@@ -51,6 +55,7 @@ namespace EpicTortoiseStudios
             {
                 //Get all damage components on collision
                 Damage[] damages = collision.transform.GetComponents<Damage>();
+
                 float totalDamage = 0f;
                 float totalKnock = 0f;
                 float appliedDamage = ResistDamage(damages, out totalDamage, out totalKnock);
@@ -141,6 +146,8 @@ namespace EpicTortoiseStudios
 
         private void ApplyDamage(float damage)
         {
+            if (currentHealth <= 0) return;
+
             float newHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
             float damageTaken = currentHealth - newHealth;
 
@@ -159,8 +166,9 @@ namespace EpicTortoiseStudios
 
             currentHealth = newHealth;
 
-            if (currentHealth == 0)
+            if (currentHealth == 0 && _isDead == false)
             {
+                _isDead = true;
                 m_HealthEmpty.Invoke();
             }
         }
@@ -251,6 +259,11 @@ namespace EpicTortoiseStudios
                     }
                 }
             }
+        }
+
+        public void DestroyObject()
+        {
+            Destroy(this.gameObject);
         }
     }
 }

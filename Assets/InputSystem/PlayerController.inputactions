@@ -76,6 +76,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "InteractPrev",
+                    "type": "Button",
+                    "id": "b1d96f8f-a023-4323-a09b-b6249c1aab94",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "InteractNext",
+                    "type": "Button",
+                    "id": "192c3435-8768-4d6f-9cf9-b43e09d47772",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -274,6 +292,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Throw_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3f22f21-3442-4b90-a4e5-3f4896ab1008",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractPrev",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68cc8100-dd11-4513-b281-0172f519b58d",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractNext",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

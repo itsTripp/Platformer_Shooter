@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_Chicken_Hurt_anim
+  m_Name: Holo_ChickenMan_Hurt
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 2100000, guid: 3b5500d2182a5f8469e6be0a12429a6c, type: 2}
+      value: {fileID: 2100000, guid: 9b8fcab635948e94da96c915479a3885, type: 2}
     - time: 0.33333334
-      value: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+      value: {fileID: 2100000, guid: 02e5d84e5d8533144b41a5f24035d802, type: 2}
     attribute: m_Materials.Array.data[0]
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 21
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 2100000, guid: 3b5500d2182a5f8469e6be0a12429a6c, type: 2}
-    - {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+    - {fileID: 2100000, guid: 9b8fcab635948e94da96c915479a3885, type: 2}
+    - {fileID: 2100000, guid: 02e5d84e5d8533144b41a5f24035d802, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -164,11 +164,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Assault Rifle
   weaponDescription: 
-  ammoType: 1
   providedAmmo: 10
-  fireRate: 0.15
-  damageMultiplyer: 1
+  recoilIntensity: 200
+  ammoType: 1
+  projectileDamageType: 1
+  projectileDamage: 5
+  projectileKnock: 5
   projectilePrefab: {fileID: 6003690836348204417, guid: 364973a28e885424298671aea36ee25b, type: 3}
+  fireRate: 0.15
   projectileSpeed: 600
   eachProjectileCostAmmo: 0
   projectileAmmoCost: 1
@@ -176,11 +179,8 @@ MonoBehaviour:
   projectilesPerDelay: 1
   projectileSpawnDelay: 0
   projectileSpreadFactor: 2
-  recoilIntensity: 200
   throwSpin: 10
   throwSpeed: 500
-  rigidbody: {fileID: 6649955921683493255}
-  collider: {fileID: 3616378093198537871}
   m_Equip:
     m_PersistentCalls:
       m_Calls: []

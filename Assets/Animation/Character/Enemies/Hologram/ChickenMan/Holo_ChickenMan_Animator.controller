@@ -541,7 +541,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player
+  m_Name: Holo_ChickenMan_Animator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: _yVelocity
@@ -734,7 +734,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 591ec197ad941604d824cfc80d6fa73d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 19954e67f2640a445b78b00d8ec99556, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1208,16 +1208,16 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 2679413284348312425}
-    second:
-    - {fileID: 1172904288018305053}
-    - {fileID: 4544763230294451375}
-    - {fileID: -8927488523493502106}
   - first: {fileID: -1691406228497932837}
     second:
     - {fileID: -4834567911446989384}
     - {fileID: -3284244826969133458}
     - {fileID: -105920256216740641}
+  - first: {fileID: 2679413284348312425}
+    second:
+    - {fileID: 1172904288018305053}
+    - {fileID: 4544763230294451375}
+    - {fileID: -8927488523493502106}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 40, y: 0, z: 0}
   m_EntryPosition: {x: 40, y: 40, z: 0}

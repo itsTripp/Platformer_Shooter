@@ -1,27 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace EpicTortoiseStudios
 {
     public class Projectile : MonoBehaviour
     {
-        private Rigidbody2D _rigidbody;
-
-        private void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
+        [Header("Events")]
+        [SerializeField] UnityEvent m_TriggerCollided;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Destroy(gameObject);
+            if (collision.gameObject.tag != this.gameObject.tag)
+            {
+                m_TriggerCollided.Invoke();
+                Destroy(gameObject);
+            }
         }
     }
 }
