@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: 85e7431d97925e04cba9d9797bbd4b22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9051082729700754484
+    second: Explosion_Colorful_0
+  - first:
+      213: 6920280947094464472
+    second: Explosion_Colorful_1
+  - first:
+      213: -8023868083985056763
+    second: Explosion_Colorful_2
+  - first:
+      213: -8833833596868755306
+    second: Explosion_Colorful_3
+  - first:
+      213: -6875988441486833095
+    second: Explosion_Colorful_4
+  - first:
+      213: 991985404048357686
+    second: Explosion_Colorful_5
+  - first:
+      213: -7959202950470968393
+    second: Explosion_Colorful_6
+  - first:
+      213: -669338931982387448
+    second: Explosion_Colorful_7
+  - first:
+      213: 8904106281032234168
+    second: Explosion_Colorful_8
+  - first:
+      213: 8927266266453570436
+    second: Explosion_Colorful_9
+  - first:
+      213: 9018793578477210370
+    second: Explosion_Colorful_10
+  - first:
+      213: -939496318135449089
+    second: Explosion_Colorful_11
+  - first:
+      213: -1521820015465619721
+    second: Explosion_Colorful_12
+  - first:
+      213: 5413013303827052764
+    second: Explosion_Colorful_13
+  - first:
+      213: 4066139607059718810
+    second: Explosion_Colorful_14
+  - first:
+      213: 6512145275007628497
+    second: Explosion_Colorful_15
+  - first:
+      213: 2190880071707316870
+    second: Explosion_Colorful_16
+  - first:
+      213: -610011557815329036
+    second: Explosion_Colorful_17
+  - first:
+      213: 4618872693104257344
+    second: Explosion_Colorful_18
+  - first:
+      213: -7625343437360908163
+    second: Explosion_Colorful_19
+  - first:
+      213: 2049570803218657259
+    second: Explosion_Colorful_20
+  - first:
+      213: -290531379250571362
+    second: Explosion_Colorful_21
+  - first:
+      213: -3172666533953576134
+    second: Explosion_Colorful_22
+  - first:
+      213: -255811355685975312
+    second: Explosion_Colorful_23
+  - first:
+      213: -8834515731872015595
+    second: Explosion_Colorful_24
+  - first:
+      213: 5600614805015895931
+    second: Explosion_Colorful_25
+  - first:
+      213: -6446121559945551583
+    second: Explosion_Colorful_26
+  - first:
+      213: 5264112525840070786
+    second: Explosion_Colorful_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Explosion_Colorful_0
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 5
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb73874638146280800000000000000
+      internalID: -9051082729700754484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_1
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 2
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7287d2bd6c90060800000000000000
+      internalID: 6920280947094464472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 10
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6900ab5b52be76580800000000000000
+      internalID: -8833833596868755306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_8
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 5
+        width: 68
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b430439c7db19b70800000000000000
+      internalID: 8904106281032234168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483fa43ee5504eb70800000000000000
+      internalID: 8927266266453570436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 28
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b45bbd9f0392d70800000000000000
+      internalID: 9018793578477210370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_11
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 8
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9cfb9831d36f2f0800000000000000
+      internalID: -939496318135449089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_Colorful_13
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 6
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd83313abe2ee1b40800000000000000
+      internalID: 5413013303827052764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3954eccef5ec1bc4785add0d36619d66
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
