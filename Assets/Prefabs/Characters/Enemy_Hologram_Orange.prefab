@@ -26,7 +26,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.29999995, y: -0.18200004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5182962451413171854}
   m_Father: {fileID: 6723859727363625119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,7 +180,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.3000002, y: -0.24199998, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4708367372561797878}
   m_Father: {fileID: 6723859727363625119}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,12 +197,11 @@ GameObject:
   - component: {fileID: 6723859727913209212}
   - component: {fileID: 6723859727913209213}
   - component: {fileID: 6723859727913209210}
-  - component: {fileID: 6723859727913209211}
   - component: {fileID: 6723859727913209208}
   - component: {fileID: 6723859727913209209}
   - component: {fileID: 6723859727134212681}
   - component: {fileID: 6723859727913208454}
-  - component: {fileID: 8537976485941539336}
+  - component: {fileID: 3431414552263803071}
   m_Layer: 6
   m_Name: Enemy_Hologram_Orange
   m_TagString: Enemy
@@ -357,62 +358,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6723859727913209211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6723859727913208455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e2c7a3c805c2c4bb454993b240c606, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxSpeed: 5
-  _acceleration: 20
-  _deAcceleration: 30
-  _airMaxSpeed: 5
-  _airAcceleration: 15
-  _airDeAcceleration: 15
-  _maxFallSpeed: 10
-  _jumpForce: 15
-  _jumpAirForcePerc: 0.75
-  _jumpCount: 2
-  _coyoteTime: 0.2
-  m_Jump:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6723859727913209210}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 5d034ae56a97f8e4e9831df3ab0d7960, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_DoubleJump:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6723859727913209210}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 5d034ae56a97f8e4e9831df3ab0d7960, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_Land:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &6723859727913209208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,7 +444,7 @@ MonoBehaviour:
           m_StringArgument: _isDead|true
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6723859727913209211}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -535,10 +480,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8537976485941539336}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
+      - m_Target: {fileID: 3431414552263803071}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -561,8 +506,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rightEquipLocation: {fileID: 6723859726857299535}
   _leftEquipLocation: {fileID: 6723859727615731130}
-  _rightWeapon: {fileID: 0}
-  _leftWeapon: {fileID: 0}
+  _rightWeapon: {fileID: 961599390880320169}
+  _leftWeapon: {fileID: 856429687668860625}
   _throwable: {fileID: 0}
   _throwableList: []
   m_Equip:
@@ -589,12 +534,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5852db6d2232242904ec575d13ea9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ammos:
-  - max: 100
-    current: 100
-    type: 1
+  InfiniteAmmo: 1
+  Ammos: []
   Equipment: []
---- !u!114 &8537976485941539336
+--- !u!114 &3431414552263803071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -603,28 +546,112 @@ MonoBehaviour:
   m_GameObject: {fileID: 6723859727913208455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3064d78d39a4caf4c94d087a2c6435c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d0ca5d9d90370445865a3d207ded708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 3
-  _oneShot: 1
-  _loopDelay: 0
-  _activateOnStart: 0
-  m_TimerActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_TimerDeactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_TimerStart:
-    m_PersistentCalls:
-      m_Calls: []
-  m_TimerEnd:
+  canJump: 1
+  jumpForce: 800
+  m_Jumped:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6723859727913209209}
-        m_TargetAssemblyTypeName: EpicTortoiseStudios.Health, Assembly-CSharp
-        m_MethodName: DestroyObject
+      - m_Target: {fileID: 6723859727913209213}
+        m_TargetAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6200000, guid: e739d7e06671413459ad2cc72d822995, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.PhysicsMaterial2D, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_Landed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6723859727913209213}
+        m_TargetAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6200000, guid: 53e82caad96218e44835dd08c6aebc0a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.PhysicsMaterial2D, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canTurn: 1
+  idleAfterTurn: 0
+  m_Turned:
+    m_PersistentCalls:
+      m_Calls: []
+  canIdle: 1
+  idleTimeMin: 1
+  idleTimeMax: 5
+  m_IdleStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  m_IdleEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  canPatrol: 1
+  patrolSpeed: 3
+  changeDirection: 1
+  patrolTimeMin: 5
+  patrolTimeMax: 10
+  m_PatrolStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PatrolEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  canChase: 1
+  chaseMask:
+    serializedVersion: 2
+    m_Bits: 128
+  canSeeThroughWalls: 0
+  sightDistance: 6
+  sightFaceDirectionOnly: 0
+  chaseSpeed: 4
+  followDistance: 3
+  timeToForget: 4
+  m_ChaseStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ChaseEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  canAttack: 1
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 128
+  alwaysAttacks: 0
+  attackOnlyWhenInFaceDirection: 0
+  attackOnlyInDirectionOfAttackObject: 1
+  timeBetweenAttacks: 0.5
+  attackDistance: 6
+  m_AttackRight:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6723859727134212681}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Equipment, Assembly-CSharp
+        m_MethodName: AttackRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_AttackLeft:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6723859727134212681}
+        m_TargetAssemblyTypeName: EpicTortoiseStudios.Equipment, Assembly-CSharp
+        m_MethodName: AttackLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -664,3 +691,161 @@ Transform:
   m_Father: {fileID: 6723859727913209215}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4094682304695514634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6723859726857299535}
+    m_Modifications:
+    - target: {fileID: 3858303200454212771, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 6003690836348204417, guid: bd76a1c16a999c94592cbffe45a38264, type: 3}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218055, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_Name
+      value: Assault_Rifle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+--- !u!4 &5182962451413171854 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+  m_PrefabInstance: {fileID: 4094682304695514634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &961599390880320169 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3858303200454212771, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+  m_PrefabInstance: {fileID: 4094682304695514634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb9e90eedb59c742a32b7521de15b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &4497358880946952818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6723859727615731130}
+    m_Modifications:
+    - target: {fileID: 3858303200454212771, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 6003690836348204417, guid: bd76a1c16a999c94592cbffe45a38264, type: 3}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0300002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.059999943
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168958576891218055, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+      propertyPath: m_Name
+      value: Assault_Rifle (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+--- !u!4 &4708367372561797878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9168958576891218052, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+  m_PrefabInstance: {fileID: 4497358880946952818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &856429687668860625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3858303200454212771, guid: bfc55c2ecb0a9224ca0d0d145ceb64f3, type: 3}
+  m_PrefabInstance: {fileID: 4497358880946952818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb9e90eedb59c742a32b7521de15b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

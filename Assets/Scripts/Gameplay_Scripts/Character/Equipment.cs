@@ -208,7 +208,7 @@ namespace EpicTortoiseStudios
             m_Throw.Invoke();
         }
 
-        private void AttackRight()
+        public void AttackRight()
         {
             if (_rightWeapon) // Does the character have a weapon in its left hand?
             {
@@ -218,7 +218,7 @@ namespace EpicTortoiseStudios
             }
         }
 
-        private void AttackLeft()
+        public void AttackLeft()
         {
             if (_leftWeapon) // Does the character have a weapon in its left hand?
             {

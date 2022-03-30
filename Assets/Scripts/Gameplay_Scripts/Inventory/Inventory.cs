@@ -6,6 +6,7 @@ namespace EpicTortoiseStudios
 {
     public class Inventory : MonoBehaviour
     {
+        [SerializeField] public bool InfiniteAmmo = false;
 
         [SerializeField]
         private List<InventoryAmmo> Ammos = new List<InventoryAmmo>();
@@ -15,6 +16,12 @@ namespace EpicTortoiseStudios
         public int AddAmmo(CommonEnums.AmmoType ammoType, int amount)
         {
             int iNewAmmoCnt = 0;
+
+            if (InfiniteAmmo)
+            {
+                //If infinite ammo negative ammo cost will be zeroed, but picking up ammo (A + amount), will be allowed.
+                amount = Mathf.Max(amount, 0);
+            }
 
             foreach (InventoryAmmo ammo in Ammos)
             {
@@ -32,14 +39,23 @@ namespace EpicTortoiseStudios
         {
             int iCurrentAmmoCnt = 0;
 
-            foreach (InventoryAmmo ammo in Ammos)
+            if (InfiniteAmmo)
             {
-                if (ammo.type == ammoType)
+                iCurrentAmmoCnt = 999;
+            } else
+            {
+                foreach (InventoryAmmo ammo in Ammos)
                 {
-                    iCurrentAmmoCnt = ammo.GetItemCnt();
-                    break;
+                    if (ammo.type == ammoType)
+                    {
+                        iCurrentAmmoCnt = ammo.GetItemCnt();
+                        break;
+                    }
                 }
             }
+            
+
+            
 
             return iCurrentAmmoCnt;
         }

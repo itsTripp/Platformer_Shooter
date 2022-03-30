@@ -21,6 +21,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private int _jumpCount; //Times the character can jump before touching the ground.
     [SerializeField] private float _coyoteTime = .4f;
 
+
+    public bool facingRight = false;
+
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
@@ -190,7 +193,7 @@ public class Movement : MonoBehaviour
             if (_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - frameDeaccelration, 0, Mathf.Abs(_currentSpeed));
             if (!_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - frameAirDeacceleration, 0, Mathf.Abs(_currentSpeed));
         }
-
+        
         _rigidbody2D.velocity = new Vector2(_currentSpeed, Mathf.Clamp(_rigidbody2D.velocity.y, -_maxFallSpeed, (_jumpForce + _perkJumpForce)));
 
         float xVelocity = _rigidbody2D.velocity.x;

@@ -9,26 +9,17 @@ public class EnemyShooting : MonoBehaviour {
 	public float shootingRate = 1f;
 	//Speed of the bullet
 	public Vector3 bulletSpeedV;
-	bool isShooting = false;
 
-	// Use this for initialization
-	void Start () {
-		isShooting = false;
-	}
+    private void FixedUpdate()
+    {
+		Shoot();
+    }
 
- 	void ISeeTarget(){
-		if (isShooting == false) {
-			StartCoroutine(Shooting ());
-			isShooting = true;
-		}
-	}
-
-	IEnumerator Shooting(){
+	private void Shoot()
+    {
 		GameObject shotBullet;
-		shotBullet = Instantiate (bullet, transform.position, Quaternion.identity) as GameObject;
+		shotBullet = Instantiate(bullet, transform.position, Quaternion.identity) as GameObject;
 		//We multiply it with transform.localScale.x because we need to know where is it facing
 		shotBullet.GetComponent<Rigidbody2D>().velocity = bulletSpeedV * transform.localScale.x;
-		yield return new WaitForSeconds (shootingRate);
-		isShooting = false;
 	}
 }

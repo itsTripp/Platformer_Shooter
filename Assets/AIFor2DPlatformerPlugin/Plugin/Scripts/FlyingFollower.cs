@@ -30,7 +30,7 @@ public class FlyingFollower : MonoBehaviour {
 
 		if (willItTurn) {
 
-			if (GameObject.Find (whoToFollow.name).GetComponent<PlayerController> ().facingRight) {
+			if (GameObject.Find (whoToFollow.name).GetComponent<Movement>().facingRight) {
 				positionX = Mathf.Lerp (thisTransform.position.x, whoToFollow.position.x - distanceFromTargetX, Time.deltaTime * velocity);
 			} else {
 				positionX = Mathf.Lerp (thisTransform.position.x, whoToFollow.position.x + distanceFromTargetX, Time.deltaTime * velocity);
@@ -39,9 +39,9 @@ public class FlyingFollower : MonoBehaviour {
 
 			thisTransform.position = new Vector3 (positionX, positionY, 0);
 
-			if (GameObject.Find (whoToFollow.name).GetComponent<PlayerController> ().facingRight == true && !facingRight) {
+			if (GameObject.Find (whoToFollow.name).GetComponent<Movement>().facingRight == true && !facingRight) {
 				Flip ();
-			} else if (GameObject.Find (whoToFollow.name).GetComponent<PlayerController> ().facingRight == false && facingRight) {
+			} else if (GameObject.Find (whoToFollow.name).GetComponent<Movement>().facingRight == false && facingRight) {
 				Flip ();
 			}
 		} else if (!willItTurn) {

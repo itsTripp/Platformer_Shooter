@@ -27,6 +27,7 @@ namespace EpicTortoiseStudios
         // 1a. Example would be Projectile Spawning Modules that would all be called when a projectile is spawned.
 
         // Global Serialized
+        [SerializeField] private bool autoFire = false; //Sets weapon to automatically fire. Good for building AI weaponry.
 
         [Header("Weapon Details")]
         [SerializeField] private string weaponName; // Name that will be used for HUD elements
@@ -75,7 +76,7 @@ namespace EpicTortoiseStudios
         private bool bCanSpawnNextProjectile;
         private float equipFactor = 1;
 
-        private void Start()
+        private void Awake()
         {
             string missingComponents = "";
             if (!TryGetComponent(out _rigidbody2D))
@@ -98,6 +99,16 @@ namespace EpicTortoiseStudios
             {
                 Debug.LogError(this.gameObject.name + " is missing a required child object named 'FirePoint' that acts as the location of the projectile spawn.");
             }
+
+            if (autoFire)
+            {
+                bCanShoot = true;
+            }
+        }
+
+        private void Start()
+        {
+            
         }
 
         private void FixedUpdate()
@@ -108,6 +119,11 @@ namespace EpicTortoiseStudios
             } else
             {
                 this.gameObject.layer = 3;
+            }
+
+            if (autoFire)
+            {
+                Fire();
             }
         }
 
@@ -174,11 +190,11 @@ namespace EpicTortoiseStudios
 
             if (bCanShoot)
             {
-                int curAmmo = inventory.GetAmmo(ammoType);
+                int curAmmo =  inventory.GetAmmo(ammoType);
 
                 if (!eachProjectileCostAmmo)
                 {
-                    if (curAmmo >= projectileAmmoCost)
+                    if (curAmmo == -1 || curAmmo >= projectileAmmoCost)
                     {
                         // There is enough ammo, spend the projectileAmmoCost.
                         inventory.AddAmmo(ammoType, -projectileAmmoCost);

@@ -261,7 +261,7 @@ namespace EpicTortoiseStudios
                     return;
                 }
                 _curTickets -= spawnedTicketCost;
-                Debug.Log("Remaining Pool Tickets: " + _curTickets.ToString());
+                //Debug.Log("Remaining Pool Tickets: " + _curTickets.ToString());
                 _actTimeToSpawn = Random.Range(_minSpawnTime, _maxSpawnTime);
                 _curTimeToSpawn = 0f;
             }
@@ -271,7 +271,7 @@ namespace EpicTortoiseStudios
         {
             _activeEnemies.Remove(enemy);
             _activeTickets -= ticketCost;
-            Debug.Log("Remaining Active Tickets: " + _activeTickets.ToString());
+            //Debug.Log("Remaining Active Tickets: " + _activeTickets.ToString());
         }
     }
     
