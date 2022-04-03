@@ -127,6 +127,8 @@ GameObject:
   - component: {fileID: 3616378093198537871}
   - component: {fileID: 3727333032422473908}
   - component: {fileID: 1327067022782224648}
+  - component: {fileID: 834465798}
+  - component: {fileID: 834465799}
   m_Layer: 3
   m_Name: Assault_Rifle
   m_TagString: Weapon
@@ -180,7 +182,7 @@ MonoBehaviour:
   projectileSpawnDelay: 0
   projectileSpreadFactor: 2
   throwSpin: 10
-  throwSpeed: 500
+  throwSpeed: 750
   m_Equip:
     m_PersistentCalls:
       m_Calls: []
@@ -196,36 +198,6 @@ MonoBehaviour:
   m_NoAmmo:
     m_PersistentCalls:
       m_Calls: []
-  m_InteractableStart:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3714314726842591332}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_sharedMaterial
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 83f102fd5c3ed7a4b83a4df235e6b3c5, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_InteractableEnd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3714314726842591332}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_sharedMaterial
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!50 &6649955921683493255
 Rigidbody2D:
   serializedVersion: 4
@@ -311,3 +283,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8c5b20623083240b6a1fe872adda11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &834465798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9168958576891218055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5e19a1600a9134a912f9b42b92d90a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractableSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: 83f102fd5c3ed7a4b83a4df235e6b3c5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_InteractableUnselected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_Use:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3714314726842591332}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: set_sharedMaterial
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &834465799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9168958576891218055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e176a168103872745a2eaf0a507b7b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  type: 0
+  damage: 2
+  knock: 7
+  minVelocity: 2
+  maxVelocity: 10

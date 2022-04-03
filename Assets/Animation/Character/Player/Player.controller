@@ -405,6 +405,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 3423971133111846386}
     m_Position: {x: 310, y: 170, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 6495603445040572148}
+    m_Position: {x: 0, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -1220,10 +1223,7 @@ AnimatorStateMachine:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Moverment
-  m_ChildStates:
-  - serializedVersion: 1
-    m_State: {fileID: 6495603445040572148}
-    m_Position: {x: 200, y: 0, z: 0}
+  m_ChildStates: []
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 2679413284348312425}

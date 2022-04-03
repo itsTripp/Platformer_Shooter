@@ -22,7 +22,9 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _coyoteTime = .4f;
 
     private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer _spriteRenderer;
+    private SpriteRenderer _spriteRenderer; //Body Sprite Renderer
+    private SpriteRenderer _rightArmSpriteRenderer; //Right Arm Sprite Renderer
+    private SpriteRenderer _leftArmSpriteRenderer; //Left Arm Sprite Renderer
     private Animator _animator;
     private Transform _characterBase;
     private CapsuleCollider2D _collider;
@@ -69,7 +71,17 @@ public class Movement : MonoBehaviour
         _spriteRenderer = this.transform.GetComponentInChildren<SpriteRenderer>(true);
         if (_spriteRenderer == null)
         {
-            missingComponents += "SpriteRenderer,";
+            missingComponents += "Body_SpriteRenderer,";
+        }
+        _rightArmSpriteRenderer = GameObject.Find("Right_Arm").GetComponent<SpriteRenderer>();
+        if (_rightArmSpriteRenderer == null)
+        {
+            missingComponents += "Front_Arm_SpriteRenderer,";
+        }
+        _leftArmSpriteRenderer = GameObject.Find("Left_Arm").GetComponent<SpriteRenderer>();
+        if (_leftArmSpriteRenderer == null)
+        {
+            missingComponents += "Rear_Arm_SpriteRenderer,";
         }
         _animator = this.transform.GetComponentInChildren<Animator>(true);
         if (_animator == null)
@@ -198,11 +210,15 @@ public class Movement : MonoBehaviour
         {
             //Character is moving right
             if (_spriteRenderer) _spriteRenderer.flipX = true;
+            if (_rightArmSpriteRenderer) _rightArmSpriteRenderer.flipX = true;
+            if (_leftArmSpriteRenderer) _leftArmSpriteRenderer.flipX = true;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else if (xVelocity > 0)
         {
             //Character is moving left
             if (_spriteRenderer) _spriteRenderer.flipX = false;
+            if (_rightArmSpriteRenderer) _rightArmSpriteRenderer.flipX = false;
+            if (_leftArmSpriteRenderer) _leftArmSpriteRenderer.flipX = false;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else
         {

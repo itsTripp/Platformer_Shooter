@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: ec02da23ebe2b604fbcd30954a25e7ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2618987752242873747
+    second: Momonjii_Base-Sheet_2
+  - first:
+      213: 5819467309720902800
+    second: Momonjii_Base-Sheet_3
+  - first:
+      213: 112297177380043307
+    second: Momonjii_Base-Sheet_4
+  - first:
+      213: 5799396491227326067
+    second: Momonjii_Base-Sheet_6
+  - first:
+      213: 8245796430222657564
+    second: Momonjii_Base-Sheet_7
+  - first:
+      213: 4797263256754831889
+    second: Momonjii_Base-Sheet_9
+  - first:
+      213: 8791819533744382137
+    second: Momonjii_Base-Sheet_10
+  - first:
+      213: -336735494436950203
+    second: Momonjii_Base-Sheet_13
+  - first:
+      213: 2431426395801859629
+    second: Momonjii_Base-Sheet_14
+  - first:
+      213: -5409725912446138257
+    second: Momonjii_Base-Sheet_15
+  - first:
+      213: 430558947248827436
+    second: Momonjii_Base-Sheet_17
+  - first:
+      213: 5452658039489629906
+    second: Momonjii_Base-Sheet_20
+  - first:
+      213: -2866939020236651953
+    second: Momonjii_Base-Sheet_23
+  - first:
+      213: -3395573225309802807
+    second: Momonjii_Base-Sheet_24
+  - first:
+      213: -4931929167383692490
+    second: Momonjii_Base-Sheet_25
+  - first:
+      213: -8945127888564086164
+    second: Momonjii_Base-Sheet_26
+  - first:
+      213: -5547397221091529837
+    second: Momonjii_Base-Sheet_30
+  - first:
+      213: -5716454121983994227
+    second: Momonjii_Base-Sheet_31
+  - first:
+      213: 1051050263020330705
+    second: Momonjii_Base-Sheet_33
+  - first:
+      213: -7672848253573037118
+    second: Momonjii_Base-Sheet_35
+  - first:
+      213: 6008517088992275364
+    second: Momonjii_Base-Sheet_36
+  - first:
+      213: -1670271462774315587
+    second: Momonjii_Base-Sheet_37
+  - first:
+      213: -5883902075392376800
+    second: Momonjii_Base-Sheet_38
+  - first:
+      213: 8042114238379592401
+    second: Momonjii_Base-Sheet_39
+  - first:
+      213: 6488694139789448090
+    second: Momonjii_Base-Sheet_42
+  - first:
+      213: 398909681209619490
+    second: Momonjii_Base-Sheet_43
+  - first:
+      213: -8781307608950135682
+    second: Momonjii_Base-Sheet_44
+  - first:
+      213: 6887472131946696921
+    second: Momonjii_Base-Sheet_45
+  - first:
+      213: -967327460754365798
+    second: Momonjii_Base-Sheet_47
+  - first:
+      213: -814007420144778354
+    second: Momonjii_Base-Sheet_49
+  - first:
+      213: 3729595987459516136
+    second: Momonjii_Base-Sheet_52
+  - first:
+      213: -8072838328752647971
+    second: Momonjii_Base-Sheet_53
+  - first:
+      213: 7853210461225789314
+    second: Momonjii_Base-Sheet_54
+  - first:
+      213: -8186615615686494025
+    second: Momonjii_Base-Sheet_55
+  - first:
+      213: 5018733461301821481
+    second: Momonjii_Base-Sheet_56
+  - first:
+      213: -8428965121162631481
+    second: Momonjii_Base-Sheet_0
+  - first:
+      213: -1677245612805589004
+    second: Momonjii_Base-Sheet_1
+  - first:
+      213: -5535241774301780993
+    second: Momonjii_Base-Sheet_5
+  - first:
+      213: -4036983709524239682
+    second: Momonjii_Base-Sheet_8
+  - first:
+      213: 3617488788974323669
+    second: Momonjii_Base-Sheet_11
+  - first:
+      213: -8652469851991709964
+    second: Momonjii_Base-Sheet_12
+  - first:
+      213: -6266884944087725714
+    second: Momonjii_Base-Sheet_16
+  - first:
+      213: -3472424043846501556
+    second: Momonjii_Base-Sheet_18
+  - first:
+      213: 1712419158473686330
+    second: Momonjii_Base-Sheet_19
+  - first:
+      213: 8029811176947091438
+    second: Momonjii_Base-Sheet_21
+  - first:
+      213: -8304796425659321593
+    second: Momonjii_Base-Sheet_22
+  - first:
+      213: 2362687167252635433
+    second: Momonjii_Base-Sheet_27
+  - first:
+      213: 6172564907183946991
+    second: Momonjii_Base-Sheet_28
+  - first:
+      213: 4534535140466086193
+    second: Momonjii_Base-Sheet_29
+  - first:
+      213: -7712589252375497261
+    second: Momonjii_Base-Sheet_32
+  - first:
+      213: -6514019156692403745
+    second: Momonjii_Base-Sheet_34
+  - first:
+      213: 5456246561289131166
+    second: Momonjii_Base-Sheet_40
+  - first:
+      213: -4997941902419593069
+    second: Momonjii_Base-Sheet_41
+  - first:
+      213: -2669622848288562570
+    second: Momonjii_Base-Sheet_46
+  - first:
+      213: -5528214627320186458
+    second: Momonjii_Base-Sheet_48
+  - first:
+      213: 3816541406941810940
+    second: Momonjii_Base-Sheet_50
+  - first:
+      213: 520118190850986071
+    second: Momonjii_Base-Sheet_51
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 9
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6af67ce38c77abd0800000000000000
+      internalID: -2618987752242873747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 9
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c99e17fa6e2c050800000000000000
+      internalID: 5819467309720902800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 9
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a340710b5fe8100800000000000000
+      internalID: 112297177380043307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 9
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376604bd1689b7050800000000000000
+      internalID: 5799396491227326067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 9
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c180b994a24fe6270800000000000000
+      internalID: 8245796430222657564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 9
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112c7e8d38d439240800000000000000
+      internalID: 4797263256754831889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 9
+        width: 26
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0ac2ee841d20a70800000000000000
+      internalID: 8791819533744382137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 9
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fe1d61adca35bf0800000000000000
+      internalID: -336735494436950203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 9
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26374bbc692eb120800000000000000
+      internalID: 2431426395801859629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2865
+        y: 9
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f680c60d1facce4b0800000000000000
+      internalID: -5409725912446138257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3122
+        y: 8
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ce1a1d417a9f500800000000000000
+      internalID: 430558947248827436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 9
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de0575f89bbbab40800000000000000
+      internalID: 5452658039489629906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 4144
+        y: 9
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42861a96269638d0800000000000000
+      internalID: -2866939020236651953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 7
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cee490642080e0d0800000000000000
+      internalID: -3395573225309802807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 8
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bf4b08d844e8bb0800000000000000
+      internalID: -4931929167383692490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 8
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a92b324958cd380800000000000000
+      internalID: -8945127888564086164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 9
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ba9d86e9fa303b0800000000000000
+      internalID: -5547397221091529837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 9
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86935c53431ba0b0800000000000000
+      internalID: -5716454121983994227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2483
+        y: 9
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de586045a4169e00800000000000000
+      internalID: 1051050263020330705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 9
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c38d467a21948590800000000000000
+      internalID: -7672848253573037118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 9
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abaf3c357a826350800000000000000
+      internalID: 6008517088992275364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 4
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db56dde34f002d8e0800000000000000
+      internalID: -1670271462774315587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 7
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020cd079c3e285ea0800000000000000
+      internalID: -5883902075392376800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 9
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da0ab57a445b9f60800000000000000
+      internalID: 8042114238379592401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 9
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a931f4a01f87c0a50800000000000000
+      internalID: 6488694139789448090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 9
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224b6f5dd36398500800000000000000
+      internalID: 398909681209619490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 9
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74a7194147822680800000000000000
+      internalID: -8781307608950135682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 9
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0d511a967359f50800000000000000
+      internalID: 6887472131946696921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 4274
+        y: 9
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a926140bccc5392f0800000000000000
+      internalID: -967327460754365798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 4402
+        y: 9
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e830dbd609014b4f0800000000000000
+      internalID: -814007420144778354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 5
+        width: 34
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e62f345acf22c330800000000000000
+      internalID: 3729595987459516136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 8
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd05a8dcf4487ff80800000000000000
+      internalID: -8072838328752647971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 8
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287aebf6e453cfc60800000000000000
+      internalID: 7853210461225789314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 9
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8375ad87c436e80800000000000000
+      internalID: -8186615615686494025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii_Base-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 4016
+        y: 9
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920034f1e7f16a540800000000000000
+      internalID: 5018733461301821481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eac5d0f3163eec748a517fc704bed6a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
