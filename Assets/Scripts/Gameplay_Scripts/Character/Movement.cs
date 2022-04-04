@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer; //Body Sprite Renderer
+    private SpriteRenderer _leftArmSpriteRenderer; //Right Arm Sprite Renderer
+    private SpriteRenderer _rightArmSpriteRenderer; //Left Arm Sprite Renderer
     private Animator _animator;
     private Transform _characterBase;
     private CapsuleCollider2D _collider;
@@ -70,6 +72,16 @@ public class Movement : MonoBehaviour
         if (_spriteRenderer == null)
         {
             missingComponents += "Body_SpriteRenderer,";
+        }
+        _rightArmSpriteRenderer = this.transform.GetComponentInChildren<SpriteRenderer>(true);
+        if (_rightArmSpriteRenderer == null)
+        {
+            missingComponents += "Right_Arm_SpriteRenderer,";
+        }
+        _leftArmSpriteRenderer = this.transform.GetComponentInChildren<SpriteRenderer>(true);
+        if (_leftArmSpriteRenderer == null)
+        {
+            missingComponents += "Left_Arm_SpriteRenderer,";
         }
         _animator = this.transform.GetComponentInChildren<Animator>(true);
         if (_animator == null)
@@ -196,14 +208,16 @@ public class Movement : MonoBehaviour
         if (xVelocity < 0)
         {
             //Character is moving left
-            //if (_spriteRenderer) _spriteRenderer.flipX = true;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            if (_spriteRenderer) _spriteRenderer.flipX = true;
+            if (_rightArmSpriteRenderer) _spriteRenderer.flipX = true;
+            if (_leftArmSpriteRenderer) _spriteRenderer.flipX = true;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else if (xVelocity > 0)
         {
             //Character is moving right
-            //if (_spriteRenderer) _spriteRenderer.flipX = false;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            if (_spriteRenderer) _spriteRenderer.flipX = false;
+            if (_rightArmSpriteRenderer) _spriteRenderer.flipX = false;
+            if (_leftArmSpriteRenderer) _spriteRenderer.flipX = false;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else
         {
