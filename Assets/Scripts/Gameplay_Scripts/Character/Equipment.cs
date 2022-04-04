@@ -26,6 +26,9 @@ namespace EpicTortoiseStudios
         private Interactor _interactor;
         private Health _health;
 
+        private int _leftWeaponOrder = 4;
+        private SpriteRenderer _leftWeaponSpriteRenderer;
+
         private bool _attackHeldRight = false;
         private bool _attackHeldLeft = false;
 
@@ -75,6 +78,7 @@ namespace EpicTortoiseStudios
             {
                 _leftWeapon.EquipToCharacter(_leftEquipLocation, this.gameObject, _inventory, _health);
             }
+            
         }
 
         private void Update()
@@ -172,6 +176,9 @@ namespace EpicTortoiseStudios
                     _interactor._selectedWeapon = null;
                     _interactor.RemoveSelectedInteractable();
                     _leftWeapon.EquipToCharacter(_leftEquipLocation, this.gameObject, _inventory, _health);
+
+                    _leftWeapon.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                    _leftWeaponSpriteRenderer.sortingOrder = _leftWeaponOrder; // Not Currently Working
 
                     m_Equip.Invoke();
                 }

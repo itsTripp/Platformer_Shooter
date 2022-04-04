@@ -22,13 +22,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0553
+        value: 0.0904
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -41,13 +41,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.025
+        value: -0.38
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -72,7 +72,7 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9b4b46c06b35e1a4982c2899437e8329, type: 3}
+      value: {fileID: 6503777465739777525, guid: 9b4b46c06b35e1a4982c2899437e8329, type: 3}
     attribute: m_Sprite
     path: Right_Arm
     classID: 212
@@ -122,7 +122,7 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: -1976331916592603641, guid: b95dfb058dc673949b307bc2640167cb, type: 3}
     - {fileID: -2207128980270027112, guid: b7e69ee95e55fb345a8fad83a34ea4e5, type: 3}
-    - {fileID: 21300000, guid: 9b4b46c06b35e1a4982c2899437e8329, type: 3}
+    - {fileID: 6503777465739777525, guid: 9b4b46c06b35e1a4982c2899437e8329, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -149,13 +149,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.0553
+        value: 0.0904
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -168,13 +168,13 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.025
+        value: -0.38
         inSlope: 0
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

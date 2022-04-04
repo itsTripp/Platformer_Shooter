@@ -23,8 +23,6 @@ public class Movement : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer; //Body Sprite Renderer
-    private SpriteRenderer _rightArmSpriteRenderer; //Right Arm Sprite Renderer
-    private SpriteRenderer _leftArmSpriteRenderer; //Left Arm Sprite Renderer
     private Animator _animator;
     private Transform _characterBase;
     private CapsuleCollider2D _collider;
@@ -73,16 +71,6 @@ public class Movement : MonoBehaviour
         {
             missingComponents += "Body_SpriteRenderer,";
         }
-        _rightArmSpriteRenderer = GameObject.Find("Right_Arm").GetComponent<SpriteRenderer>();
-        if (_rightArmSpriteRenderer == null)
-        {
-            missingComponents += "Front_Arm_SpriteRenderer,";
-        }
-        _leftArmSpriteRenderer = GameObject.Find("Left_Arm").GetComponent<SpriteRenderer>();
-        if (_leftArmSpriteRenderer == null)
-        {
-            missingComponents += "Rear_Arm_SpriteRenderer,";
-        }
         _animator = this.transform.GetComponentInChildren<Animator>(true);
         if (_animator == null)
         {
@@ -93,7 +81,6 @@ public class Movement : MonoBehaviour
         {
             Debug.LogError(this.gameObject.name + " is missing required child 'CharacterBase'. This child is used to determine if character is grounded and should be placed at the 'feet' of the character.");
         }
-
         if (missingComponents.Length > 0)
         {
             missingComponents = missingComponents.Trim(','); //Trim the last comma off.
@@ -208,17 +195,15 @@ public class Movement : MonoBehaviour
         float xVelocity = _rigidbody2D.velocity.x;
         if (xVelocity < 0)
         {
-            //Character is moving right
-            if (_spriteRenderer) _spriteRenderer.flipX = true;
-            if (_rightArmSpriteRenderer) _rightArmSpriteRenderer.flipX = true;
-            if (_leftArmSpriteRenderer) _leftArmSpriteRenderer.flipX = true;
+            //Character is moving left
+            //if (_spriteRenderer) _spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             if (_animator) _animator.SetBool("_isRunning", true);
         } else if (xVelocity > 0)
         {
-            //Character is moving left
-            if (_spriteRenderer) _spriteRenderer.flipX = false;
-            if (_rightArmSpriteRenderer) _rightArmSpriteRenderer.flipX = false;
-            if (_leftArmSpriteRenderer) _leftArmSpriteRenderer.flipX = false;
+            //Character is moving right
+            //if (_spriteRenderer) _spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
             if (_animator) _animator.SetBool("_isRunning", true);
         } else
         {
