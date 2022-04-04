@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
     public bool facingRight = false;
 
     private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer _spriteRenderer;
+    private SpriteRenderer _spriteRenderer; //Body Sprite Renderer
     private Animator _animator;
     private Transform _characterBase;
     private CapsuleCollider2D _collider;
@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
         _spriteRenderer = this.transform.GetComponentInChildren<SpriteRenderer>(true);
         if (_spriteRenderer == null)
         {
-            missingComponents += "SpriteRenderer,";
+            missingComponents += "Body_SpriteRenderer,";
         }
         _animator = this.transform.GetComponentInChildren<Animator>(true);
         if (_animator == null)
@@ -84,7 +84,6 @@ public class Movement : MonoBehaviour
         {
             Debug.LogError(this.gameObject.name + " is missing required child 'CharacterBase'. This child is used to determine if character is grounded and should be placed at the 'feet' of the character.");
         }
-
         if (missingComponents.Length > 0)
         {
             missingComponents = missingComponents.Trim(','); //Trim the last comma off.
@@ -199,13 +198,15 @@ public class Movement : MonoBehaviour
         float xVelocity = _rigidbody2D.velocity.x;
         if (xVelocity < 0)
         {
-            //Character is moving right
-            if (_spriteRenderer) _spriteRenderer.flipX = true;
+            //Character is moving left
+            //if (_spriteRenderer) _spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             if (_animator) _animator.SetBool("_isRunning", true);
         } else if (xVelocity > 0)
         {
-            //Character is moving left
-            if (_spriteRenderer) _spriteRenderer.flipX = false;
+            //Character is moving right
+            //if (_spriteRenderer) _spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
             if (_animator) _animator.SetBool("_isRunning", true);
         } else
         {

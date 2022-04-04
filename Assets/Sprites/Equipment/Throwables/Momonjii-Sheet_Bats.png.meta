@@ -1,0 +1,840 @@
+fileFormatVersion: 2
+guid: 1f878dfd527ae0244b57f2ec1cf9ec8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 495639754652368383
+    second: Momonjii-Sheet_Bats_3
+  - first:
+      213: -1320261596699661669
+    second: Momonjii-Sheet_Bats_4
+  - first:
+      213: -267267024542171494
+    second: Momonjii-Sheet_Bats_5
+  - first:
+      213: 7842813757400641284
+    second: Momonjii-Sheet_Bats_6
+  - first:
+      213: 5984728578625169912
+    second: Momonjii-Sheet_Bats_7
+  - first:
+      213: 1833227401996462714
+    second: Momonjii-Sheet_Bats_31
+  - first:
+      213: -8490859355012278255
+    second: Momonjii-Sheet_Bats_34
+  - first:
+      213: -6714708132170079370
+    second: Momonjii-Sheet_Bats_35
+  - first:
+      213: 6323219975604441483
+    second: Momonjii-Sheet_Bats_38
+  - first:
+      213: -5503163935749176809
+    second: Momonjii-Sheet_Bats_0
+  - first:
+      213: 1195910070359493294
+    second: Momonjii-Sheet_Bats_1
+  - first:
+      213: -1404865654270841715
+    second: Momonjii-Sheet_Bats_2
+  - first:
+      213: -5068953944222610853
+    second: Momonjii-Sheet_Bats_8
+  - first:
+      213: 7135403894469307747
+    second: Momonjii-Sheet_Bats_9
+  - first:
+      213: -7900454954922561954
+    second: Momonjii-Sheet_Bats_10
+  - first:
+      213: -8771172015327914523
+    second: Momonjii-Sheet_Bats_11
+  - first:
+      213: -4492337128748637691
+    second: Momonjii-Sheet_Bats_12
+  - first:
+      213: 788517131543058631
+    second: Momonjii-Sheet_Bats_13
+  - first:
+      213: 8644112966321850631
+    second: Momonjii-Sheet_Bats_14
+  - first:
+      213: 1094078709986136998
+    second: Momonjii-Sheet_Bats_15
+  - first:
+      213: -2680052930970812759
+    second: Momonjii-Sheet_Bats_16
+  - first:
+      213: 4086480787148347256
+    second: Momonjii-Sheet_Bats_17
+  - first:
+      213: 2711691794060064278
+    second: Momonjii-Sheet_Bats_18
+  - first:
+      213: 5647131063702960075
+    second: Momonjii-Sheet_Bats_19
+  - first:
+      213: -1324400664395650636
+    second: Momonjii-Sheet_Bats_20
+  - first:
+      213: -8598745459263738696
+    second: Momonjii-Sheet_Bats_21
+  - first:
+      213: -7444599215264021707
+    second: Momonjii-Sheet_Bats_22
+  - first:
+      213: 4090697142677130532
+    second: Momonjii-Sheet_Bats_23
+  - first:
+      213: 8958313067348642723
+    second: Momonjii-Sheet_Bats_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_3
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 22
+        width: 128
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdbd981bbdd0e600800000000000000
+      internalID: 495639754652368383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a6026a21d7dade0800000000000000
+      internalID: -1320261596699661669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_5
+      rect:
+        serializedVersion: 2
+        x: 4094
+        y: 3
+        width: 96
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9efcf5ae0a7a4cf0800000000000000
+      internalID: -267267024542171494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_6
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 3
+        width: 72
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f69613f8547dc60800000000000000
+      internalID: 7842813757400641284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_7
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 21
+        width: 29
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9e41e0fe60e0350800000000000000
+      internalID: 5984728578625169912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_31
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 17
+        width: 124
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ae288fb9ee07910800000000000000
+      internalID: 1833227401996462714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_34
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 19
+        width: 61
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118d0b237686a2a80800000000000000
+      internalID: -8490859355012278255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_35
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 22
+        width: 73
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6736393a78090d2a0800000000000000
+      internalID: -6714708132170079370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_38
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 21
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b819e82e01790c750800000000000000
+      internalID: 6323219975604441483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_0
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 22
+        width: 128
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7120ee4be85d0a3b0800000000000000
+      internalID: -5503163935749176809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_1
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 4
+        width: 117
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa071f6fd9b89010800000000000000
+      internalID: 1195910070359493294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6
+        width: 128
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c2a08712ae08ce0800000000000000
+      internalID: -1404865654270841715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_8
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5acbc38e3577a9b0800000000000000
+      internalID: -5068953944222610853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_9
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 126
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d28ca790c060360800000000000000
+      internalID: 7135403894469307747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_10
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 0
+        width: 130
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5eaddfa312fb5290800000000000000
+      internalID: -7900454954922561954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e558821689864680800000000000000
+      internalID: -8771172015327914523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_12
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502a3adce2308a1c0800000000000000
+      internalID: -4492337128748637691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_13
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c81fe4472061fa00800000000000000
+      internalID: 788517131543058631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_14
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70946f3c1fe06f770800000000000000
+      internalID: 8644112966321850631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_15
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 126
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a39a014ac2fe2f00800000000000000
+      internalID: 1094078709986136998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_16
+      rect:
+        serializedVersion: 2
+        x: 2686
+        y: 0
+        width: 130
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae7d3e0f0a8ecad0800000000000000
+      internalID: -2680052930970812759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_17
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8779f63ff9816b830800000000000000
+      internalID: 4086480787148347256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_18
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 127
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616ba4dc15dd1a520800000000000000
+      internalID: 2711691794060064278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_19
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 0
+        width: 129
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7b61c58c3ae5e40800000000000000
+      internalID: 5647131063702960075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_20
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 127
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9e76adc98ce9de0800000000000000
+      internalID: -1324400664395650636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_21
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 0
+        width: 128
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bce49a109e1ba880800000000000000
+      internalID: -8598745459263738696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_22
+      rect:
+        serializedVersion: 2
+        x: 3455
+        y: 0
+        width: 129
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5334907f4787fa890800000000000000
+      internalID: -7444599215264021707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_23
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 129
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dc9f8b06315c830800000000000000
+      internalID: 4090697142677130532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Momonjii-Sheet_Bats_24
+      rect:
+        serializedVersion: 2
+        x: 3713
+        y: 0
+        width: 127
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab4e068542525c70800000000000000
+      internalID: 8958313067348642723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: aff8a25c81bbcc44484319345e9a5f21
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
