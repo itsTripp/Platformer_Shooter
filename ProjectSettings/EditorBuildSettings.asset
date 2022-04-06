@@ -6,15 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Game_Levels/Splash_Screen.unity
+    guid: b1124ac52aeb33e4498b5f76836312f4
+  - enabled: 1
     path: Assets/Scenes/Game_Levels/Main_Menu.unity
     guid: f072c216132ae9e4b8c54b1b55255e92
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LAB/Metrics_Level.unity
     guid: e6b51740cb7c81a408938512df52d29d
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Game_Levels/Level_01.unity
+    guid: 435a788fc7668024cba141b4653d7ea4
+  - enabled: 1
+    path: Assets/Scenes/Game_Levels/Level_02.unity
+    guid: 87179bf04326eec4f95fe445a25a7f0d
+  - enabled: 1
+    path: Assets/Scenes/Game_Levels/Level_03.unity
+    guid: 1a4c4129083961443a6c2a631eb548ff
+  - enabled: 0
     path: Assets/Scenes/LAB/Perk_Test_Scene 2.unity
     guid: b56808aff3e4c4d468865b11ad9b2d6b
   m_configObjects: {}
