@@ -2904,17 +2904,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9df1883ac19402b4c93e5396bf71c26d, type: 3}
---- !u!114 &1830118837 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1363746994, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-  m_PrefabInstance: {fileID: 1045206632473208548}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce66e2b0b04480a42aabf95ec8f0eed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8485270332251776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2983,42 +2972,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 243465432, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_TimerEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 243465432, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_TimerStart.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1830118837}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetBool
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AnimatorParamSetter, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1009722820, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Attack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 1045206631769332911, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3067,13 +3020,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7565618005008703364, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7565618005008703364, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 087c2dbd5b419584591ba8f5845952ad, type: 3}

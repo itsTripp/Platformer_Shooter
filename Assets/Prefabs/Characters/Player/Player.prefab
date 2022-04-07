@@ -90,7 +90,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1375675165
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -7754971977581883321, guid: f8421ff49217e394f9912f149b08f3e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -867,6 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5852db6d2232242904ec575d13ea9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InfiniteAmmo: 0
   Ammos:
   - max: 100
     current: 100
@@ -905,34 +906,10 @@ MonoBehaviour:
       m_Calls: []
   m_TimerStart:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7565618005008703364}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_sharedMaterial
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: f955e3e5b1891bb468452527b3ffc11f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_TimerEnd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7565618005008703364}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_sharedMaterial
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: cc460e5b1c6c0bd498b44195a0c3da99, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &2915032317284093207
 GameObject:
   m_ObjectHideFlags: 0
