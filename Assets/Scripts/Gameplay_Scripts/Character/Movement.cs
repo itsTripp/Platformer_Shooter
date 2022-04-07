@@ -21,11 +21,10 @@ public class Movement : MonoBehaviour
     [SerializeField] private int _jumpCount; //Times the character can jump before touching the ground.
     [SerializeField] private float _coyoteTime = .4f;
 
-
-    public bool facingRight = false;
-
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer; //Body Sprite Renderer
+    private SpriteRenderer _leftArmSpriteRenderer; //Right Arm Sprite Renderer
+    private SpriteRenderer _rightArmSpriteRenderer; //Left Arm Sprite Renderer
     private Animator _animator;
     private Transform _characterBase;
     private CapsuleCollider2D _collider;
@@ -73,6 +72,16 @@ public class Movement : MonoBehaviour
         if (_spriteRenderer == null)
         {
             missingComponents += "Body_SpriteRenderer,";
+        }
+        _rightArmSpriteRenderer = this.transform.GetComponentInChildren<SpriteRenderer>(true);
+        if (_rightArmSpriteRenderer == null)
+        {
+            missingComponents += "Right_Arm_SpriteRenderer,";
+        }
+        _leftArmSpriteRenderer = this.transform.GetComponentInChildren<SpriteRenderer>(true);
+        if (_leftArmSpriteRenderer == null)
+        {
+            missingComponents += "Left_Arm_SpriteRenderer,";
         }
         _animator = this.transform.GetComponentInChildren<Animator>(true);
         if (_animator == null)
@@ -192,7 +201,7 @@ public class Movement : MonoBehaviour
             if (_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - frameDeaccelration, 0, Mathf.Abs(_currentSpeed));
             if (!_isGrounded) _currentSpeed = Mathf.Sign(_currentSpeed) * Mathf.Clamp(Mathf.Abs(_currentSpeed) - frameAirDeacceleration, 0, Mathf.Abs(_currentSpeed));
         }
-        
+
         _rigidbody2D.velocity = new Vector2(_currentSpeed, Mathf.Clamp(_rigidbody2D.velocity.y, -_maxFallSpeed, (_jumpForce + _perkJumpForce)));
 
         float xVelocity = _rigidbody2D.velocity.x;
@@ -200,11 +209,15 @@ public class Movement : MonoBehaviour
         {
             //Character is moving left
             if (_spriteRenderer) _spriteRenderer.flipX = true;
+            if (_rightArmSpriteRenderer) _spriteRenderer.flipX = true;
+            if (_leftArmSpriteRenderer) _spriteRenderer.flipX = true;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else if (xVelocity > 0)
         {
             //Character is moving right
             if (_spriteRenderer) _spriteRenderer.flipX = false;
+            if (_rightArmSpriteRenderer) _spriteRenderer.flipX = false;
+            if (_leftArmSpriteRenderer) _spriteRenderer.flipX = false;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else
         {

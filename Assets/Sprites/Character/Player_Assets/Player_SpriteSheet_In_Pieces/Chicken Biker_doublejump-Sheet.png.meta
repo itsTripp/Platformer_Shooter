@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: 3bd2e946ea12cd34cbdd4fd4eb7c0099
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4317899269280459524
+    second: Chicken Biker_doublejump-Sheet_0
+  - first:
+      213: 7231077414397214425
+    second: Chicken Biker_doublejump-Sheet_1
+  - first:
+      213: -5360457886661292784
+    second: Chicken Biker_doublejump-Sheet_2
+  - first:
+      213: 7170114724467223122
+    second: Chicken Biker_doublejump-Sheet_4
+  - first:
+      213: 5444580289666430436
+    second: Chicken Biker_doublejump-Sheet_5
+  - first:
+      213: -3642838798214276093
+    second: Chicken Biker_doublejump-Sheet_6
+  - first:
+      213: 1884517876367034390
+    second: Chicken Biker_doublejump-Sheet_7
+  - first:
+      213: -2305542061520535676
+    second: Chicken Biker_doublejump-Sheet_8
+  - first:
+      213: 5547547551701035432
+    second: Chicken Biker_doublejump-Sheet_9
+  - first:
+      213: -4642565168283681960
+    second: Chicken Biker_doublejump-Sheet_10
+  - first:
+      213: 8213188079334308580
+    second: Chicken Biker_doublejump-Sheet_11
+  - first:
+      213: -1528559741620914702
+    second: Chicken Biker_doublejump-Sheet_12
+  - first:
+      213: -2978347027808394260
+    second: Chicken Biker_doublejump-Sheet_13
+  - first:
+      213: -6365594524096795331
+    second: Chicken Biker_doublejump-Sheet_14
+  - first:
+      213: -1866824308555514994
+    second: Chicken Biker_doublejump-Sheet_15
+  - first:
+      213: -2776981198559753923
+    second: Chicken Biker_doublejump-Sheet_16
+  - first:
+      213: -7409883464581889038
+    second: Chicken Biker_doublejump-Sheet_17
+  - first:
+      213: -4314409085668790213
+    second: Chicken Biker_doublejump-Sheet_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 281
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf49e96ed7db314c0800000000000000
+      internalID: -4317899269280459524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 281
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9defe74b892f95460800000000000000
+      internalID: 7231077414397214425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 281
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dcc18f3f3db95b0800000000000000
+      internalID: -5360457886661292784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 281
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25aaaae5a5d518360800000000000000
+      internalID: 7170114724467223122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 262
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e539a44de80f8b40800000000000000
+      internalID: 5444580289666430436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 256
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c5d62e969027dc0800000000000000
+      internalID: -3642838798214276093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 153
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6180bb12607272a10800000000000000
+      internalID: 1884517876367034390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 153
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fb858d5b11100e0800000000000000
+      internalID: -2305542061520535676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 153
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a96ab92b19dcfc40800000000000000
+      internalID: 5547547551701035432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 153
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b79d9a39b429fb0800000000000000
+      internalID: -4642565168283681960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 134
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eab136fa0b1bf170800000000000000
+      internalID: 8213188079334308580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 128
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5f8be730779cae0800000000000000
+      internalID: -1528559741620914702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 25
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3e3ad7829caa6d0800000000000000
+      internalID: -2978347027808394260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 25
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3de907b18dd8a7a0800000000000000
+      internalID: -6365594524096795331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 25
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bfb76ae25b716e0800000000000000
+      internalID: -1866824308555514994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 25
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3948ef105e2679d0800000000000000
+      internalID: -2776981198559753923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 6
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f34e8a8f3eca2990800000000000000
+      internalID: -7409883464581889038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chicken Biker_doublejump-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 0
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b307ef89bc32024c0800000000000000
+      internalID: -4314409085668790213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b3cb3de52b442da499eaa9293ceb2a27
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

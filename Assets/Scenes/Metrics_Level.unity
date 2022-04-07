@@ -2489,7 +2489,7 @@ GameObject:
   - component: {fileID: 1109511889}
   - component: {fileID: 1109511890}
   m_Layer: 0
-  m_Name: Left_Arm
+  m_Name: Right_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,7 +2503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109511888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1793, y: -0.0002, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3069398000962855550}
@@ -2551,9 +2551,9 @@ SpriteRenderer:
   m_SortingLayerID: 1375675165
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2207128980270027112, guid: b7e69ee95e55fb345a8fad83a34ea4e5, type: 3}
+  m_Sprite: {fileID: -4624646421185770235, guid: e7bd2373ca497d14cb62ca7884b0bfa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.09, y: 0.36}
@@ -3124,7 +3124,7 @@ GameObject:
   - component: {fileID: 1499264971}
   - component: {fileID: 1499264972}
   m_Layer: 0
-  m_Name: Right_Arm
+  m_Name: Left_Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3138,7 +3138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499264970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.225, y: -0.015, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3069398001000621329}
@@ -3186,9 +3186,9 @@ SpriteRenderer:
   m_SortingLayerID: 1375675165
   m_SortingLayer: 3
   m_SortingOrder: 5
-  m_Sprite: {fileID: -6749716233407307064, guid: 7dc20d31c375b2c4db4ce246e2a0d51a, type: 3}
+  m_Sprite: {fileID: -1126831488683518039, guid: e7bd2373ca497d14cb62ca7884b0bfa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.18, y: 0.39}
@@ -7401,9 +7401,9 @@ SpriteRenderer:
   m_SortingLayerID: 1375675165
   m_SortingLayer: 3
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1976331916592603641, guid: b95dfb058dc673949b307bc2640167cb, type: 3}
+  m_Sprite: {fileID: 3664521897377374242, guid: e7bd2373ca497d14cb62ca7884b0bfa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.28}
