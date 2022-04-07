@@ -199,14 +199,12 @@ public class Movement : MonoBehaviour
         if (xVelocity < 0)
         {
             //Character is moving left
-            //if (_spriteRenderer) _spriteRenderer.flipX = true;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            if (_spriteRenderer) _spriteRenderer.flipX = true;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else if (xVelocity > 0)
         {
             //Character is moving right
-            //if (_spriteRenderer) _spriteRenderer.flipX = false;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            if (_spriteRenderer) _spriteRenderer.flipX = false;
             if (_animator) _animator.SetBool("_isRunning", true);
         } else
         {
