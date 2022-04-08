@@ -69,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1375675165
-  m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingLayerID: 316306269
+  m_SortingLayer: 5
+  m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 2af586463401d6141a6e3c86e9a3118b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb9e90eedb59c742a32b7521de15b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoFire: 0
   weaponName: The Reach Around
   weaponDescription: This pistol will shoot behind you
   providedAmmo: 10

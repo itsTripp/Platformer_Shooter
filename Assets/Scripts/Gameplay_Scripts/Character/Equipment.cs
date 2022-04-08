@@ -177,8 +177,8 @@ namespace EpicTortoiseStudios
                     _interactor.RemoveSelectedInteractable();
                     _leftWeapon.EquipToCharacter(_leftEquipLocation, this.gameObject, _inventory, _health);
 
-                    _leftWeapon.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-                    _leftWeaponSpriteRenderer.sortingOrder = _leftWeaponOrder; // Not Currently Working
+                    //_leftWeapon.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                    //_leftWeaponSpriteRenderer.sortingOrder = _leftWeaponOrder; // Not Currently Working
 
                     m_Equip.Invoke();
                 }

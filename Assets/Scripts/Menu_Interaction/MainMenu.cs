@@ -117,7 +117,7 @@ namespace EpicTortoiseStudios
         {
             Application.Quit();
             ///Comment This out before release
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
 
         public void Settings_Menu()
