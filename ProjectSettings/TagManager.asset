@@ -64,6 +64,12 @@ TagManager:
   - name: Background
     uniqueID: 671440353
     locked: 0
+  - name: Foreground
+    uniqueID: 480131523
+    locked: 0
+  - name: LiveAction
+    uniqueID: 1093726823
+    locked: 0
   - name: MidGround
     uniqueID: 1375675165
     locked: 0
@@ -75,7 +81,4 @@ TagManager:
     locked: 0
   - name: CharacterFront
     uniqueID: 316306269
-    locked: 0
-  - name: Foreground
-    uniqueID: 480131523
     locked: 0
